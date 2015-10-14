@@ -20,6 +20,10 @@
 		C23A33061BC558E4007320E1 /* Surgery.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32FB1BC558E4007320E1 /* Surgery.png */; settings = {ASSET_TAGS = (); }; };
 		C23A346E1BC55D0C007320E1 /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A346D1BC55D0C007320E1 /* hand.png */; settings = {ASSET_TAGS = (); }; };
 		C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A34701BC562CA007320E1 /* CommonHelper.m */; settings = {ASSET_TAGS = (); }; };
+		C242BCC91BCE3D6E003E5950 /* suffer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC51BCE3D6E003E5950 /* suffer.jpg */; settings = {ASSET_TAGS = (); }; };
+		C242BCCA1BCE3D6E003E5950 /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC61BCE3D6E003E5950 /* user.jpg */; settings = {ASSET_TAGS = (); }; };
+		C242BCCB1BCE3D6E003E5950 /* common.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC71BCE3D6E003E5950 /* common.jpg */; settings = {ASSET_TAGS = (); }; };
+		C242BCCC1BCE3D6E003E5950 /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC81BCE3D6E003E5950 /* home.jpg */; settings = {ASSET_TAGS = (); }; };
 		C2500FF41BCE220B00057CDD /* SufferDeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF51BCE220B00057CDD /* SufferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF11BCE220B00057CDD /* SufferTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF31BCE220B00057CDD /* SufferViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -120,6 +124,10 @@
 		C23A346D1BC55D0C007320E1 /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
 		C23A346F1BC562CA007320E1 /* CommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelper.h; sourceTree = "<group>"; };
 		C23A34701BC562CA007320E1 /* CommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelper.m; sourceTree = "<group>"; };
+		C242BCC51BCE3D6E003E5950 /* suffer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = suffer.jpg; sourceTree = "<group>"; };
+		C242BCC61BCE3D6E003E5950 /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
+		C242BCC71BCE3D6E003E5950 /* common.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = common.jpg; sourceTree = "<group>"; };
+		C242BCC81BCE3D6E003E5950 /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
 		C2500FEE1BCE220B00057CDD /* SufferDeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferDeTableViewController.h; sourceTree = "<group>"; };
 		C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferDeTableViewController.m; sourceTree = "<group>"; };
 		C2500FF01BCE220B00057CDD /* SufferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferTableViewController.h; sourceTree = "<group>"; };
@@ -176,15 +184,15 @@
 		C2D0B7CF1BCE2866001745D0 /* CommonDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailsController.m; sourceTree = "<group>"; };
 		C2D0B7D81BCE2D5C001745D0 /* UserListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListController.h; sourceTree = "<group>"; };
 		C2D0B7D91BCE2D5C001745D0 /* UserListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListController.m; sourceTree = "<group>"; };
-		C2D0B7DB1BCE2EAE001745D0 /* mie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mie.gif; sourceTree = "<group>"; };
+		C2D0B7DB1BCE2EAE001745D0 /* mie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mie.gif; path = ../mie.gif; sourceTree = "<group>"; };
 		C2D0B7DE1BCE2F68001745D0 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
 		C2D0B7DF1BCE2F68001745D0 /* GiFHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiFHUD.m; sourceTree = "<group>"; };
 		C2D0B7E11BCE2F68001745D0 /* RKCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKCardView.h; sourceTree = "<group>"; };
 		C2D0B7E21BCE2F68001745D0 /* RKCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKCardView.m; sourceTree = "<group>"; };
 		C2D0B7E41BCE2F68001745D0 /* WZFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZFlashButton.h; sourceTree = "<group>"; };
 		C2D0B7E51BCE2F68001745D0 /* WZFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZFlashButton.m; sourceTree = "<group>"; };
-		C2D0B7EB1BCE3443001745D0 /* sheep1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheep1.png; sourceTree = "<group>"; };
-		C2D0B7ED1BCE3443001745D0 /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
+		C2D0B7EB1BCE3443001745D0 /* sheep1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sheep1.png; path = ../WZFlashButton/sheep1.png; sourceTree = "<group>"; };
+		C2D0B7ED1BCE3443001745D0 /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 111.jpg; path = ../WZFlashButton/111.jpg; sourceTree = "<group>"; };
 		C2D1396B1BC5F9CA00D4B1F7 /* Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Male.png; sourceTree = "<group>"; };
 		C2D1396D1BC5F9D100D4B1F7 /* Female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Female.png; sourceTree = "<group>"; };
 		C2D15F0F1BC535CD000CB956 /* MedicineNurse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicineNurse.pch; sourceTree = "<group>"; };
@@ -282,6 +290,13 @@
 		C23A32F11BC558E4007320E1 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				C242BCC51BCE3D6E003E5950 /* suffer.jpg */,
+				C242BCC61BCE3D6E003E5950 /* user.jpg */,
+				C242BCC71BCE3D6E003E5950 /* common.jpg */,
+				C242BCC81BCE3D6E003E5950 /* home.jpg */,
+				C2D0B7EB1BCE3443001745D0 /* sheep1.png */,
+				C2D0B7ED1BCE3443001745D0 /* 111.jpg */,
+				C2D0B7DB1BCE2EAE001745D0 /* mie.gif */,
 				C25015EE1BCE2D7800057CDD /* image.jpg */,
 				C23A346D1BC55D0C007320E1 /* hand.png */,
 				C23A32F61BC558E4007320E1 /* Medicin.png */,
@@ -492,7 +507,6 @@
 				C2D0B7DD1BCE2F68001745D0 /* GIFHUD */,
 				C2D0B7E01BCE2F68001745D0 /* RKCard */,
 				C2D0B7E31BCE2F68001745D0 /* WZFlashButton */,
-				C2D0B7DB1BCE2EAE001745D0 /* mie.gif */,
 				C2FC64101BCE029A00B2B22E /* HomeResource */,
 				C2EC44C51BC7B6EC00934592 /* WQImage */,
 				C23A32F11BC558E4007320E1 /* img */,
@@ -629,8 +643,6 @@
 		C2D0B7E31BCE2F68001745D0 /* WZFlashButton */ = {
 			isa = PBXGroup;
 			children = (
-				C2D0B7EB1BCE3443001745D0 /* sheep1.png */,
-				C2D0B7ED1BCE3443001745D0 /* 111.jpg */,
 				C2D0B7E41BCE2F68001745D0 /* WZFlashButton.h */,
 				C2D0B7E51BCE2F68001745D0 /* WZFlashButton.m */,
 			);
@@ -841,17 +853,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C242BCCC1BCE3D6E003E5950 /* home.jpg in Resources */,
 				C23A33051BC558E4007320E1 /* Skin.png in Resources */,
 				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
 				C2FC64191BCE029A00B2B22E /* IanScrollViewDefault@2x.png in Resources */,
 				C23A33061BC558E4007320E1 /* Surgery.png in Resources */,
 				C2D0B7F01BCE3443001745D0 /* 111.jpg in Resources */,
 				C23A33011BC558E4007320E1 /* Medicin.png in Resources */,
+				C242BCC91BCE3D6E003E5950 /* suffer.jpg in Resources */,
 				C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */,
 				C2D0B7DC1BCE2EAE001745D0 /* mie.gif in Resources */,
 				C2FC64011BCE013B00B2B22E /* HEDCell.xib in Resources */,
 				C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */,
 				C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */,
+				C242BCCB1BCE3D6E003E5950 /* common.jpg in Resources */,
 				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
 				C2FC63FF1BCE013B00B2B22E /* HCCell.xib in Resources */,
 				C25015EF1BCE2D7800057CDD /* image.jpg in Resources */,
@@ -862,6 +877,7 @@
 				C23A346E1BC55D0C007320E1 /* hand.png in Resources */,
 				C23A33021BC558E4007320E1 /* Mentality.png in Resources */,
 				C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */,
+				C242BCCA1BCE3D6E003E5950 /* user.jpg in Resources */,
 				C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */,
 				C2D0B7EE1BCE3443001745D0 /* sheep1.png in Resources */,
 				C2FC64051BCE013B00B2B22E /* HSBCell.xib in Resources */,

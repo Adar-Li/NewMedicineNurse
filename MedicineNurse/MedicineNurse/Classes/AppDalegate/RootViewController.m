@@ -50,9 +50,9 @@
     
     UINavigationController *common = [[UINavigationController alloc]initWithRootViewController:[CommonController new]];
     common.tabBarItem.title = @"常见病症";
-    
+
     UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
-    suffer.tabBarItem.title = @"用药咨询";
+    suffer.tabBarItem.title = @"用药助手";
     
     UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
     User.tabBarItem.title = @"用户";

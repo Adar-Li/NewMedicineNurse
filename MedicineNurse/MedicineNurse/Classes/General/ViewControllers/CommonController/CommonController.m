@@ -17,10 +17,23 @@
 
 @implementation CommonController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UIImage *image = [UIImage imageNamed:@"common.jpg"];
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = image;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.title = @"常见病症";
     
     self.left = [CommonClassifyController new];
     _left.view.frame = CGRectMake(0, 64, self.view.frame.size.width/2.8, self.view.frame.size.height - 110);

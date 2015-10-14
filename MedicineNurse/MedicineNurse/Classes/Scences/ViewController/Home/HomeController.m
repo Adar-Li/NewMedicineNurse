@@ -42,6 +42,17 @@
 
 @implementation HomeController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UIImage *image = [UIImage imageNamed:@"home.jpg"];
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = image;
+    }
+    return self;
+}
+
 static NSString * homeCell = @"homeCell";
 static NSString * hccCell = @"hccCellID";
 

@@ -20,10 +20,23 @@
 
 @implementation UserListController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UIImage *image = [UIImage imageNamed:@"user.jpg"];
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = image;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1];
+    
+    self.navigationItem.title = @"用户";
     
     self.cardView= [[RKCardView alloc]initWithFrame:CGRectMake(BUFFERX, BUFFERY, self.view.frame.size.width-2*BUFFERX, self.view.frame.size.height-2*BUFFERY)];
     

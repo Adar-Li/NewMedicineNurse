@@ -31,6 +31,17 @@
 
 @implementation SufferViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UIImage *image = [UIImage imageNamed:@"suffer.jpg"];
+        image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = image;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
