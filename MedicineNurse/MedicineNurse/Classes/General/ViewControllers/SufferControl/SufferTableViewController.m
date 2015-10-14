@@ -14,37 +14,26 @@
 #import "SVPullToRefresh.h"
 #import "SufferDeTableViewController.h"
 
-
 @interface SufferTableViewController ()
 @property (nonatomic ,assign)NSInteger page;
-
 @end
-
 @implementation SufferTableViewController
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.page = 1;
-    
     self.navigationItem.title = @"用药咨询";
- 
-    //注册cell
+
+      //注册cell
     [self.tableView registerClass:[SufferTableViewCell class] forCellReuseIdentifier:@"cell"];
    
-    
         //刷新View视图
-    
-
     [[SufferHelper sharedSuffer]requestAllSufferWith:0 Finish:^{
         
         [self.tableView reloadData];
     }];
-    
-   
+
     __weak typeof(self) weakself = self;
-    
     [self.tableView addPullToRefreshWithActionHandler:^{
       
         [[SufferHelper sharedSuffer]requestAllSufferWith:1 Finish:^{
@@ -52,8 +41,6 @@
             [weakself.tableView.pullToRefreshView stopAnimating];
             
         }];
-        
-        
     }];
     
     [self.tableView addInfiniteScrollingWithActionHandler:^{
@@ -99,9 +86,7 @@
     return cell;
 }
 
-
-//cell的高度
-
+   //cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return self.view.frame.size.height/5;
@@ -111,8 +96,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ViewController *Suffer = [[ViewController alloc]init];
-    
-    
    SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
     
     
@@ -123,17 +106,11 @@
         
     }else
     {
-        
         SufferDeTableViewController *sufferde = [[SufferDeTableViewController alloc]init];
-        
         sufferde.tail = [model.stag valueForKey:@"tagid"];
-        
-        NSLog(@"===================%@",sufferde.tail);
-        
-        [self.navigationController pushViewController:sufferde animated:YES];
+              [self.navigationController pushViewController:sufferde animated:YES];
        
     }
-    
 }
 
 

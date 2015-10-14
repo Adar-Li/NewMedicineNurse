@@ -13,6 +13,7 @@
 #import "SufferTableViewController.h"
 #import "ViewController.h"
 #import "AFNetworking.h"
+#import "SufferDeTableViewController.h"
 
 #define KWith self.view.frame.size.width
 #define Kheight self.view.frame.size.height
@@ -26,8 +27,6 @@
 @property (nonatomic ,strong)UITableView  *table;
 @property (nonatomic ,strong)UIImageView  *Img;
 
-
-
 @end
 
 @implementation SufferViewController
@@ -38,8 +37,11 @@
     _Img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 60, KWith, Kheight/3.7)];
     _Img.backgroundColor = [UIColor redColor];
     [_Img setImage:[UIImage imageNamed:@"image.jpg"]];
+ 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(TapChange)];
+    [_Img addGestureRecognizer:tap];
     [self.view addSubview:_Img];
-
+    
     self.navigationItem.title = @"用药助手";
     _cityLabel= [[UILabel alloc]init];
     _cityLabel.frame = CGRectMake(10, 65,self.view.frame.size.width/2,Kheight/16);
@@ -121,16 +123,16 @@
          //初始化button
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-    //设置文字和文字颜色
+      //设置文字和文字颜色
     [button setTitle:@"<<了解更多" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
     
-    //设置圆角
+      //设置圆角
     button.layer.cornerRadius = 3;
     button.layer.masksToBounds = YES;
     
     [button addTarget:self action:@selector(JumpMore) forControlEvents:UIControlEventTouchUpInside];
-    //设置大小
+     //设置大小
   button.frame = CGRectMake(-50, -10,self.view.frame.size.width - 20 , 30);
     self.table.tableFooterView = button;
 }
@@ -147,18 +149,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
       //返回四个cell
-    if (self.view.frame.size.height >= 667) {
+    if (self.view.frame.size.height >= 667 ) {
       return  [SufferHelper sharedSuffer].Allarray.count - 16;
-    }{
+    }else if (self.view.frame.size.height >= 568 &&self.view.frame.size.height <= 667)   {
         
-    return [SufferHelper sharedSuffer].Allarray.count - 18;
+    return [SufferHelper sharedSuffer].Allarray.count - 17;
+    }else{
+        
+        return [SufferHelper sharedSuffer].Allarray.count - 18;
+        
     }
-}
+    
+ }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
     
     SufferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -170,28 +176,47 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //判断返回
+       //判断返回
     if (self.view.frame.size.height >= 667 ) {
-         return self.table.frame.size.height/4 - 10;
-    }else{
-
+         return self.table.frame.size.height/4 - 20;
+    }else if (self.view.frame.size.height >= 568 &&self.view.frame.size.height < 667) {
+        return self.table.frame.size.height/3 - 20;
+    }else
+    {
         return self.table.frame.size.height/2 - 30;
     }
 }
 
-
    //页面跳转
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ViewController *suffer = [[ViewController alloc]init];
-    
-      //找到当前点击的这个row
+    ViewController *Suffer = [[ViewController alloc]init];
     SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
-    suffer.str = model.url;
     
-    [self.navigationController pushViewController:suffer animated:YES];
- 
+    if (model.stag == nil) {
+        Suffer.str = model.url;
+        [self.navigationController pushViewController:Suffer animated:YES];
+    }else
+    {
+        SufferDeTableViewController *sufferde = [[SufferDeTableViewController alloc]init];
+        sufferde.tail = [model.stag valueForKey:@"tagid"];
+        [self.navigationController pushViewController:sufferde animated:YES];
+        
+    }
 }
+
+//手势的事件
+- (void)TapChange
+{
+   
+    
+    
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
