@@ -1,0 +1,901 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D5D751078EB568CED7A0148 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ABDA66B6F25486D79C6217 /* libPods.a */; };
+		C2002E9F1BC4A96C0007F7B9 /* CommonDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2002EA01BC4A96C0007F7B9 /* DrugAndnewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */; settings = {ASSET_TAGS = (); }; };
+		C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */; settings = {ASSET_TAGS = (); }; };
+		C23A32EF1BC53F31007320E1 /* CommonClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */; settings = {ASSET_TAGS = (); }; };
+		C23A32F01BC53F31007320E1 /* CommonDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */; settings = {ASSET_TAGS = (); }; };
+		C23A32FD1BC558E4007320E1 /* Child.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F21BC558E4007320E1 /* Child.png */; settings = {ASSET_TAGS = (); }; };
+		C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F31BC558E4007320E1 /* Chinese.png */; settings = {ASSET_TAGS = (); }; };
+		C23A32FF1BC558E4007320E1 /* Infect.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F41BC558E4007320E1 /* Infect.png */; settings = {ASSET_TAGS = (); }; };
+		C23A33011BC558E4007320E1 /* Medicin.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F61BC558E4007320E1 /* Medicin.png */; settings = {ASSET_TAGS = (); }; };
+		C23A33021BC558E4007320E1 /* Mentality.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F71BC558E4007320E1 /* Mentality.png */; settings = {ASSET_TAGS = (); }; };
+		C23A33031BC558E4007320E1 /* Organs.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F81BC558E4007320E1 /* Organs.png */; settings = {ASSET_TAGS = (); }; };
+		C23A33041BC558E4007320E1 /* Rheumatism.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F91BC558E4007320E1 /* Rheumatism.png */; settings = {ASSET_TAGS = (); }; };
+		C23A33051BC558E4007320E1 /* Skin.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32FA1BC558E4007320E1 /* Skin.png */; settings = {ASSET_TAGS = (); }; };
+		C23A33061BC558E4007320E1 /* Surgery.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32FB1BC558E4007320E1 /* Surgery.png */; settings = {ASSET_TAGS = (); }; };
+		C23A346E1BC55D0C007320E1 /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A346D1BC55D0C007320E1 /* hand.png */; settings = {ASSET_TAGS = (); }; };
+		C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A34701BC562CA007320E1 /* CommonHelper.m */; settings = {ASSET_TAGS = (); }; };
+		C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C24C12241BC4ABC5000EF4A0 /* default@2x.png */; settings = {ASSET_TAGS = (); }; };
+		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
+		C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6821BC3A9DA00B394F5 /* Main.storyboard */; };
+		C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */; };
+		C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6871BC3A9DA00B394F5 /* LaunchScreen.storyboard */; };
+		C28EA6941BC3A9DA00B394F5 /* MedicineNurseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6931BC3A9DA00B394F5 /* MedicineNurseTests.m */; };
+		C28EA69F1BC3A9DA00B394F5 /* MedicineNurseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA69E1BC3A9DA00B394F5 /* MedicineNurseUITests.m */; };
+		C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */; };
+		C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */; settings = {ASSET_TAGS = (); }; };
+		C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0C1BCA70D300466B76 /* CommonTableController.m */; settings = {ASSET_TAGS = (); }; };
+		C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */; };
+		C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB89D1BC8AD410002AAB2 /* CommonController.m */; settings = {ASSET_TAGS = (); }; };
+		C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2CFB8CC1BC8ADD10002AAB2 /* CommonClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8B91BC8ADD10002AAB2 /* CommonClickCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2CFB8CD1BC8ADD10002AAB2 /* CommonClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8BA1BC8ADD10002AAB2 /* CommonClickCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2CFB8CE1BC8ADD10002AAB2 /* CommonDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8BC1BC8ADD10002AAB2 /* CommonDetailsCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8BD1BC8ADD10002AAB2 /* CommonDetailsCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D1396B1BC5F9CA00D4B1F7 /* Male.png */; settings = {ASSET_TAGS = (); }; };
+		C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D1396D1BC5F9D100D4B1F7 /* Female.png */; settings = {ASSET_TAGS = (); }; };
+		C2EB3E961BC7FA3B003E81A9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EB3E951BC7FA3B003E81A9 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C61BC7B6EC00934592 /* lovew.png */; settings = {ASSET_TAGS = (); }; };
+		C2EC44CA1BC7B6EC00934592 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C71BC7B6EC00934592 /* share.png */; settings = {ASSET_TAGS = (); }; };
+		C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C81BC7B6EC00934592 /* Text.png */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C28EA6901BC3A9DA00B394F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C28EA66E1BC3A9DA00B394F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C28EA6751BC3A9DA00B394F5;
+			remoteInfo = MedicineNurse;
+		};
+		C28EA69B1BC3A9DA00B394F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C28EA66E1BC3A9DA00B394F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C28EA6751BC3A9DA00B394F5;
+			remoteInfo = MedicineNurse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85ABDA66B6F25486D79C6217 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92CC3A1C94F2DBB8C58B1320 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C2002E9B1BC4A96C0007F7B9 /* CommonDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailModel.h; sourceTree = "<group>"; };
+		C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailModel.m; sourceTree = "<group>"; };
+		C2002E9D1BC4A96C0007F7B9 /* DrugAndnewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugAndnewsListModel.h; sourceTree = "<group>"; };
+		C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugAndnewsListModel.m; sourceTree = "<group>"; };
+		C216DFDC1BCB487B009974FF /* CommonDrugDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDrugDetailsController.h; sourceTree = "<group>"; };
+		C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDrugDetailsController.m; sourceTree = "<group>"; };
+		C23A32EB1BC53F31007320E1 /* CommonClassifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonClassifyController.h; sourceTree = "<group>"; };
+		C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonClassifyController.m; sourceTree = "<group>"; };
+		C23A32ED1BC53F31007320E1 /* CommonDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailsController.h; sourceTree = "<group>"; };
+		C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailsController.m; sourceTree = "<group>"; };
+		C23A32F21BC558E4007320E1 /* Child.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Child.png; sourceTree = "<group>"; };
+		C23A32F31BC558E4007320E1 /* Chinese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chinese.png; sourceTree = "<group>"; };
+		C23A32F41BC558E4007320E1 /* Infect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Infect.png; sourceTree = "<group>"; };
+		C23A32F61BC558E4007320E1 /* Medicin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Medicin.png; sourceTree = "<group>"; };
+		C23A32F71BC558E4007320E1 /* Mentality.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mentality.png; sourceTree = "<group>"; };
+		C23A32F81BC558E4007320E1 /* Organs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Organs.png; sourceTree = "<group>"; };
+		C23A32F91BC558E4007320E1 /* Rheumatism.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rheumatism.png; sourceTree = "<group>"; };
+		C23A32FA1BC558E4007320E1 /* Skin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skin.png; sourceTree = "<group>"; };
+		C23A32FB1BC558E4007320E1 /* Surgery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Surgery.png; sourceTree = "<group>"; };
+		C23A346D1BC55D0C007320E1 /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
+		C23A346F1BC562CA007320E1 /* CommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelper.h; sourceTree = "<group>"; };
+		C23A34701BC562CA007320E1 /* CommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelper.m; sourceTree = "<group>"; };
+		C24C12241BC4ABC5000EF4A0 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNurse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28EA67A1BC3A9DA00B394F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C28EA6831BC3A9DA00B394F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C28EA6881BC3A9DA00B394F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C28EA68A1BC3A9DA00B394F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28EA68F1BC3A9DA00B394F5 /* MedicineNurseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineNurseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28EA6931BC3A9DA00B394F5 /* MedicineNurseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicineNurseTests.m; sourceTree = "<group>"; };
+		C28EA6951BC3A9DA00B394F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28EA69A1BC3A9DA00B394F5 /* MedicineNurseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineNurseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28EA69E1BC3A9DA00B394F5 /* MedicineNurseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicineNurseUITests.m; sourceTree = "<group>"; };
+		C28EA6A01BC3A9DA00B394F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28EA6AE1BC3C52700B394F5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2953E091BCA5F8900466B76 /* CommonNewsDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNewsDetailsController.h; sourceTree = "<group>"; };
+		C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNewsDetailsController.m; sourceTree = "<group>"; };
+		C2953E0C1BCA70D300466B76 /* CommonTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableController.m; sourceTree = "<group>"; };
+		C299EAF41BC3CF7E0087A7F8 /* CommonSymptomsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSymptomsModel.h; sourceTree = "<group>"; };
+		C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSymptomsModel.m; sourceTree = "<group>"; };
+		C2CFB89C1BC8AD410002AAB2 /* CommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonController.h; sourceTree = "<group>"; };
+		C2CFB89D1BC8AD410002AAB2 /* CommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonController.m; sourceTree = "<group>"; };
+		C2CFB89E1BC8AD410002AAB2 /* CommonTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableController.h; sourceTree = "<group>"; };
+		C2CFB8B51BC8ADD10002AAB2 /* CommonClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonClassifyCell.h; sourceTree = "<group>"; };
+		C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonClassifyCell.m; sourceTree = "<group>"; };
+		C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonClassifyCell.xib; sourceTree = "<group>"; };
+		C2CFB8B81BC8ADD10002AAB2 /* CommonClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonClickCell.h; sourceTree = "<group>"; };
+		C2CFB8B91BC8ADD10002AAB2 /* CommonClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonClickCell.m; sourceTree = "<group>"; };
+		C2CFB8BA1BC8ADD10002AAB2 /* CommonClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonClickCell.xib; sourceTree = "<group>"; };
+		C2CFB8BB1BC8ADD10002AAB2 /* CommonDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailsCell.h; sourceTree = "<group>"; };
+		C2CFB8BC1BC8ADD10002AAB2 /* CommonDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailsCell.m; sourceTree = "<group>"; };
+		C2CFB8BD1BC8ADD10002AAB2 /* CommonDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonDetailsCell.xib; sourceTree = "<group>"; };
+		C2D1396B1BC5F9CA00D4B1F7 /* Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Male.png; sourceTree = "<group>"; };
+		C2D1396D1BC5F9D100D4B1F7 /* Female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Female.png; sourceTree = "<group>"; };
+		C2D15F0F1BC535CD000CB956 /* MedicineNurse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicineNurse.pch; sourceTree = "<group>"; };
+		C2D15F101BC536E9000CB956 /* URLAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLAPI.h; sourceTree = "<group>"; };
+		C2EB3E941BC7FA3B003E81A9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C2EB3E951BC7FA3B003E81A9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C2EC44C61BC7B6EC00934592 /* lovew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovew.png; sourceTree = "<group>"; };
+		C2EC44C71BC7B6EC00934592 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		C2EC44C81BC7B6EC00934592 /* Text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text.png; sourceTree = "<group>"; };
+		DF3A9E4C6BB109E4FF0572F2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C28EA6731BC3A9DA00B394F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5D751078EB568CED7A0148 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28EA68C1BC3A9DA00B394F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28EA6971BC3A9DA00B394F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D7F21F597D19EBCC2325C5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92CC3A1C94F2DBB8C58B1320 /* Pods.debug.xcconfig */,
+				DF3A9E4C6BB109E4FF0572F2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5BA8737AD6297E9AC317AC75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85ABDA66B6F25486D79C6217 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C23A32F11BC558E4007320E1 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				C23A346D1BC55D0C007320E1 /* hand.png */,
+				C23A32F61BC558E4007320E1 /* Medicin.png */,
+				C23A32FB1BC558E4007320E1 /* Surgery.png */,
+				C23A32F31BC558E4007320E1 /* Chinese.png */,
+				C2D1396B1BC5F9CA00D4B1F7 /* Male.png */,
+				C23A32F81BC558E4007320E1 /* Organs.png */,
+				C23A32F91BC558E4007320E1 /* Rheumatism.png */,
+				C2D1396D1BC5F9D100D4B1F7 /* Female.png */,
+				C23A32F41BC558E4007320E1 /* Infect.png */,
+				C23A32FA1BC558E4007320E1 /* Skin.png */,
+				C23A32F21BC558E4007320E1 /* Child.png */,
+				C23A32F71BC558E4007320E1 /* Mentality.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		C28EA66D1BC3A9DA00B394F5 = {
+			isa = PBXGroup;
+			children = (
+				C28EA6781BC3A9DA00B394F5 /* MedicineNurse */,
+				C28EA6921BC3A9DA00B394F5 /* MedicineNurseTests */,
+				C28EA69D1BC3A9DA00B394F5 /* MedicineNurseUITests */,
+				C28EA6771BC3A9DA00B394F5 /* Products */,
+				2D7F21F597D19EBCC2325C5E /* Pods */,
+				5BA8737AD6297E9AC317AC75 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C28EA6771BC3A9DA00B394F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */,
+				C28EA68F1BC3A9DA00B394F5 /* MedicineNurseTests.xctest */,
+				C28EA69A1BC3A9DA00B394F5 /* MedicineNurseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C28EA6781BC3A9DA00B394F5 /* MedicineNurse */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA6AC1BC3C52700B394F5 /* Classes */,
+				C28EA6821BC3A9DA00B394F5 /* Main.storyboard */,
+				C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */,
+				C28EA6871BC3A9DA00B394F5 /* LaunchScreen.storyboard */,
+				C28EA68A1BC3A9DA00B394F5 /* Info.plist */,
+				C28EA6791BC3A9DA00B394F5 /* Supporting Files */,
+			);
+			path = MedicineNurse;
+			sourceTree = "<group>";
+		};
+		C28EA6791BC3A9DA00B394F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA67A1BC3A9DA00B394F5 /* main.m */,
+				C2D15F0F1BC535CD000CB956 /* MedicineNurse.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C28EA6921BC3A9DA00B394F5 /* MedicineNurseTests */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA6931BC3A9DA00B394F5 /* MedicineNurseTests.m */,
+				C28EA6951BC3A9DA00B394F5 /* Info.plist */,
+			);
+			path = MedicineNurseTests;
+			sourceTree = "<group>";
+		};
+		C28EA69D1BC3A9DA00B394F5 /* MedicineNurseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA69E1BC3A9DA00B394F5 /* MedicineNurseUITests.m */,
+				C28EA6A01BC3A9DA00B394F5 /* Info.plist */,
+			);
+			path = MedicineNurseUITests;
+			sourceTree = "<group>";
+		};
+		C28EA6AC1BC3C52700B394F5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA6AD1BC3C52700B394F5 /* AppDalegate */,
+				C28EA6B01BC3C52700B394F5 /* General */,
+				C28EA6B51BC3C52700B394F5 /* Helpers */,
+				C28EA6B61BC3C52700B394F5 /* Macro */,
+				C28EA6B71BC3C52700B394F5 /* Models */,
+				C28EA6B81BC3C52700B394F5 /* Resources */,
+				C28EA6B91BC3C52700B394F5 /* Scences */,
+				C2D13AD61BC60E9300D4B1F7 /* Vendors */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C28EA6AD1BC3C52700B394F5 /* AppDalegate */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA6AE1BC3C52700B394F5 /* AppDelegate.h */,
+				C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */,
+				C2EB3E941BC7FA3B003E81A9 /* RootViewController.h */,
+				C2EB3E951BC7FA3B003E81A9 /* RootViewController.m */,
+			);
+			path = AppDalegate;
+			sourceTree = "<group>";
+		};
+		C28EA6B01BC3C52700B394F5 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA6B11BC3C52700B394F5 /* Categories */,
+				C28EA6B21BC3C52700B394F5 /* ViewControllers */,
+				C28EA81D1BC3FE6900B394F5 /* Views */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		C28EA6B11BC3C52700B394F5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C28EA6B21BC3C52700B394F5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2CFB89B1BC8AD410002AAB2 /* CommonController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C28EA6B51BC3C52700B394F5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C23A346F1BC562CA007320E1 /* CommonHelper.h */,
+				C23A34701BC562CA007320E1 /* CommonHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C28EA6B61BC3C52700B394F5 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C2D15F101BC536E9000CB956 /* URLAPI.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		C28EA6B71BC3C52700B394F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C299EAF41BC3CF7E0087A7F8 /* CommonSymptomsModel.h */,
+				C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */,
+				C2002E9B1BC4A96C0007F7B9 /* CommonDetailModel.h */,
+				C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */,
+				C2002E9D1BC4A96C0007F7B9 /* DrugAndnewsListModel.h */,
+				C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C28EA6B81BC3C52700B394F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC44C51BC7B6EC00934592 /* WQImage */,
+				C23A32F11BC558E4007320E1 /* img */,
+				C24C12241BC4ABC5000EF4A0 /* default@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C28EA6B91BC3C52700B394F5 /* Scences */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA9611BC3FEFF00B394F5 /* View */,
+				C28EA9621BC3FEFF00B394F5 /* ViewController */,
+			);
+			path = Scences;
+			sourceTree = "<group>";
+		};
+		C28EA81D1BC3FE6900B394F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C28EA81E1BC3FE6900B394F5 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C28EA81E1BC3FE6900B394F5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C2CFB8B41BC8ADD10002AAB2 /* CommonCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C28EA9611BC3FEFF00B394F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C28EA9621BC3FEFF00B394F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C23A32EB1BC53F31007320E1 /* CommonClassifyController.h */,
+				C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */,
+				C23A32ED1BC53F31007320E1 /* CommonDetailsController.h */,
+				C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C2CFB89B1BC8AD410002AAB2 /* CommonController */ = {
+			isa = PBXGroup;
+			children = (
+				C2CFB89C1BC8AD410002AAB2 /* CommonController.h */,
+				C2CFB89D1BC8AD410002AAB2 /* CommonController.m */,
+				C2CFB89E1BC8AD410002AAB2 /* CommonTableController.h */,
+				C2953E0C1BCA70D300466B76 /* CommonTableController.m */,
+				C2953E091BCA5F8900466B76 /* CommonNewsDetailsController.h */,
+				C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */,
+				C216DFDC1BCB487B009974FF /* CommonDrugDetailsController.h */,
+				C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */,
+			);
+			path = CommonController;
+			sourceTree = "<group>";
+		};
+		C2CFB8B41BC8ADD10002AAB2 /* CommonCells */ = {
+			isa = PBXGroup;
+			children = (
+				C2CFB8B51BC8ADD10002AAB2 /* CommonClassifyCell.h */,
+				C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */,
+				C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */,
+				C2CFB8BB1BC8ADD10002AAB2 /* CommonDetailsCell.h */,
+				C2CFB8BC1BC8ADD10002AAB2 /* CommonDetailsCell.m */,
+				C2CFB8BD1BC8ADD10002AAB2 /* CommonDetailsCell.xib */,
+				C2CFB8B81BC8ADD10002AAB2 /* CommonClickCell.h */,
+				C2CFB8B91BC8ADD10002AAB2 /* CommonClickCell.m */,
+				C2CFB8BA1BC8ADD10002AAB2 /* CommonClickCell.xib */,
+			);
+			path = CommonCells;
+			sourceTree = "<group>";
+		};
+		C2D13AD61BC60E9300D4B1F7 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		C2EC44C51BC7B6EC00934592 /* WQImage */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC44C61BC7B6EC00934592 /* lovew.png */,
+				C2EC44C71BC7B6EC00934592 /* share.png */,
+				C2EC44C81BC7B6EC00934592 /* Text.png */,
+			);
+			name = WQImage;
+			path = img/WQImage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C28EA6751BC3A9DA00B394F5 /* MedicineNurse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28EA6A31BC3A9DA00B394F5 /* Build configuration list for PBXNativeTarget "MedicineNurse" */;
+			buildPhases = (
+				FE92F6D38B24E6D6E645C5F1 /* Check Pods Manifest.lock */,
+				C28EA6721BC3A9DA00B394F5 /* Sources */,
+				C28EA6731BC3A9DA00B394F5 /* Frameworks */,
+				C28EA6741BC3A9DA00B394F5 /* Resources */,
+				6E69F699CA8122245CA629CF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedicineNurse;
+			productName = MedicineNurse;
+			productReference = C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C28EA68E1BC3A9DA00B394F5 /* MedicineNurseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28EA6A61BC3A9DA00B394F5 /* Build configuration list for PBXNativeTarget "MedicineNurseTests" */;
+			buildPhases = (
+				C28EA68B1BC3A9DA00B394F5 /* Sources */,
+				C28EA68C1BC3A9DA00B394F5 /* Frameworks */,
+				C28EA68D1BC3A9DA00B394F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C28EA6911BC3A9DA00B394F5 /* PBXTargetDependency */,
+			);
+			name = MedicineNurseTests;
+			productName = MedicineNurseTests;
+			productReference = C28EA68F1BC3A9DA00B394F5 /* MedicineNurseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C28EA6991BC3A9DA00B394F5 /* MedicineNurseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28EA6A91BC3A9DA00B394F5 /* Build configuration list for PBXNativeTarget "MedicineNurseUITests" */;
+			buildPhases = (
+				C28EA6961BC3A9DA00B394F5 /* Sources */,
+				C28EA6971BC3A9DA00B394F5 /* Frameworks */,
+				C28EA6981BC3A9DA00B394F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C28EA69C1BC3A9DA00B394F5 /* PBXTargetDependency */,
+			);
+			name = MedicineNurseUITests;
+			productName = MedicineNurseUITests;
+			productReference = C28EA69A1BC3A9DA00B394F5 /* MedicineNurseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C28EA66E1BC3A9DA00B394F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Adar-Li";
+				TargetAttributes = {
+					C28EA6751BC3A9DA00B394F5 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = M27U6W77DY;
+					};
+					C28EA68E1BC3A9DA00B394F5 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = C28EA6751BC3A9DA00B394F5;
+					};
+					C28EA6991BC3A9DA00B394F5 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = C28EA6751BC3A9DA00B394F5;
+					};
+				};
+			};
+			buildConfigurationList = C28EA6711BC3A9DA00B394F5 /* Build configuration list for PBXProject "MedicineNurse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C28EA66D1BC3A9DA00B394F5;
+			productRefGroup = C28EA6771BC3A9DA00B394F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C28EA6751BC3A9DA00B394F5 /* MedicineNurse */,
+				C28EA68E1BC3A9DA00B394F5 /* MedicineNurseTests */,
+				C28EA6991BC3A9DA00B394F5 /* MedicineNurseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C28EA6741BC3A9DA00B394F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23A33051BC558E4007320E1 /* Skin.png in Resources */,
+				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
+				C23A33061BC558E4007320E1 /* Surgery.png in Resources */,
+				C23A33011BC558E4007320E1 /* Medicin.png in Resources */,
+				C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */,
+				C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */,
+				C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */,
+				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
+				C23A32FD1BC558E4007320E1 /* Child.png in Resources */,
+				C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */,
+				C23A33031BC558E4007320E1 /* Organs.png in Resources */,
+				C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */,
+				C23A346E1BC55D0C007320E1 /* hand.png in Resources */,
+				C23A33021BC558E4007320E1 /* Mentality.png in Resources */,
+				C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */,
+				C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */,
+				C2CFB8CD1BC8ADD10002AAB2 /* CommonClickCell.xib in Resources */,
+				C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */,
+				C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */,
+				C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */,
+				C2EC44CA1BC7B6EC00934592 /* share.png in Resources */,
+				C23A33041BC558E4007320E1 /* Rheumatism.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28EA68D1BC3A9DA00B394F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28EA6981BC3A9DA00B394F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E69F699CA8122245CA629CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE92F6D38B24E6D6E645C5F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C28EA6721BC3A9DA00B394F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CFB8CC1BC8ADD10002AAB2 /* CommonClickCell.m in Sources */,
+				C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */,
+				C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */,
+				C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */,
+				C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */,
+				C2CFB8CE1BC8ADD10002AAB2 /* CommonDetailsCell.m in Sources */,
+				C2EB3E961BC7FA3B003E81A9 /* RootViewController.m in Sources */,
+				C23A32F01BC53F31007320E1 /* CommonDetailsController.m in Sources */,
+				C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */,
+				C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */,
+				C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */,
+				C2002EA01BC4A96C0007F7B9 /* DrugAndnewsListModel.m in Sources */,
+				C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */,
+				C23A32EF1BC53F31007320E1 /* CommonClassifyController.m in Sources */,
+				C2002E9F1BC4A96C0007F7B9 /* CommonDetailModel.m in Sources */,
+				C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28EA68B1BC3A9DA00B394F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28EA6941BC3A9DA00B394F5 /* MedicineNurseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28EA6961BC3A9DA00B394F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28EA69F1BC3A9DA00B394F5 /* MedicineNurseUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C28EA6911BC3A9DA00B394F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C28EA6751BC3A9DA00B394F5 /* MedicineNurse */;
+			targetProxy = C28EA6901BC3A9DA00B394F5 /* PBXContainerItemProxy */;
+		};
+		C28EA69C1BC3A9DA00B394F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C28EA6751BC3A9DA00B394F5 /* MedicineNurse */;
+			targetProxy = C28EA69B1BC3A9DA00B394F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C28EA6821BC3A9DA00B394F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C28EA6831BC3A9DA00B394F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C28EA6871BC3A9DA00B394F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C28EA6881BC3A9DA00B394F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C28EA6A11BC3A9DA00B394F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C28EA6A21BC3A9DA00B394F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C28EA6A41BC3A9DA00B394F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92CC3A1C94F2DBB8C58B1320 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = MedicineNurse/MedicineNurse.pch;
+				INFOPLIST_FILE = MedicineNurse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C28EA6A51BC3A9DA00B394F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3A9E4C6BB109E4FF0572F2 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = MedicineNurse/MedicineNurse.pch;
+				INFOPLIST_FILE = MedicineNurse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C28EA6A71BC3A9DA00B394F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MedicineNurseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedicineNurse.app/MedicineNurse";
+			};
+			name = Debug;
+		};
+		C28EA6A81BC3A9DA00B394F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MedicineNurseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedicineNurse.app/MedicineNurse";
+			};
+			name = Release;
+		};
+		C28EA6AA1BC3A9DA00B394F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MedicineNurseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MedicineNurse;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C28EA6AB1BC3A9DA00B394F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MedicineNurseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MedicineNurse;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C28EA6711BC3A9DA00B394F5 /* Build configuration list for PBXProject "MedicineNurse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28EA6A11BC3A9DA00B394F5 /* Debug */,
+				C28EA6A21BC3A9DA00B394F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28EA6A31BC3A9DA00B394F5 /* Build configuration list for PBXNativeTarget "MedicineNurse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28EA6A41BC3A9DA00B394F5 /* Debug */,
+				C28EA6A51BC3A9DA00B394F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28EA6A61BC3A9DA00B394F5 /* Build configuration list for PBXNativeTarget "MedicineNurseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28EA6A71BC3A9DA00B394F5 /* Debug */,
+				C28EA6A81BC3A9DA00B394F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28EA6A91BC3A9DA00B394F5 /* Build configuration list for PBXNativeTarget "MedicineNurseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28EA6AA1BC3A9DA00B394F5 /* Debug */,
+				C28EA6AB1BC3A9DA00B394F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C28EA66E1BC3A9DA00B394F5 /* Project object */;
+}

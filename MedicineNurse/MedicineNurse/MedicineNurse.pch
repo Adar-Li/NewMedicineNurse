@@ -1,0 +1,23 @@
+//
+//  MedicineNurse.pch
+//  MedicineNurse
+//
+//  Created by lanou3g on 15/10/7.
+//  Copyright © 2015年 Adar-Li. All rights reserved.
+//
+
+#ifndef MedicineNurse_pch
+#define MedicineNurse_pch
+
+#define kScremHeight [UIScreen mainScreen].bounds.size.height
+#define kScremWidth [UIScreen mainScreen].bounds.size.width
+
+
+
+
+
+//引入网址头文件
+#import "URLAPI.h"
+
+
+#endif /* MedicineNurse_pch */

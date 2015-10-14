@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="CommonClassifyCell">
+            <rect key="frame" x="0.0" y="0.0" width="134" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="134" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风湿免疫科" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-7F-FIf">
+                        <rect key="frame" x="46" y="18" width="84" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default.png" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-dj-pVf">
+                        <rect key="frame" x="8" y="17" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="r73-hy-np4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Wj0-7F-FIf" firstAttribute="leading" secondItem="pRm-dj-pVf" secondAttribute="trailing" constant="13" id="09S-OK-tt5"/>
+                    <constraint firstItem="pRm-dj-pVf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="Svq-7K-zMS"/>
+                    <constraint firstItem="pRm-dj-pVf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="THC-Dl-x0H"/>
+                    <constraint firstItem="pRm-dj-pVf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="agn-zu-yJP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Wj0-7F-FIf" secondAttribute="trailing" constant="-4" id="iMo-3z-3fJ"/>
+                    <constraint firstItem="pRm-dj-pVf" firstAttribute="centerY" secondItem="Wj0-7F-FIf" secondAttribute="centerY" id="ogu-vA-Pz3"/>
+                    <constraint firstItem="Wj0-7F-FIf" firstAttribute="bottom" secondItem="pRm-dj-pVf" secondAttribute="bottom" id="tq1-FK-ZWh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="imageView4Classify" destination="pRm-dj-pVf" id="iuc-pT-QgE"/>
+                <outlet property="label4Classify" destination="Wj0-7F-FIf" id="mkx-S1-Jow"/>
+            </connections>
+            <point key="canvasLocation" x="558" y="436"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default.png" width="375" height="562"/>
+    </resources>
+</document>

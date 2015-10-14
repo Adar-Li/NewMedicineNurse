@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="CommonClickCell">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default.png" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-Xv-n1x">
+                        <rect key="frame" x="8" y="8" width="58" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="Nfq-Ek-Tnn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="各种感冒治疗方案" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZc-SH-Oet">
+                        <rect key="frame" x="74" y="8" width="220" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上百种感冒药主要考不到20种成分的互相组合你造吗" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0F-Zs-JhE">
+                        <rect key="frame" x="74" y="26" width="241" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZZc-SH-Oet" firstAttribute="top" secondItem="T9n-Xv-n1x" secondAttribute="top" id="DRC-HW-y4N"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="K0F-Zs-JhE" secondAttribute="trailing" constant="2" id="JuG-Jj-Hjr"/>
+                    <constraint firstItem="K0F-Zs-JhE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="N4r-I9-oR1"/>
+                    <constraint firstItem="ZZc-SH-Oet" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="UzS-JM-VlK"/>
+                    <constraint firstItem="K0F-Zs-JhE" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="bvf-y0-e9j"/>
+                    <constraint firstItem="T9n-Xv-n1x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="lDd-CS-Ag3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZZc-SH-Oet" secondAttribute="bottom" constant="34" id="mPn-hi-3l8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZZc-SH-Oet" secondAttribute="trailing" constant="23" id="nFR-FD-6jb"/>
+                    <constraint firstItem="K0F-Zs-JhE" firstAttribute="bottom" secondItem="T9n-Xv-n1x" secondAttribute="bottom" id="vuk-ie-sUb"/>
+                    <constraint firstItem="ZZc-SH-Oet" firstAttribute="leading" secondItem="T9n-Xv-n1x" secondAttribute="trailing" constant="8" symbolic="YES" id="wSx-eR-wLF"/>
+                    <constraint firstItem="K0F-Zs-JhE" firstAttribute="leading" secondItem="ZZc-SH-Oet" secondAttribute="leading" id="xDv-v7-x26"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="img4InfoLogo" destination="T9n-Xv-n1x" id="O3S-iU-FoC"/>
+                <outlet property="label4InfoContent" destination="K0F-Zs-JhE" id="nbP-Ml-4eY"/>
+                <outlet property="label4InfoTitle" destination="ZZc-SH-Oet" id="ANG-KB-KrS"/>
+            </connections>
+            <point key="canvasLocation" x="264.5" y="388.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default.png" width="375" height="562"/>
+    </resources>
+</document>
