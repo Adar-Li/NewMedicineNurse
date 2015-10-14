@@ -28,8 +28,6 @@
 
 
 
-////推荐界面轮播图
-#define kHomeTJSCURL @"http://dxy.com/app/i/feed/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&vc=4.0.5"
 //专题界面
 #define kHomeSBURL @"http://dxy.com/app/i/columns/special/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=1&vc=4.0.5"
 

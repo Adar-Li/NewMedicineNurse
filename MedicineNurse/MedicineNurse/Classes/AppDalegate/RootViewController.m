@@ -60,8 +60,7 @@
 //    UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
 //    User.tabBarItem.title = @"用户";
     
-    
-    [self parentViewController];
+
     
     self.viewControllers = @[homeNC,common,suffer];
 

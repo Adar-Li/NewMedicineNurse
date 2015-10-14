@@ -111,7 +111,7 @@ static NSString * hccCell = @"hccCellID";
 
 //绘制主界面tableView
 - (void)drawTableView{
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, kScremWidth, kScremHeight - 108) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, kScremWidth, kScremHeight - 88) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     //注册自定义cell
@@ -134,7 +134,6 @@ static NSString * hccCell = @"hccCellID";
         [weakSelf pullFromtheButton];
     }];
     
-    
 }
 #pragma mark --上拉刷新下拉加载事件
 - (void)pullFromtheButton{
@@ -144,7 +143,7 @@ static NSString * hccCell = @"hccCellID";
    [[HomeHelper shareHomeHelper]analysisMoreDataWithURL:URL :^{
        [self.tableView removeFromSuperview];
        [self drawTableView];
-       self.tableView.contentOffset = CGPointMake(0, kScremWidth *pageIndex);
+       self.tableView.contentOffset = CGPointMake(0, kScremWidth *(pageIndex -1));
    }];
     
     
