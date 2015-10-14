@@ -2,3 +2,5 @@ pod 'AFNetworking', '~> 2.6.0'
 pod 'SDWebImage'
 pod 'SVPullToRefresh'
 
+pod 'AVOSCloud'
+

@@ -7,6 +7,7 @@
 //
 
 #import "UserFindController.h"
+#import "AVUser.h"
 
 @interface UserFindController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField4Email;
@@ -34,6 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btn4Find:(id)sender {
+    
+    [AVUser requestPasswordResetForEmailInBackground:@"myemail@example.com" block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            
+        } else {
+            
+        }
+    }];
+    
+    
 }
 - (IBAction)btn4Cancel:(id)sender {
     self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
