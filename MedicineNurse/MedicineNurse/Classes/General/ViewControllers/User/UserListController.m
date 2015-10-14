@@ -34,7 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1];
     
     self.navigationItem.title = @"用户";
@@ -53,7 +52,8 @@
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     outerRoundFlashButton.clickBlock = ^(void) {
-        NSLog(@"测试");
+    
+        
     };
     
     [self.cardView addSubview:outerRoundFlashButton];
@@ -68,14 +68,11 @@
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     outerRoundFlashButton.clickBlock = ^(void) {
         UserController *user = [UserController new];
-        user.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        user.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:user animated:YES completion:nil];
     };
     [self.cardView addSubview:outerRoundFlashButton];
-    
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

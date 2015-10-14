@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
 @interface AppDelegate ()
 
 @end
@@ -21,7 +22,11 @@
     self.window.backgroundColor = [UIColor cyanColor];
     
     RootViewController *Root = [[RootViewController alloc]init];
-//    UINavigationController *RootNC = [[UINavigationController alloc]initWithRootViewController:Root];
+
+    [AVOSCloud setApplicationId:@"qdBwKAv6gXz7SgtXKilwJHC6"
+                      clientKey:@"ihIQvOfM8gIDip3lBd0OgALP"];
+    
+    
     self.window.rootViewController = Root;
 
     [self.window makeKeyAndVisible];
