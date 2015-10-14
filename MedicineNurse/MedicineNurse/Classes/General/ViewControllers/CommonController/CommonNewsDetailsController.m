@@ -8,6 +8,7 @@
 
 #import "CommonNewsDetailsController.h"
 #import "AFHTTPSessionManager.h"
+#import "GiFHUD.h"
 
 @interface CommonNewsDetailsController ()
 {
@@ -31,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+    
     index = 0;
     [self requestNewsDetail];
     //调用绘制表头事件
@@ -53,7 +57,7 @@
         [self.webView loadHTMLString:self.newsDetail baseURL:nil];
         _webView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:_webView];
-        
+        [GiFHUD dismiss];
     } failure:^(NSURLSessionDataTask *  task, NSError *  error) {
         
     }];

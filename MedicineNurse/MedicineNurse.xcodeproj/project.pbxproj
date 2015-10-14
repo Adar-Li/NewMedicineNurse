@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D5D751078EB568CED7A0148 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ABDA66B6F25486D79C6217 /* libPods.a */; };
-		C2002E9F1BC4A96C0007F7B9 /* CommonDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */; settings = {ASSET_TAGS = (); }; };
-		C2002EA01BC4A96C0007F7B9 /* DrugAndnewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */; settings = {ASSET_TAGS = (); }; };
 		C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */; settings = {ASSET_TAGS = (); }; };
-		C23A32EF1BC53F31007320E1 /* CommonClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */; settings = {ASSET_TAGS = (); }; };
-		C23A32F01BC53F31007320E1 /* CommonDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */; settings = {ASSET_TAGS = (); }; };
 		C23A32FD1BC558E4007320E1 /* Child.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F21BC558E4007320E1 /* Child.png */; settings = {ASSET_TAGS = (); }; };
 		C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F31BC558E4007320E1 /* Chinese.png */; settings = {ASSET_TAGS = (); }; };
 		C23A32FF1BC558E4007320E1 /* Infect.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F41BC558E4007320E1 /* Infect.png */; settings = {ASSET_TAGS = (); }; };
@@ -24,7 +20,6 @@
 		C23A33061BC558E4007320E1 /* Surgery.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32FB1BC558E4007320E1 /* Surgery.png */; settings = {ASSET_TAGS = (); }; };
 		C23A346E1BC55D0C007320E1 /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A346D1BC55D0C007320E1 /* hand.png */; settings = {ASSET_TAGS = (); }; };
 		C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A34701BC562CA007320E1 /* CommonHelper.m */; settings = {ASSET_TAGS = (); }; };
-		C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C24C12241BC4ABC5000EF4A0 /* default@2x.png */; settings = {ASSET_TAGS = (); }; };
 		C2500FF41BCE220B00057CDD /* SufferDeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF51BCE220B00057CDD /* SufferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF11BCE220B00057CDD /* SufferTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF31BCE220B00057CDD /* SufferViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -41,7 +36,6 @@
 		C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */; };
 		C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */; settings = {ASSET_TAGS = (); }; };
 		C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0C1BCA70D300466B76 /* CommonTableController.m */; settings = {ASSET_TAGS = (); }; };
-		C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */; };
 		C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB89D1BC8AD410002AAB2 /* CommonController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -49,6 +43,18 @@
 		C2CFB8CD1BC8ADD10002AAB2 /* CommonClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8BA1BC8ADD10002AAB2 /* CommonClickCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CE1BC8ADD10002AAB2 /* CommonDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8BC1BC8ADD10002AAB2 /* CommonDetailsCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8BD1BC8ADD10002AAB2 /* CommonDetailsCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7C81BCE2807001745D0 /* CommonDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7C31BCE2807001745D0 /* CommonDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7C91BCE2807001745D0 /* CommonSymptomsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7C51BCE2807001745D0 /* CommonSymptomsModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7CA1BCE2807001745D0 /* DrugAndnewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7C71BCE2807001745D0 /* DrugAndnewsListModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7D01BCE2866001745D0 /* CommonClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7CD1BCE2866001745D0 /* CommonClassifyController.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7D11BCE2866001745D0 /* CommonDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7CF1BCE2866001745D0 /* CommonDetailsController.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7DA1BCE2D5C001745D0 /* UserListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7D91BCE2D5C001745D0 /* UserListController.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7DC1BCE2EAE001745D0 /* mie.gif in Resources */ = {isa = PBXBuildFile; fileRef = C2D0B7DB1BCE2EAE001745D0 /* mie.gif */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7E61BCE2F68001745D0 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7DF1BCE2F68001745D0 /* GiFHUD.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7E71BCE2F68001745D0 /* RKCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7E21BCE2F68001745D0 /* RKCardView.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7E81BCE2F68001745D0 /* WZFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B7E51BCE2F68001745D0 /* WZFlashButton.m */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7EE1BCE3443001745D0 /* sheep1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D0B7EB1BCE3443001745D0 /* sheep1.png */; settings = {ASSET_TAGS = (); }; };
+		C2D0B7F01BCE3443001745D0 /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2D0B7ED1BCE3443001745D0 /* 111.jpg */; settings = {ASSET_TAGS = (); }; };
 		C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D1396B1BC5F9CA00D4B1F7 /* Male.png */; settings = {ASSET_TAGS = (); }; };
 		C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D1396D1BC5F9D100D4B1F7 /* Female.png */; settings = {ASSET_TAGS = (); }; };
 		C2EB3E961BC7FA3B003E81A9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EB3E951BC7FA3B003E81A9 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -99,16 +105,8 @@
 /* Begin PBXFileReference section */
 		85ABDA66B6F25486D79C6217 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CC3A1C94F2DBB8C58B1320 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C2002E9B1BC4A96C0007F7B9 /* CommonDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailModel.h; sourceTree = "<group>"; };
-		C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailModel.m; sourceTree = "<group>"; };
-		C2002E9D1BC4A96C0007F7B9 /* DrugAndnewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugAndnewsListModel.h; sourceTree = "<group>"; };
-		C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugAndnewsListModel.m; sourceTree = "<group>"; };
 		C216DFDC1BCB487B009974FF /* CommonDrugDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDrugDetailsController.h; sourceTree = "<group>"; };
 		C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDrugDetailsController.m; sourceTree = "<group>"; };
-		C23A32EB1BC53F31007320E1 /* CommonClassifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonClassifyController.h; sourceTree = "<group>"; };
-		C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonClassifyController.m; sourceTree = "<group>"; };
-		C23A32ED1BC53F31007320E1 /* CommonDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailsController.h; sourceTree = "<group>"; };
-		C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailsController.m; sourceTree = "<group>"; };
 		C23A32F21BC558E4007320E1 /* Child.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Child.png; sourceTree = "<group>"; };
 		C23A32F31BC558E4007320E1 /* Chinese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chinese.png; sourceTree = "<group>"; };
 		C23A32F41BC558E4007320E1 /* Infect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Infect.png; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		C23A346D1BC55D0C007320E1 /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
 		C23A346F1BC562CA007320E1 /* CommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHelper.h; sourceTree = "<group>"; };
 		C23A34701BC562CA007320E1 /* CommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHelper.m; sourceTree = "<group>"; };
-		C24C12241BC4ABC5000EF4A0 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 		C2500FEE1BCE220B00057CDD /* SufferDeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferDeTableViewController.h; sourceTree = "<group>"; };
 		C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferDeTableViewController.m; sourceTree = "<group>"; };
 		C2500FF01BCE220B00057CDD /* SufferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferTableViewController.h; sourceTree = "<group>"; };
@@ -153,8 +150,6 @@
 		C2953E091BCA5F8900466B76 /* CommonNewsDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNewsDetailsController.h; sourceTree = "<group>"; };
 		C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNewsDetailsController.m; sourceTree = "<group>"; };
 		C2953E0C1BCA70D300466B76 /* CommonTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableController.m; sourceTree = "<group>"; };
-		C299EAF41BC3CF7E0087A7F8 /* CommonSymptomsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSymptomsModel.h; sourceTree = "<group>"; };
-		C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSymptomsModel.m; sourceTree = "<group>"; };
 		C2CFB89C1BC8AD410002AAB2 /* CommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonController.h; sourceTree = "<group>"; };
 		C2CFB89D1BC8AD410002AAB2 /* CommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonController.m; sourceTree = "<group>"; };
 		C2CFB89E1BC8AD410002AAB2 /* CommonTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableController.h; sourceTree = "<group>"; };
@@ -167,6 +162,27 @@
 		C2CFB8BB1BC8ADD10002AAB2 /* CommonDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailsCell.h; sourceTree = "<group>"; };
 		C2CFB8BC1BC8ADD10002AAB2 /* CommonDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailsCell.m; sourceTree = "<group>"; };
 		C2CFB8BD1BC8ADD10002AAB2 /* CommonDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonDetailsCell.xib; sourceTree = "<group>"; };
+		C2D0B7C21BCE2807001745D0 /* CommonDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailModel.h; sourceTree = "<group>"; };
+		C2D0B7C31BCE2807001745D0 /* CommonDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailModel.m; sourceTree = "<group>"; };
+		C2D0B7C41BCE2807001745D0 /* CommonSymptomsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSymptomsModel.h; sourceTree = "<group>"; };
+		C2D0B7C51BCE2807001745D0 /* CommonSymptomsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSymptomsModel.m; sourceTree = "<group>"; };
+		C2D0B7C61BCE2807001745D0 /* DrugAndnewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugAndnewsListModel.h; sourceTree = "<group>"; };
+		C2D0B7C71BCE2807001745D0 /* DrugAndnewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugAndnewsListModel.m; sourceTree = "<group>"; };
+		C2D0B7CC1BCE2866001745D0 /* CommonClassifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonClassifyController.h; sourceTree = "<group>"; };
+		C2D0B7CD1BCE2866001745D0 /* CommonClassifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonClassifyController.m; sourceTree = "<group>"; };
+		C2D0B7CE1BCE2866001745D0 /* CommonDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailsController.h; sourceTree = "<group>"; };
+		C2D0B7CF1BCE2866001745D0 /* CommonDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailsController.m; sourceTree = "<group>"; };
+		C2D0B7D81BCE2D5C001745D0 /* UserListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListController.h; sourceTree = "<group>"; };
+		C2D0B7D91BCE2D5C001745D0 /* UserListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListController.m; sourceTree = "<group>"; };
+		C2D0B7DB1BCE2EAE001745D0 /* mie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mie.gif; sourceTree = "<group>"; };
+		C2D0B7DE1BCE2F68001745D0 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
+		C2D0B7DF1BCE2F68001745D0 /* GiFHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiFHUD.m; sourceTree = "<group>"; };
+		C2D0B7E11BCE2F68001745D0 /* RKCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKCardView.h; sourceTree = "<group>"; };
+		C2D0B7E21BCE2F68001745D0 /* RKCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKCardView.m; sourceTree = "<group>"; };
+		C2D0B7E41BCE2F68001745D0 /* WZFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZFlashButton.h; sourceTree = "<group>"; };
+		C2D0B7E51BCE2F68001745D0 /* WZFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZFlashButton.m; sourceTree = "<group>"; };
+		C2D0B7EB1BCE3443001745D0 /* sheep1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheep1.png; sourceTree = "<group>"; };
+		C2D0B7ED1BCE3443001745D0 /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
 		C2D1396B1BC5F9CA00D4B1F7 /* Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Male.png; sourceTree = "<group>"; };
 		C2D1396D1BC5F9D100D4B1F7 /* Female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Female.png; sourceTree = "<group>"; };
 		C2D15F0F1BC535CD000CB956 /* MedicineNurse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicineNurse.pch; sourceTree = "<group>"; };
@@ -428,6 +444,7 @@
 		C28EA6B21BC3C52700B394F5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2D0B7D71BCE2D17001745D0 /* User */,
 				C2500FED1BCE220B00057CDD /* SufferControl */,
 				C2FC63E11BCDFFBB00B2B22E /* Home */,
 				C2CFB89B1BC8AD410002AAB2 /* CommonController */,
@@ -459,14 +476,9 @@
 		C28EA6B71BC3C52700B394F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C2D0B7C11BCE2807001745D0 /* CommonModel */,
 				C25015E61BCE235200057CDD /* SufferModel */,
 				C2FC64091BCE01F900B2B22E /* HomeModel */,
-				C299EAF41BC3CF7E0087A7F8 /* CommonSymptomsModel.h */,
-				C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */,
-				C2002E9B1BC4A96C0007F7B9 /* CommonDetailModel.h */,
-				C2002E9C1BC4A96C0007F7B9 /* CommonDetailModel.m */,
-				C2002E9D1BC4A96C0007F7B9 /* DrugAndnewsListModel.h */,
-				C2002E9E1BC4A96C0007F7B9 /* DrugAndnewsListModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,10 +486,13 @@
 		C28EA6B81BC3C52700B394F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2D0B7DD1BCE2F68001745D0 /* GIFHUD */,
+				C2D0B7E01BCE2F68001745D0 /* RKCard */,
+				C2D0B7E31BCE2F68001745D0 /* WZFlashButton */,
+				C2D0B7DB1BCE2EAE001745D0 /* mie.gif */,
 				C2FC64101BCE029A00B2B22E /* HomeResource */,
 				C2EC44C51BC7B6EC00934592 /* WQImage */,
 				C23A32F11BC558E4007320E1 /* img */,
-				C24C12241BC4ABC5000EF4A0 /* default@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -519,12 +534,9 @@
 		C28EA9621BC3FEFF00B394F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C25015EA1BCE24E800057CDD /* SufferWeb */,
-				C23A32EB1BC53F31007320E1 /* CommonClassifyController.h */,
-				C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */,
-				C23A32ED1BC53F31007320E1 /* CommonDetailsController.h */,
-				C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */,
+				C2D0B7CB1BCE2866001745D0 /* Common */,
 				C2FC63D91BCDFE3A00B2B22E /* Home */,
+				C25015EA1BCE24E800057CDD /* SufferWeb */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -558,6 +570,68 @@
 				C2CFB8BA1BC8ADD10002AAB2 /* CommonClickCell.xib */,
 			);
 			path = CommonCells;
+			sourceTree = "<group>";
+		};
+		C2D0B7C11BCE2807001745D0 /* CommonModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0B7C21BCE2807001745D0 /* CommonDetailModel.h */,
+				C2D0B7C31BCE2807001745D0 /* CommonDetailModel.m */,
+				C2D0B7C41BCE2807001745D0 /* CommonSymptomsModel.h */,
+				C2D0B7C51BCE2807001745D0 /* CommonSymptomsModel.m */,
+				C2D0B7C61BCE2807001745D0 /* DrugAndnewsListModel.h */,
+				C2D0B7C71BCE2807001745D0 /* DrugAndnewsListModel.m */,
+			);
+			path = CommonModel;
+			sourceTree = "<group>";
+		};
+		C2D0B7CB1BCE2866001745D0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0B7CC1BCE2866001745D0 /* CommonClassifyController.h */,
+				C2D0B7CD1BCE2866001745D0 /* CommonClassifyController.m */,
+				C2D0B7CE1BCE2866001745D0 /* CommonDetailsController.h */,
+				C2D0B7CF1BCE2866001745D0 /* CommonDetailsController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C2D0B7D71BCE2D17001745D0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0B7D81BCE2D5C001745D0 /* UserListController.h */,
+				C2D0B7D91BCE2D5C001745D0 /* UserListController.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C2D0B7DD1BCE2F68001745D0 /* GIFHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0B7DE1BCE2F68001745D0 /* GiFHUD.h */,
+				C2D0B7DF1BCE2F68001745D0 /* GiFHUD.m */,
+			);
+			path = GIFHUD;
+			sourceTree = "<group>";
+		};
+		C2D0B7E01BCE2F68001745D0 /* RKCard */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0B7E11BCE2F68001745D0 /* RKCardView.h */,
+				C2D0B7E21BCE2F68001745D0 /* RKCardView.m */,
+			);
+			path = RKCard;
+			sourceTree = "<group>";
+		};
+		C2D0B7E31BCE2F68001745D0 /* WZFlashButton */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0B7EB1BCE3443001745D0 /* sheep1.png */,
+				C2D0B7ED1BCE3443001745D0 /* 111.jpg */,
+				C2D0B7E41BCE2F68001745D0 /* WZFlashButton.h */,
+				C2D0B7E51BCE2F68001745D0 /* WZFlashButton.m */,
+			);
+			path = WZFlashButton;
 			sourceTree = "<group>";
 		};
 		C2D13AD61BC60E9300D4B1F7 /* Vendors */ = {
@@ -768,8 +842,10 @@
 				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
 				C2FC64191BCE029A00B2B22E /* IanScrollViewDefault@2x.png in Resources */,
 				C23A33061BC558E4007320E1 /* Surgery.png in Resources */,
+				C2D0B7F01BCE3443001745D0 /* 111.jpg in Resources */,
 				C23A33011BC558E4007320E1 /* Medicin.png in Resources */,
 				C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */,
+				C2D0B7DC1BCE2EAE001745D0 /* mie.gif in Resources */,
 				C2FC64011BCE013B00B2B22E /* HEDCell.xib in Resources */,
 				C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */,
 				C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */,
@@ -778,12 +854,12 @@
 				C23A32FD1BC558E4007320E1 /* Child.png in Resources */,
 				C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */,
 				C23A33031BC558E4007320E1 /* Organs.png in Resources */,
-				C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */,
 				C2FC64031BCE013B00B2B22E /* HomeCell.xib in Resources */,
 				C23A346E1BC55D0C007320E1 /* hand.png in Resources */,
 				C23A33021BC558E4007320E1 /* Mentality.png in Resources */,
 				C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */,
 				C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */,
+				C2D0B7EE1BCE3443001745D0 /* sheep1.png in Resources */,
 				C2FC64051BCE013B00B2B22E /* HSBCell.xib in Resources */,
 				C2CFB8CD1BC8ADD10002AAB2 /* CommonClickCell.xib in Resources */,
 				C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */,
@@ -853,16 +929,16 @@
 				C2CFB8CC1BC8ADD10002AAB2 /* CommonClickCell.m in Sources */,
 				C2FC63EF1BCE00A100B2B22E /* HPublicController.m in Sources */,
 				C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */,
-				C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */,
 				C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */,
 				C25015E91BCE235200057CDD /* SufferModel.m in Sources */,
+				C2D0B7C91BCE2807001745D0 /* CommonSymptomsModel.m in Sources */,
 				C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */,
 				C2FC641C1BCE033B00B2B22E /* HBView.m in Sources */,
 				C2CFB8CE1BC8ADD10002AAB2 /* CommonDetailsCell.m in Sources */,
 				C2FC640F1BCE01F900B2B22E /* HSubjectModel.m in Sources */,
 				C2FC63ED1BCE00A100B2B22E /* HEDController.m in Sources */,
 				C2EB3E961BC7FA3B003E81A9 /* RootViewController.m in Sources */,
-				C23A32F01BC53F31007320E1 /* CommonDetailsController.m in Sources */,
+				C2D0B7D01BCE2866001745D0 /* CommonClassifyController.m in Sources */,
 				C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */,
 				C2500FF41BCE220B00057CDD /* SufferDeTableViewController.m in Sources */,
 				C2FC63E41BCDFFBB00B2B22E /* HDetailController.m in Sources */,
@@ -871,23 +947,27 @@
 				C2500FF51BCE220B00057CDD /* SufferTableViewController.m in Sources */,
 				C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */,
 				C2FC63F01BCE00A100B2B22E /* HSBDetailController.m in Sources */,
+				C2D0B7D11BCE2866001745D0 /* CommonDetailsController.m in Sources */,
 				C2FC640E1BCE01F900B2B22E /* HDetailModel.m in Sources */,
 				C2FC64181BCE029A00B2B22E /* IanScrollView.m in Sources */,
-				C2002EA01BC4A96C0007F7B9 /* DrugAndnewsListModel.m in Sources */,
 				C2FC63DC1BCDFE8800B2B22E /* HomeController.m in Sources */,
 				C25015E51BCE22F200057CDD /* SufferHelper.m in Sources */,
 				C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */,
-				C23A32EF1BC53F31007320E1 /* CommonClassifyController.m in Sources */,
-				C2002E9F1BC4A96C0007F7B9 /* CommonDetailModel.m in Sources */,
+				C2D0B7DA1BCE2D5C001745D0 /* UserListController.m in Sources */,
 				C2FC64021BCE013B00B2B22E /* HomeCell.m in Sources */,
 				C2FC64041BCE013B00B2B22E /* HSBCell.m in Sources */,
 				C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */,
+				C2D0B7E81BCE2F68001745D0 /* WZFlashButton.m in Sources */,
+				C2D0B7CA1BCE2807001745D0 /* DrugAndnewsListModel.m in Sources */,
+				C2D0B7E61BCE2F68001745D0 /* GiFHUD.m in Sources */,
 				C25015ED1BCE24E800057CDD /* ViewController.m in Sources */,
 				C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */,
+				C2D0B7E71BCE2F68001745D0 /* RKCardView.m in Sources */,
 				C2FC63EE1BCE00A100B2B22E /* HomeSBController.m in Sources */,
 				C2FC64081BCE018400B2B22E /* HomeHelper.m in Sources */,
 				C2FC641F1BCE03D100B2B22E /* RecommendModel.m in Sources */,
 				C25015E21BCE229300057CDD /* SufferTableViewCell.m in Sources */,
+				C2D0B7C81BCE2807001745D0 /* CommonDetailModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

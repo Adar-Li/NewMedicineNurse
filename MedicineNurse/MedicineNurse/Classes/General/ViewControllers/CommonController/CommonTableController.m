@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "CommonNewsDetailsController.h"
 #import "CommonDrugDetailsController.h"
+#import "GiFHUD.h"
 
 @interface CommonTableController ()
 
@@ -25,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
     
     //注册Cell
     [self.tableView registerNib:[UINib nibWithNibName:@"CommonClickCell" bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -58,7 +61,7 @@
             [self.drugListMutArray addObject:model];
         }
         [self.tableView reloadData];
-        
+        [GiFHUD dismiss];
     } failure:^(NSURLSessionDataTask *  task, NSError *  error) {
         
     }];
@@ -81,15 +84,6 @@
     self.tableView.tableHeaderView = view1;
 }
 
-//表头2
-//- (void)drawHeder2{
-//    
-//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kScremWidth, 32)];
-//    label.text = @"相关用药";
-//    
-//    self.tableView.tableHeaderView = label;
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -107,38 +101,6 @@
     }
     
 }
-
-//曲头
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    
-//    UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 74)];
-//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, 64)];
-//    UIView *view2 = [[UIView alloc]initWithFrame:CGRectMake(0,64 , self.view.frame.size.width, 10)];
-//    view2.backgroundColor = [UIColor lightGrayColor];
-//    label.text = self.deseaseInfoDic[@"content"];
-//    label.font = [UIFont systemFontOfSize:13];
-//    label.numberOfLines = 2;
-//    [view1 addSubview:label];
-//    [view1 addSubview:view2];
-//    
-//    UILabel *DragLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kScremWidth, 32)];
-//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScremWidth, 32)];
-//    [view addSubview:DragLabel];
-//    label.text = @"相关用药";
-//    
-//    if (section == 0) {
-//        return view1;
-//    }
-//        return view;
-//    
-//}
-
-
-//曲头高度
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    return 30;
-//}
-
 
 //分区个数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -183,7 +145,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-//        [self drawHeader1];
         CommonClickCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         DrugAndnewsListModel *model = self.newsListMutArray[indexPath.row];
         cell.label4InfoTitle.text = model.infoTitle;
@@ -191,7 +152,6 @@
         cell.label4InfoContent.text = model.infoContent;
         return cell;
     }else{
-//        [self drawHeder2];
     CommonClickCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     DrugAndnewsListModel *model = self.drugListMutArray[indexPath.row];
     cell.label4InfoTitle.text = model.drugName;

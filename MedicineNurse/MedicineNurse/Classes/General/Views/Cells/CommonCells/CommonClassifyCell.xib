@@ -20,7 +20,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default.png" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-dj-pVf">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-dj-pVf">
                         <rect key="frame" x="8" y="17" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="r73-hy-np4"/>
@@ -46,7 +46,4 @@
             <point key="canvasLocation" x="558" y="436"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="default.png" width="375" height="562"/>
-    </resources>
 </document>

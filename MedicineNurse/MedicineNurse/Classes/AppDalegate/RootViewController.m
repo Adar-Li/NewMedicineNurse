@@ -10,6 +10,7 @@
 #import "CommonController.h"
 #import "HomeController.h"
 #import "SufferViewController.h"
+#import "UserListController.h"
 
 
 
@@ -42,10 +43,9 @@
 - (void)p_setupControllers
 {
     
-    //五个模块：首页、常见病症、医药资讯、附近、我
+    //四个模块：首页、常见病症、医药资讯、我
     
     UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:[HomeController new]];
-//    HomeController *homeNC = [HomeController new];
     homeNC.tabBarItem.title = @"首页";
     
     UINavigationController *common = [[UINavigationController alloc]initWithRootViewController:[CommonController new]];
@@ -54,15 +54,10 @@
     UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
     suffer.tabBarItem.title = @"用药咨询";
     
-//    UINavigationController *Nearby = [[UINavigationController alloc]initWithRootViewController:[NearbyViewController new]];
-//    Nearby.tabBarItem.title = @"附近";
+    UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
+    User.tabBarItem.title = @"用户";
     
-//    UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
-//    User.tabBarItem.title = @"用户";
-    
-
-    
-    self.viewControllers = @[homeNC,common,suffer];
+    self.viewControllers = @[homeNC,common,suffer,User];
 
     
 }
