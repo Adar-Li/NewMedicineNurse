@@ -83,6 +83,24 @@
     
     
 }
+
+
+//
+- (void)P_saveUserInfo
+{
+    NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
+    [userdefaults setObject:_textField4Name.text forKey:@"userName"];
+    [userdefaults setObject:_textField4Password.text forKey:@"Passward"];
+    [userdefaults synchronize];
+   
+    
+}
+
+
+
+
+
+
 - (IBAction)btn4Cancel:(id)sender {
     self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self dismissViewControllerAnimated:YES completion:nil];
