@@ -8,20 +8,42 @@
 
 #import "ViewController.h"
 #import "GiFHUD.h"
+#import "UMSocial.h"
 
 @interface ViewController ()<UIWebViewDelegate>
+{
+    NSInteger index;
+}
 @property(nonatomic,strong)UIWebView *web;
+//创建头视图
+@property(nonatomic,strong)UIView * headerView;
+
 @end
 
 @implementation ViewController
 
+//界面将要消失时隐藏
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:YES];
+    self.headerView.hidden = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.headerView.hidden = NO;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    index = 0;
     [GiFHUD setGifWithImageName:@"mie.gif"];
     [GiFHUD show];
     
     [self drawWebView];
+    //调用绘制表头事件
+    [self drawHeader];
+    [self drawbutton];
 
 }
 
@@ -51,6 +73,50 @@
     
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('source')[0].style.display = 'none'"];
     
+}
+
+//绘制button事件
+- (void)drawHeader{
+    
+    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(90, 0,  kScremWidth -90 , 44)];
+    [self.navigationController.navigationBar addSubview:self.headerView];
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180, 0, 35, 35)];
+    [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
+    [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:SizeButton];
+    
+}
+
+- (void)drawbutton{
+    
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 140, 0, 32, 32)];
+    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:SizeButton];
+}
+
+- (void)shareAction{
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"561c6d93e0f55a0eeb00a2b4"
+                                      shareText:self.str
+                                     shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
+                                       delegate:nil];
+}
+
+#pragma mark -- webView的代理事件---
+
+//改变字体大小
+- (void)changeTextSize{
+    index ++;
+    if (index == 1) {
+        [_web stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '130%'"];
+    }else if (index == 2){
+        [_web stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '160%'"];
+    }else if (index == 3){
+        index = 0;
+        [_web stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%'"];
+    }
 }
 
 

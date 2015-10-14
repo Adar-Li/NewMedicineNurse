@@ -9,7 +9,7 @@
 #import "HDetailController.h"
 #import <AFNetworking.h>
 #import "HDetailModel.h"
-
+#import "UMSocial.h"
 
 @interface HDetailController ()<UIWebViewDelegate>
 {
@@ -45,8 +45,9 @@
     [super viewDidLoad];
     [self analysisCellData];
     self.navigationController.navigationBarHidden = NO;
-        //调用绘制表头事件
-        [self drawHeader];    
+    //调用绘制表头事件
+    [self drawHeader];
+    [self drawbutton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,6 +103,22 @@
     
 }
 
+- (void)drawbutton{
+    
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 140, 0, 32, 32)];
+    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:SizeButton];
+}
+
+- (void)shareAction{
+
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"561c6d93e0f55a0eeb00a2b4"
+                                      shareText:kHomeCellURL(self.ID)
+                                     shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
+                                       delegate:nil];
+}
 
 #pragma mark -- webView的代理事件---
 - (void)webViewDidFinishLoad:(UIWebView *)webView{

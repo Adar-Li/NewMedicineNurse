@@ -9,6 +9,7 @@
 #import "CommonNewsDetailsController.h"
 #import "AFHTTPSessionManager.h"
 #import "GiFHUD.h"
+#import "UMSocial.h"
 
 @interface CommonNewsDetailsController ()
 {
@@ -27,6 +28,7 @@
     
     self.tabBarController.tabBar.hidden = NO;
     [self.headerView removeFromSuperview];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -44,6 +46,7 @@
     [self requestNewsDetail];
     //调用绘制表头事件
     [self drawHeader];
+    [self drawbutton];
 }
 
 - (void)requestNewsDetail{
@@ -92,6 +95,22 @@
     }
 }
 
+- (void)drawbutton{
+    
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(30, 0, 35, 35)];
+    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:SizeButton];
+}
+
+- (void)shareAction{
+    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"561c6d93e0f55a0eeb00a2b4"
+                                      shareText:KCommonNewsListURL(self.commonNDModel.infoId)
+                                     shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
+                                       delegate:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
