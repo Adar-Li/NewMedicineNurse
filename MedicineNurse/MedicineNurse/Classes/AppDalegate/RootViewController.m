@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "CommonController.h"
 #import "HomeController.h"
+#import "SufferViewController.h"
 
 
 
@@ -50,8 +51,8 @@
     UINavigationController *common = [[UINavigationController alloc]initWithRootViewController:[CommonController new]];
     common.tabBarItem.title = @"常见病症";
     
-//    UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
-//    suffer.tabBarItem.title = @"用药咨询";
+    UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
+    suffer.tabBarItem.title = @"用药咨询";
     
 //    UINavigationController *Nearby = [[UINavigationController alloc]initWithRootViewController:[NearbyViewController new]];
 //    Nearby.tabBarItem.title = @"附近";
@@ -61,7 +62,7 @@
     
 
     
-    self.viewControllers = @[homeNC,common ];
+    self.viewControllers = @[homeNC,common,suffer];
 
     
 }

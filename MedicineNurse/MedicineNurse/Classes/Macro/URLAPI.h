@@ -22,6 +22,9 @@
 //cell中专题网址
 #define detail(tab) [NSString stringWithFormat:@"http://www.dxy.cn/webservices/article/list/tags?ac=4124c5f1-1029-4fda-b06f-a87ac5ad8d9f&limit=20&mc=df4e09ce2cf802df592ff64773dbb40156b4d58dudidfor7&pge=1&tags=%@&token=TGT-154773-cafT3zxC4UWhQIDjQOLnkNB07AE0iHCpYH7-50&u=Adar410",tab];
 
+//weather
+#define WeatherNet @"http://api.map.baidu.com/telematics/v3/weather?location=116.337518,40.029343&output=json&ak=fZmDW5RmHoL9FfT5ANV5Plen"
+
 
 
 
