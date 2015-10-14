@@ -34,21 +34,17 @@
 // 解析数据
 - (void)set_up
 {
-    
     NSString * urlStr = detail(self.tail);
-    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr ]];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *  response, NSData *  data, NSError *  connectionError) {
         
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         
-        
         for (NSDictionary *dic in dict[@"message"][@"list"]) {
             SufferModel *data = [SufferModel new];
             
             [data setValuesForKeysWithDictionary:dic];
-            
             [self.dataArray addObject:data];
        
         }
@@ -74,8 +70,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
@@ -84,10 +78,7 @@
     
     SufferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.data = model;
-    
-
-
-       
+ 
     return cell;
 }
 
@@ -96,17 +87,11 @@
     return  self.tableView.frame.size.height/5;
     
 }
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     ViewController *suff = [ViewController new];
     suff.str = [_dataArray[indexPath.row]url];
-    
     [self.navigationController pushViewController:suff animated:YES];
-    
-    
 }
 
 
