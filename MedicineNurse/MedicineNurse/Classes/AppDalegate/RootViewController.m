@@ -43,19 +43,24 @@
 - (void)p_setupControllers
 {
     
+    self.view.backgroundColor = [UIColor whiteColor];
     //四个模块：首页、常见病症、医药资讯、我
     
     UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:[HomeController new]];
     homeNC.tabBarItem.title = @"首页";
+    homeNC.navigationBar.backgroundColor = [UIColor colorWithRed:0.957 green:1.000 blue:0.091 alpha:1.000];
     
     UINavigationController *common = [[UINavigationController alloc]initWithRootViewController:[CommonController new]];
     common.tabBarItem.title = @"常见病症";
-
+    common.navigationBar.backgroundColor = [UIColor colorWithWhite:0.600 alpha:1.000];
+    
     UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
     suffer.tabBarItem.title = @"用药助手";
+    suffer.navigationBar.backgroundColor = [UIColor colorWithRed:0.502 green:1.000 blue:0.000 alpha:1.000];
     
     UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
     User.tabBarItem.title = @"用户";
+    User.navigationBar.backgroundColor = [UIColor colorWithRed:0.957 green:1.000 blue:0.091 alpha:1.000];
     
     self.viewControllers = @[homeNC,common,suffer,User];
 

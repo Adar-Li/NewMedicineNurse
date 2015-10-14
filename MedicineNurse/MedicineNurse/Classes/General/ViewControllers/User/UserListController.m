@@ -9,6 +9,7 @@
 #import "UserListController.h"
 #import "RKCardView.h"
 #import "WZFlashButton.h"
+#import "UserController.h"
 #define BUFFERX 20
 #define BUFFERY 66
 
@@ -46,9 +47,9 @@
     [self.cardView addShadow]; // comment this out if you don't want a shadow
     [self.view addSubview:self.cardView];
 
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(50, 300, 50, 50)];
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(50, 300, 200, 50)];
     outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
-    outerRoundFlashButton.layer.cornerRadius = 25;
+    outerRoundFlashButton.textLabel.text = @"微博登陆";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     outerRoundFlashButton.clickBlock = ^(void) {
@@ -56,8 +57,24 @@
     };
     
     [self.cardView addSubview:outerRoundFlashButton];
+    [self drawMyButton];
+}
+
+- (void)drawMyButton{
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(50, 400, 200, 50)];
+    outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
+    outerRoundFlashButton.textLabel.text = @"登陆";
+    outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
+    outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
+    outerRoundFlashButton.clickBlock = ^(void) {
+        UserController *user = [UserController new];
+        user.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:user animated:YES completion:nil];
+    };
+    [self.cardView addSubview:outerRoundFlashButton];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

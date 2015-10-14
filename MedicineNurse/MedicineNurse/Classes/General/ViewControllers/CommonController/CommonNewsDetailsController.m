@@ -23,10 +23,15 @@
 
 @implementation CommonNewsDetailsController
 
-//界面将要消失时隐藏
 - (void)viewWillDisappear:(BOOL)animated{
     
+    self.tabBarController.tabBar.hidden = NO;
     [self.headerView removeFromSuperview];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)viewDidLoad {
@@ -52,8 +57,7 @@
         self.navigationItem.title = responseObject[@"data"][@"newsInfo"][@"dataTitle"];
         
         //webView
-        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, kScremWidth, kScremHeight - 100)];
-//        _webView.scalesPageToFit = YES;
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, kScremWidth, kScremHeight-50)];
         [self.webView loadHTMLString:self.newsDetail baseURL:nil];
         _webView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:_webView];

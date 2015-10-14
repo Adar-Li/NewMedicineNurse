@@ -29,6 +29,9 @@
     
     [[CommonHelper shareHelp] requestCommonList:^{
         [self.tableView reloadData];
+        
+        [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+
     }];
 
 }
