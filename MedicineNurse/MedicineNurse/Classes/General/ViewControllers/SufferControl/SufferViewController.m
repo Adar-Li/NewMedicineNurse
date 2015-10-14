@@ -12,33 +12,12 @@
 #import "SufferHelper.h"
 #import "SufferTableViewController.h"
 #import "ViewController.h"
-
 #import "AFNetworking.h"
+#import "SufferDeTableViewController.h"
 
 #define KWith self.view.frame.size.width
 #define Kheight self.view.frame.size.height
 @interface SufferViewController ()<UITableViewDataSource,UITableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UIView *BackView;
-@property (weak, nonatomic) IBOutlet UITableView *Table;
-@property (nonatomic ,strong)UIView  *tableFooterView;
-@property (nonatomic ,strong)NSMutableArray  *dataArray;
-@property (nonatomic ,strong)NSMutableArray  *Listdata;
-@property (nonatomic ,strong)UIView  *inputAccessoryView;//这盖视图
-@property (nonatomic ,assign)NSInteger  page;
-@property (nonatomic ,strong)UIButton  *butAccessoryView;
-
-@property (weak, nonatomic) IBOutlet UILabel *label;
-
-@property (weak, nonatomic) IBOutlet UILabel *label2;
-@property (weak, nonatomic) IBOutlet UILabel *label3;
-@property (weak, nonatomic) IBOutlet UILabel *label4;
-@property (weak, nonatomic) IBOutlet UILabel *label5;
-
-
-@property (weak, nonatomic) IBOutlet UILabel *label6;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
 @property (nonatomic ,strong)UILabel  *cityLabel;
 @property (nonatomic ,strong)UILabel  *Weatherlabel;
 @property (nonatomic ,strong)UILabel  *datalabel;
@@ -46,19 +25,22 @@
 @property (nonatomic ,strong)UILabel  *labelwind;
 @property (nonatomic ,strong)UILabel  *Deslabel;
 @property (nonatomic ,strong)UITableView  *table;
-
-
-
-
+@property (nonatomic ,strong)UIImageView  *Img;
 
 @end
 
 @implementation SufferViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _Img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 60, KWith, Kheight/3.7)];
+    _Img.backgroundColor = [UIColor redColor];
+    [_Img setImage:[UIImage imageNamed:@"image.jpg"]];
+ 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(TapChange)];
+    [_Img addGestureRecognizer:tap];
+    [self.view addSubview:_Img];
     
     self.navigationItem.title = @"用药助手";
     _cityLabel= [[UILabel alloc]init];
@@ -85,7 +67,6 @@
     _Deslabel.textColor = [UIColor orangeColor];
     _Deslabel.numberOfLines = 0;
     _Deslabel.font = [UIFont systemFontOfSize:13];
-    
     [self.view addSubview:_Deslabel];
  
     _table = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_Deslabel.frame)+2,KWith,(Kheight - CGRectGetMaxY(_Deslabel.frame)) - 49) style:UITableViewStylePlain];
@@ -93,10 +74,7 @@
     
     UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 69, KWith, Kheight - CGRectGetMaxY(_table.frame))];
     image.image = [UIImage imageNamed:@"3"];
-    
     [self.view addSubview:image];
-    
-    
     
     self.table.delegate = self;
     self.table.dataSource = self;
@@ -107,16 +85,8 @@
     [[SufferHelper sharedSuffer]requestAllSufferWith:0 Finish:^{
         [self.table reloadData];
     }];
-      _butAccessoryView = [[UIButton alloc]initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
-    [_butAccessoryView setAlpha:1];
-    
-    [_butAccessoryView setTitle:@"xhhkwe" forState:UIControlStateNormal];
-
-    
     [self Set_weatherView];
-
 }
-
 
 - (void)Set_weatherView
 {
@@ -133,11 +103,9 @@
             self.Weatherlabel.text = dic2[@"weather"];
             self.label1.text = dic2[@"wind"];
             self.labelwind.text = dic2[@"temperature"];
-         
         }
      
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-        
     }];
    
 }
@@ -152,84 +120,103 @@
     label.font = [UIFont systemFontOfSize:19];
     self.table.tableHeaderView = label;
     
-    
          //初始化button
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-    //设置文字和文字颜色
+      //设置文字和文字颜色
     [button setTitle:@"<<了解更多" forState:UIControlStateNormal];
-    
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
     
-    //设置圆角
+      //设置圆角
     button.layer.cornerRadius = 3;
     button.layer.masksToBounds = YES;
     
     [button addTarget:self action:@selector(JumpMore) forControlEvents:UIControlEventTouchUpInside];
-    
-    //设置大小
+     //设置大小
   button.frame = CGRectMake(-50, -10,self.view.frame.size.width - 20 , 30);
-
     self.table.tableFooterView = button;
-  
-    
 }
 
 
-//tableFooterView的button事件
+  //tableFooterView的button事件
 - (void)JumpMore
 {
     SufferTableViewController *suff = [[SufferTableViewController alloc]init];
     [SufferHelper sharedSuffer].Allarray =nil;
-    
     [self.navigationController pushViewController:suff animated:YES];
-  
 }
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //返回四个cell
-    return [SufferHelper sharedSuffer].Allarray.count - 18;
-
-}
+      //返回四个cell
+    if (self.view.frame.size.height >= 667 ) {
+      return  [SufferHelper sharedSuffer].Allarray.count - 16;
+    }else if (self.view.frame.size.height >= 568 &&self.view.frame.size.height <= 667)   {
+        
+    return [SufferHelper sharedSuffer].Allarray.count - 17;
+    }else{
+        
+        return [SufferHelper sharedSuffer].Allarray.count - 18;
+        
+    }
+    
+ }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
     
     SufferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.data = model;
-    
-    return cell;
-    
-}
 
+    return cell;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+       //判断返回
+    if (self.view.frame.size.height >= 667 ) {
+         return self.table.frame.size.height/4 - 20;
+    }else if (self.view.frame.size.height >= 568 &&self.view.frame.size.height < 667) {
+        return self.table.frame.size.height/3 - 20;
+    }else
+    {
         return self.table.frame.size.height/2 - 30;
-    
+    }
 }
 
-
-//页面跳转
-
+   //页面跳转
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ViewController *suffer = [[ViewController alloc]init];
-    
-    //找到当前点击的这个row
+    ViewController *Suffer = [[ViewController alloc]init];
     SufferModel *model = [[SufferHelper sharedSuffer]itemWithIndex:indexPath.row];
-    suffer.str = model.url;
     
-    [self.navigationController pushViewController:suffer animated:YES];
- 
+    if (model.stag == nil) {
+        Suffer.str = model.url;
+        [self.navigationController pushViewController:Suffer animated:YES];
+    }else
+    {
+        SufferDeTableViewController *sufferde = [[SufferDeTableViewController alloc]init];
+        sufferde.tail = [model.stag valueForKey:@"tagid"];
+        [self.navigationController pushViewController:sufferde animated:YES];
+        
+    }
 }
+
+//手势的事件
+- (void)TapChange
+{
+   
+    
+    
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

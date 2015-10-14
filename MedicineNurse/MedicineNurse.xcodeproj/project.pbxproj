@@ -27,6 +27,7 @@
 		C25015E51BCE22F200057CDD /* SufferHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C25015E41BCE22F200057CDD /* SufferHelper.m */; settings = {ASSET_TAGS = (); }; };
 		C25015E91BCE235200057CDD /* SufferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C25015E81BCE235200057CDD /* SufferModel.m */; settings = {ASSET_TAGS = (); }; };
 		C25015ED1BCE24E800057CDD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25015EC1BCE24E800057CDD /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C25015EF1BCE2D7800057CDD /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C25015EE1BCE2D7800057CDD /* image.jpg */; settings = {ASSET_TAGS = (); }; };
 		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
 		C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6821BC3A9DA00B394F5 /* Main.storyboard */; };
 		C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */; };
@@ -133,6 +134,7 @@
 		C25015E81BCE235200057CDD /* SufferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferModel.m; sourceTree = "<group>"; };
 		C25015EB1BCE24E800057CDD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C25015EC1BCE24E800057CDD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C25015EE1BCE2D7800057CDD /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNurse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28EA67A1BC3A9DA00B394F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C28EA6831BC3A9DA00B394F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		C23A32F11BC558E4007320E1 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				C25015EE1BCE2D7800057CDD /* image.jpg */,
 				C23A346D1BC55D0C007320E1 /* hand.png */,
 				C23A32F61BC558E4007320E1 /* Medicin.png */,
 				C23A32FB1BC558E4007320E1 /* Surgery.png */,
@@ -851,6 +854,7 @@
 				C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */,
 				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
 				C2FC63FF1BCE013B00B2B22E /* HCCell.xib in Resources */,
+				C25015EF1BCE2D7800057CDD /* image.jpg in Resources */,
 				C23A32FD1BC558E4007320E1 /* Child.png in Resources */,
 				C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */,
 				C23A33031BC558E4007320E1 /* Organs.png in Resources */,

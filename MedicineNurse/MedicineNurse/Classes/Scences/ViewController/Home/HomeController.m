@@ -129,7 +129,7 @@ static NSString * hccCell = @"hccCellID";
         [weakSelf analysisDataAndDrawUI];
         
     }];
-    
+    //加载
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         [weakSelf pullFromtheButton];
     }];
@@ -138,12 +138,13 @@ static NSString * hccCell = @"hccCellID";
 #pragma mark --上拉刷新下拉加载事件
 - (void)pullFromtheButton{
     pageIndex ++;
+    __weak HomeController * weakSelf = self;
     NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/recommend?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=%ld&vc=4.0.5",pageIndex];
     
    [[HomeHelper shareHomeHelper]analysisMoreDataWithURL:URL :^{
-       [self.tableView removeFromSuperview];
-       [self drawTableView];
-       self.tableView.contentOffset = CGPointMake(0, kScremWidth *(pageIndex -1));
+
+       [weakSelf.tableView reloadData];
+       [weakSelf.tableView.infiniteScrollingView stopAnimating];
    }];
     
     
