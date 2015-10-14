@@ -31,8 +31,7 @@ static NSString * hsbcell = @"hsbcell";
     pageIndex = 1;
     [super viewDidLoad];
     [self analysisData];
-    
-    
+
     //注册自定义cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HSBCell" bundle:nil] forCellReuseIdentifier:hsbcell];
     
