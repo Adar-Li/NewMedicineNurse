@@ -25,14 +25,25 @@
 
 
 
-//推荐界面轮播图
+////推荐界面轮播图
 #define kHomeTJSCURL @"http://dxy.com/app/i/feed/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&vc=4.0.5"
 //专题界面
 #define kHomeSBURL @"http://dxy.com/app/i/columns/special/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=1&vc=4.0.5"
+
+//点击专题进去的界面
+#define kHomeSBDetailURL(SBDetail) [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&order=publishTime&page_index=1&special_id=%@&vc=4.0.5",SBDetail]
+
+
 //真相接口
 #define kHomeTURL @"http://dxy.com/app/i/columns/truth/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=1&vc=4.0.5"
 //肿瘤接口
 #define kHomeTumorURL(p) [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&channel_id=%@&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&order=publishTime&page_index=1&vc=4.0.5",p]
+
+//丁香医生编辑页面接口
+#define kHomeEditeURL @"http://dxy.com/app/i/columnspecialtype/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&mc=4decbc59f1ffbaab0eb5da5d0bc7a5c9f267fe6d&vc=4.0.7"
+//通知
+#define kChoose @"choooseAction"
+#define kBackChoose @"backChoose"
 
 
 //常见病症网址

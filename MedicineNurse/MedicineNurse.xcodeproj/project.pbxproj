@@ -48,6 +48,28 @@
 		C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C61BC7B6EC00934592 /* lovew.png */; settings = {ASSET_TAGS = (); }; };
 		C2EC44CA1BC7B6EC00934592 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C71BC7B6EC00934592 /* share.png */; settings = {ASSET_TAGS = (); }; };
 		C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C81BC7B6EC00934592 /* Text.png */; settings = {ASSET_TAGS = (); }; };
+		C2FC63DC1BCDFE8800B2B22E /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63DB1BCDFE8800B2B22E /* HomeController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63E41BCDFFBB00B2B22E /* HDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63E31BCDFFBB00B2B22E /* HDetailController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63ED1BCE00A100B2B22E /* HEDController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63E61BCE00A100B2B22E /* HEDController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63EE1BCE00A100B2B22E /* HomeSBController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63E81BCE00A100B2B22E /* HomeSBController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63EF1BCE00A100B2B22E /* HPublicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63EA1BCE00A100B2B22E /* HPublicController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63F01BCE00A100B2B22E /* HSBDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63EC1BCE00A100B2B22E /* HSBDetailController.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63FE1BCE013B00B2B22E /* HCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63F31BCE013B00B2B22E /* HCCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC63FF1BCE013B00B2B22E /* HCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FC63F41BCE013B00B2B22E /* HCCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2FC64001BCE013B00B2B22E /* HEDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63F61BCE013B00B2B22E /* HEDCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC64011BCE013B00B2B22E /* HEDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FC63F71BCE013B00B2B22E /* HEDCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2FC64021BCE013B00B2B22E /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63F91BCE013B00B2B22E /* HomeCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC64031BCE013B00B2B22E /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FC63FA1BCE013B00B2B22E /* HomeCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2FC64041BCE013B00B2B22E /* HSBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC63FC1BCE013B00B2B22E /* HSBCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC64051BCE013B00B2B22E /* HSBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2FC63FD1BCE013B00B2B22E /* HSBCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2FC64081BCE018400B2B22E /* HomeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC64071BCE018400B2B22E /* HomeHelper.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC640E1BCE01F900B2B22E /* HDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC640B1BCE01F900B2B22E /* HDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC640F1BCE01F900B2B22E /* HSubjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC640D1BCE01F900B2B22E /* HSubjectModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC64171BCE029A00B2B22E /* IanScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC64131BCE029A00B2B22E /* IanScrollImageView.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC64181BCE029A00B2B22E /* IanScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC64151BCE029A00B2B22E /* IanScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC64191BCE029A00B2B22E /* IanScrollViewDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FC64161BCE029A00B2B22E /* IanScrollViewDefault@2x.png */; settings = {ASSET_TAGS = (); }; };
+		C2FC641C1BCE033B00B2B22E /* HBView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC641B1BCE033B00B2B22E /* HBView.m */; settings = {ASSET_TAGS = (); }; };
+		C2FC641F1BCE03D100B2B22E /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FC641E1BCE03D100B2B22E /* RecommendModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +155,45 @@
 		C2EC44C61BC7B6EC00934592 /* lovew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovew.png; sourceTree = "<group>"; };
 		C2EC44C71BC7B6EC00934592 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		C2EC44C81BC7B6EC00934592 /* Text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text.png; sourceTree = "<group>"; };
+		C2FC63DA1BCDFE8800B2B22E /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		C2FC63DB1BCDFE8800B2B22E /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		C2FC63E21BCDFFBB00B2B22E /* HDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDetailController.h; sourceTree = "<group>"; };
+		C2FC63E31BCDFFBB00B2B22E /* HDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDetailController.m; sourceTree = "<group>"; };
+		C2FC63E51BCE00A100B2B22E /* HEDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEDController.h; sourceTree = "<group>"; };
+		C2FC63E61BCE00A100B2B22E /* HEDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEDController.m; sourceTree = "<group>"; };
+		C2FC63E71BCE00A100B2B22E /* HomeSBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSBController.h; sourceTree = "<group>"; };
+		C2FC63E81BCE00A100B2B22E /* HomeSBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSBController.m; sourceTree = "<group>"; };
+		C2FC63E91BCE00A100B2B22E /* HPublicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPublicController.h; sourceTree = "<group>"; };
+		C2FC63EA1BCE00A100B2B22E /* HPublicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPublicController.m; sourceTree = "<group>"; };
+		C2FC63EB1BCE00A100B2B22E /* HSBDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBDetailController.h; sourceTree = "<group>"; };
+		C2FC63EC1BCE00A100B2B22E /* HSBDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBDetailController.m; sourceTree = "<group>"; };
+		C2FC63F21BCE013B00B2B22E /* HCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCell.h; sourceTree = "<group>"; };
+		C2FC63F31BCE013B00B2B22E /* HCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCell.m; sourceTree = "<group>"; };
+		C2FC63F41BCE013B00B2B22E /* HCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCCell.xib; sourceTree = "<group>"; };
+		C2FC63F51BCE013B00B2B22E /* HEDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEDCell.h; sourceTree = "<group>"; };
+		C2FC63F61BCE013B00B2B22E /* HEDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEDCell.m; sourceTree = "<group>"; };
+		C2FC63F71BCE013B00B2B22E /* HEDCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HEDCell.xib; sourceTree = "<group>"; };
+		C2FC63F81BCE013B00B2B22E /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		C2FC63F91BCE013B00B2B22E /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		C2FC63FA1BCE013B00B2B22E /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		C2FC63FB1BCE013B00B2B22E /* HSBCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBCell.h; sourceTree = "<group>"; };
+		C2FC63FC1BCE013B00B2B22E /* HSBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBCell.m; sourceTree = "<group>"; };
+		C2FC63FD1BCE013B00B2B22E /* HSBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSBCell.xib; sourceTree = "<group>"; };
+		C2FC64061BCE018400B2B22E /* HomeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHelper.h; sourceTree = "<group>"; };
+		C2FC64071BCE018400B2B22E /* HomeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHelper.m; sourceTree = "<group>"; };
+		C2FC640A1BCE01F900B2B22E /* HDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDetailModel.h; sourceTree = "<group>"; };
+		C2FC640B1BCE01F900B2B22E /* HDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDetailModel.m; sourceTree = "<group>"; };
+		C2FC640C1BCE01F900B2B22E /* HSubjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSubjectModel.h; sourceTree = "<group>"; };
+		C2FC640D1BCE01F900B2B22E /* HSubjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSubjectModel.m; sourceTree = "<group>"; };
+		C2FC64121BCE029A00B2B22E /* IanScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanScrollImageView.h; sourceTree = "<group>"; };
+		C2FC64131BCE029A00B2B22E /* IanScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanScrollImageView.m; sourceTree = "<group>"; };
+		C2FC64141BCE029A00B2B22E /* IanScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanScrollView.h; sourceTree = "<group>"; };
+		C2FC64151BCE029A00B2B22E /* IanScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanScrollView.m; sourceTree = "<group>"; };
+		C2FC64161BCE029A00B2B22E /* IanScrollViewDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IanScrollViewDefault@2x.png"; sourceTree = "<group>"; };
+		C2FC641A1BCE033B00B2B22E /* HBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBView.h; sourceTree = "<group>"; };
+		C2FC641B1BCE033B00B2B22E /* HBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBView.m; sourceTree = "<group>"; };
+		C2FC641D1BCE03D100B2B22E /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		C2FC641E1BCE03D100B2B22E /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
 		DF3A9E4C6BB109E4FF0572F2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +367,7 @@
 		C28EA6B21BC3C52700B394F5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC63E11BCDFFBB00B2B22E /* Home */,
 				C2CFB89B1BC8AD410002AAB2 /* CommonController */,
 			);
 			path = ViewControllers;
@@ -314,6 +376,8 @@
 		C28EA6B51BC3C52700B394F5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC64061BCE018400B2B22E /* HomeHelper.h */,
+				C2FC64071BCE018400B2B22E /* HomeHelper.m */,
 				C23A346F1BC562CA007320E1 /* CommonHelper.h */,
 				C23A34701BC562CA007320E1 /* CommonHelper.m */,
 			);
@@ -331,6 +395,7 @@
 		C28EA6B71BC3C52700B394F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC64091BCE01F900B2B22E /* HomeModel */,
 				C299EAF41BC3CF7E0087A7F8 /* CommonSymptomsModel.h */,
 				C299EAF51BC3CF7E0087A7F8 /* CommonSymptomsModel.m */,
 				C2002E9B1BC4A96C0007F7B9 /* CommonDetailModel.h */,
@@ -344,6 +409,7 @@
 		C28EA6B81BC3C52700B394F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC64101BCE029A00B2B22E /* HomeResource */,
 				C2EC44C51BC7B6EC00934592 /* WQImage */,
 				C23A32F11BC558E4007320E1 /* img */,
 				C24C12241BC4ABC5000EF4A0 /* default@2x.png */,
@@ -371,6 +437,7 @@
 		C28EA81E1BC3FE6900B394F5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C2FC63F11BCE013B00B2B22E /* HomeCell */,
 				C2CFB8B41BC8ADD10002AAB2 /* CommonCells */,
 			);
 			path = Cells;
@@ -390,6 +457,7 @@
 				C23A32EC1BC53F31007320E1 /* CommonClassifyController.m */,
 				C23A32ED1BC53F31007320E1 /* CommonDetailsController.h */,
 				C23A32EE1BC53F31007320E1 /* CommonDetailsController.m */,
+				C2FC63D91BCDFE3A00B2B22E /* Home */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -441,6 +509,86 @@
 			);
 			name = WQImage;
 			path = img/WQImage;
+			sourceTree = "<group>";
+		};
+		C2FC63D91BCDFE3A00B2B22E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC63DA1BCDFE8800B2B22E /* HomeController.h */,
+				C2FC63DB1BCDFE8800B2B22E /* HomeController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C2FC63E11BCDFFBB00B2B22E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC641A1BCE033B00B2B22E /* HBView.h */,
+				C2FC641B1BCE033B00B2B22E /* HBView.m */,
+				C2FC63E51BCE00A100B2B22E /* HEDController.h */,
+				C2FC63E61BCE00A100B2B22E /* HEDController.m */,
+				C2FC63E71BCE00A100B2B22E /* HomeSBController.h */,
+				C2FC63E81BCE00A100B2B22E /* HomeSBController.m */,
+				C2FC63E91BCE00A100B2B22E /* HPublicController.h */,
+				C2FC63EA1BCE00A100B2B22E /* HPublicController.m */,
+				C2FC63EB1BCE00A100B2B22E /* HSBDetailController.h */,
+				C2FC63EC1BCE00A100B2B22E /* HSBDetailController.m */,
+				C2FC63E21BCDFFBB00B2B22E /* HDetailController.h */,
+				C2FC63E31BCDFFBB00B2B22E /* HDetailController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C2FC63F11BCE013B00B2B22E /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC63F21BCE013B00B2B22E /* HCCell.h */,
+				C2FC63F31BCE013B00B2B22E /* HCCell.m */,
+				C2FC63F41BCE013B00B2B22E /* HCCell.xib */,
+				C2FC63F51BCE013B00B2B22E /* HEDCell.h */,
+				C2FC63F61BCE013B00B2B22E /* HEDCell.m */,
+				C2FC63F71BCE013B00B2B22E /* HEDCell.xib */,
+				C2FC63F81BCE013B00B2B22E /* HomeCell.h */,
+				C2FC63F91BCE013B00B2B22E /* HomeCell.m */,
+				C2FC63FA1BCE013B00B2B22E /* HomeCell.xib */,
+				C2FC63FB1BCE013B00B2B22E /* HSBCell.h */,
+				C2FC63FC1BCE013B00B2B22E /* HSBCell.m */,
+				C2FC63FD1BCE013B00B2B22E /* HSBCell.xib */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		C2FC64091BCE01F900B2B22E /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC641D1BCE03D100B2B22E /* RecommendModel.h */,
+				C2FC641E1BCE03D100B2B22E /* RecommendModel.m */,
+				C2FC640A1BCE01F900B2B22E /* HDetailModel.h */,
+				C2FC640B1BCE01F900B2B22E /* HDetailModel.m */,
+				C2FC640C1BCE01F900B2B22E /* HSubjectModel.h */,
+				C2FC640D1BCE01F900B2B22E /* HSubjectModel.m */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		C2FC64101BCE029A00B2B22E /* HomeResource */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC64111BCE029A00B2B22E /* IanScrollViewLib */,
+			);
+			path = HomeResource;
+			sourceTree = "<group>";
+		};
+		C2FC64111BCE029A00B2B22E /* IanScrollViewLib */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC64121BCE029A00B2B22E /* IanScrollImageView.h */,
+				C2FC64131BCE029A00B2B22E /* IanScrollImageView.m */,
+				C2FC64141BCE029A00B2B22E /* IanScrollView.h */,
+				C2FC64151BCE029A00B2B22E /* IanScrollView.m */,
+				C2FC64161BCE029A00B2B22E /* IanScrollViewDefault@2x.png */,
+			);
+			path = IanScrollViewLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,20 +699,25 @@
 			files = (
 				C23A33051BC558E4007320E1 /* Skin.png in Resources */,
 				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
+				C2FC64191BCE029A00B2B22E /* IanScrollViewDefault@2x.png in Resources */,
 				C23A33061BC558E4007320E1 /* Surgery.png in Resources */,
 				C23A33011BC558E4007320E1 /* Medicin.png in Resources */,
 				C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */,
+				C2FC64011BCE013B00B2B22E /* HEDCell.xib in Resources */,
 				C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */,
 				C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */,
 				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
+				C2FC63FF1BCE013B00B2B22E /* HCCell.xib in Resources */,
 				C23A32FD1BC558E4007320E1 /* Child.png in Resources */,
 				C2EC44CB1BC7B6EC00934592 /* Text.png in Resources */,
 				C23A33031BC558E4007320E1 /* Organs.png in Resources */,
 				C24C12251BC4ABC5000EF4A0 /* default@2x.png in Resources */,
+				C2FC64031BCE013B00B2B22E /* HomeCell.xib in Resources */,
 				C23A346E1BC55D0C007320E1 /* hand.png in Resources */,
 				C23A33021BC558E4007320E1 /* Mentality.png in Resources */,
 				C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */,
 				C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */,
+				C2FC64051BCE013B00B2B22E /* HSBCell.xib in Resources */,
 				C2CFB8CD1BC8ADD10002AAB2 /* CommonClickCell.xib in Resources */,
 				C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */,
 				C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */,
@@ -628,22 +781,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FC64171BCE029A00B2B22E /* IanScrollImageView.m in Sources */,
+				C2FC63FE1BCE013B00B2B22E /* HCCell.m in Sources */,
 				C2CFB8CC1BC8ADD10002AAB2 /* CommonClickCell.m in Sources */,
+				C2FC63EF1BCE00A100B2B22E /* HPublicController.m in Sources */,
 				C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */,
 				C299EAF61BC3CF7E0087A7F8 /* CommonSymptomsModel.m in Sources */,
 				C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */,
 				C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */,
+				C2FC641C1BCE033B00B2B22E /* HBView.m in Sources */,
 				C2CFB8CE1BC8ADD10002AAB2 /* CommonDetailsCell.m in Sources */,
+				C2FC640F1BCE01F900B2B22E /* HSubjectModel.m in Sources */,
+				C2FC63ED1BCE00A100B2B22E /* HEDController.m in Sources */,
 				C2EB3E961BC7FA3B003E81A9 /* RootViewController.m in Sources */,
 				C23A32F01BC53F31007320E1 /* CommonDetailsController.m in Sources */,
 				C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */,
+				C2FC63E41BCDFFBB00B2B22E /* HDetailController.m in Sources */,
+				C2FC64001BCE013B00B2B22E /* HEDCell.m in Sources */,
 				C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */,
 				C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */,
+				C2FC63F01BCE00A100B2B22E /* HSBDetailController.m in Sources */,
+				C2FC640E1BCE01F900B2B22E /* HDetailModel.m in Sources */,
+				C2FC64181BCE029A00B2B22E /* IanScrollView.m in Sources */,
 				C2002EA01BC4A96C0007F7B9 /* DrugAndnewsListModel.m in Sources */,
+				C2FC63DC1BCDFE8800B2B22E /* HomeController.m in Sources */,
 				C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */,
 				C23A32EF1BC53F31007320E1 /* CommonClassifyController.m in Sources */,
 				C2002E9F1BC4A96C0007F7B9 /* CommonDetailModel.m in Sources */,
+				C2FC64021BCE013B00B2B22E /* HomeCell.m in Sources */,
+				C2FC64041BCE013B00B2B22E /* HSBCell.m in Sources */,
 				C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */,
+				C2FC63EE1BCE00A100B2B22E /* HomeSBController.m in Sources */,
+				C2FC64081BCE018400B2B22E /* HomeHelper.m in Sources */,
+				C2FC641F1BCE03D100B2B22E /* RecommendModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

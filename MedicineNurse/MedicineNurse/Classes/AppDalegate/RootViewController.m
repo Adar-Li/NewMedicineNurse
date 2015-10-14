@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "CommonController.h"
+#import "HomeController.h"
 
 
 
@@ -42,9 +43,9 @@
     
     //五个模块：首页、常见病症、医药资讯、附近、我
     
-//    UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:[HomeController new]];
+    UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:[HomeController new]];
 //    HomeController *homeNC = [HomeController new];
-//    homeNC.tabBarItem.title = @"首页";
+    homeNC.tabBarItem.title = @"首页";
     
     UINavigationController *common = [[UINavigationController alloc]initWithRootViewController:[CommonController new]];
     common.tabBarItem.title = @"常见病症";
@@ -61,7 +62,7 @@
     
     [self parentViewController];
     
-    self.viewControllers = @[common ];
+    self.viewControllers = @[homeNC,common ];
 
     
 }
