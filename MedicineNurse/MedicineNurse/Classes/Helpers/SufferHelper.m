@@ -19,6 +19,7 @@
 
 + (SufferHelper *)sharedSuffer
 {
+
     static SufferHelper *help = nil;
     
     static dispatch_once_t onceToken;
@@ -58,10 +59,12 @@
             
         }
         
+      
+        
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-    
+     
     }];
-  
+   
 }
 
 - (SufferModel *)itemWithIndex:(NSInteger)index

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D5D751078EB568CED7A0148 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ABDA66B6F25486D79C6217 /* libPods.a */; };
 		C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */; settings = {ASSET_TAGS = (); }; };
+		C235AAE21BCE42CF002308FB /* WeathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C235AAE11BCE42CF002308FB /* WeathViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C23A32FD1BC558E4007320E1 /* Child.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F21BC558E4007320E1 /* Child.png */; settings = {ASSET_TAGS = (); }; };
 		C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F31BC558E4007320E1 /* Chinese.png */; settings = {ASSET_TAGS = (); }; };
 		C23A32FF1BC558E4007320E1 /* Infect.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A32F41BC558E4007320E1 /* Infect.png */; settings = {ASSET_TAGS = (); }; };
@@ -112,6 +113,8 @@
 		92CC3A1C94F2DBB8C58B1320 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C216DFDC1BCB487B009974FF /* CommonDrugDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDrugDetailsController.h; sourceTree = "<group>"; };
 		C216DFDD1BCB487B009974FF /* CommonDrugDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDrugDetailsController.m; sourceTree = "<group>"; };
+		C235AAE01BCE42CF002308FB /* WeathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeathViewController.h; sourceTree = "<group>"; };
+		C235AAE11BCE42CF002308FB /* WeathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeathViewController.m; sourceTree = "<group>"; };
 		C23A32F21BC558E4007320E1 /* Child.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Child.png; sourceTree = "<group>"; };
 		C23A32F31BC558E4007320E1 /* Chinese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chinese.png; sourceTree = "<group>"; };
 		C23A32F41BC558E4007320E1 /* Infect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Infect.png; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				C2500FF11BCE220B00057CDD /* SufferTableViewController.m */,
 				C2500FF21BCE220B00057CDD /* SufferViewController.h */,
 				C2500FF31BCE220B00057CDD /* SufferViewController.m */,
+				C235AAE01BCE42CF002308FB /* WeathViewController.h */,
+				C235AAE11BCE42CF002308FB /* WeathViewController.m */,
 			);
 			path = SufferControl;
 			sourceTree = "<group>";
@@ -974,6 +979,7 @@
 				C25015E51BCE22F200057CDD /* SufferHelper.m in Sources */,
 				C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */,
 				C2D0B7DA1BCE2D5C001745D0 /* UserListController.m in Sources */,
+				C235AAE21BCE42CF002308FB /* WeathViewController.m in Sources */,
 				C2FC64021BCE013B00B2B22E /* HomeCell.m in Sources */,
 				C2FC64041BCE013B00B2B22E /* HSBCell.m in Sources */,
 				C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */,

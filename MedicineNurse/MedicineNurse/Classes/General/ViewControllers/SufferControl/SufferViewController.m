@@ -14,6 +14,8 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "SufferDeTableViewController.h"
+#import "WeathViewController.h"
+#import "GiFHUD.h"
 
 #define KWith self.view.frame.size.width
 #define Kheight self.view.frame.size.height
@@ -45,15 +47,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+    
+    //添加图片
     _Img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 60, KWith, Kheight/3.7)];
     _Img.backgroundColor = [UIColor redColor];
     [_Img setImage:[UIImage imageNamed:@"image.jpg"]];
+    _Img.userInteractionEnabled = YES;
  
+        //添加手势
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(TapChange)];
+    tap.numberOfTapsRequired = 2;
     [_Img addGestureRecognizer:tap];
     [self.view addSubview:_Img];
     
     self.navigationItem.title = @"用药助手";
+    
+      //label布局
     _cityLabel= [[UILabel alloc]init];
     _cityLabel.frame = CGRectMake(10, 65,self.view.frame.size.width/2,Kheight/16);
     _cityLabel.textColor = [UIColor redColor];
@@ -87,6 +98,7 @@
     image.image = [UIImage imageNamed:@"3"];
     [self.view addSubview:image];
     
+        //代理方法
     self.table.delegate = self;
     self.table.dataSource = self;
     [self.table registerClass:[SufferTableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -95,10 +107,11 @@
     [self addFooterButton];
     [[SufferHelper sharedSuffer]requestAllSufferWith:0 Finish:^{
         [self.table reloadData];
+        [GiFHUD dismiss];
     }];
     [self Set_weatherView];
 }
-
+    //天气数据
 - (void)Set_weatherView
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -121,6 +134,7 @@
    
 }
 
+  //添加表头
 - (void)addFooterButton
 {
     UILabel *label = [[UILabel alloc]init];
@@ -156,7 +170,7 @@
     [SufferHelper sharedSuffer].Allarray =nil;
     [self.navigationController pushViewController:suff animated:YES];
 }
-
+    //cell
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
       //返回四个cell
@@ -211,6 +225,8 @@
     {
         SufferDeTableViewController *sufferde = [[SufferDeTableViewController alloc]init];
         sufferde.tail = [model.stag valueForKey:@"tagid"];
+        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
+        self.navigationItem.backBarButtonItem = barButtonItem;
         [self.navigationController pushViewController:sufferde animated:YES];
         
     }
@@ -220,8 +236,8 @@
 - (void)TapChange
 {
    
-    
-    
+    [self.navigationController pushViewController:[WeathViewController new] animated:YES];
+  
 }
 
 

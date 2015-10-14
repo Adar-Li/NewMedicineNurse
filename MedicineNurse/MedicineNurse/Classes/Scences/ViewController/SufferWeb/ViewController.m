@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GiFHUD.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 @property(nonatomic,strong)UIWebView *web;
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+    
     [self drawWebView];
 
 }
@@ -33,7 +37,7 @@
     
     [self.view addSubview:_web];
     [_web loadRequest:request];
-
+    [GiFHUD dismiss];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
@@ -43,19 +47,11 @@
      [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.getElementsByClassName('m_nav_bar')[0].style.display = 'none'"];
     
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('med_time')[0].style.display = 'none'"];
-    
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('a')[59].style.display = 'none'"];
     
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('source')[0].style.display = 'none'"];
     
 }
-
-
-
-
-
-
-
 
 
 - (void)didReceiveMemoryWarning {

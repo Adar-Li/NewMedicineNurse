@@ -12,6 +12,7 @@
 #import "ViewController.h"
 #import "UIImageView+WebCache.h"
 #import "SufferHelper.h"
+#import "GiFHUD.h"
 
 @interface SufferDeTableViewController ()
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -22,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
     
     [self.tableView registerClass:[SufferTableViewCell class] forCellReuseIdentifier:@"cell"];
     
@@ -43,12 +47,12 @@
         
         for (NSDictionary *dic in dict[@"message"][@"list"]) {
             SufferModel *data = [SufferModel new];
-            
             [data setValuesForKeysWithDictionary:dic];
             [self.dataArray addObject:data];
        
         }
         [self.tableView reloadData];
+        [GiFHUD dismiss];
     }];
     
 }
@@ -71,9 +75,7 @@
     return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
+
     SufferModel *model = _dataArray[indexPath.row];
     
     SufferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];

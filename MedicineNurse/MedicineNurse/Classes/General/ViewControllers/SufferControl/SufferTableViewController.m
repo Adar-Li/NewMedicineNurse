@@ -13,14 +13,14 @@
 #import "ViewController.h"
 #import "SVPullToRefresh.h"
 #import "SufferDeTableViewController.h"
-
+#import "GiFHUD.h"
 @interface SufferTableViewController ()
 @property (nonatomic ,assign)NSInteger page;
 @end
 @implementation SufferTableViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.page = 1;
     self.navigationItem.title = @"用药咨询";
 
@@ -53,9 +53,10 @@
             [weakself.tableView.infiniteScrollingView stopAnimating];
    
         }];
-   
+        
     }];
-   
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,12 +103,16 @@
     if (model.stag == nil) {
         
         Suffer.str = model.url;
+        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
+        self.navigationItem.backBarButtonItem = barButtonItem;
         [self.navigationController pushViewController:Suffer animated:YES];
         
     }else
     {
         SufferDeTableViewController *sufferde = [[SufferDeTableViewController alloc]init];
         sufferde.tail = [model.stag valueForKey:@"tagid"];
+        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
+        self.navigationItem.backBarButtonItem = barButtonItem;
               [self.navigationController pushViewController:sufferde animated:YES];
        
     }
