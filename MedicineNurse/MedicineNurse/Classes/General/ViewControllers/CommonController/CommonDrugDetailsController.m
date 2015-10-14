@@ -16,6 +16,16 @@
 
 @implementation CommonDrugDetailsController
 
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    self.tabBarController.tabBar.hidden = YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -25,7 +35,7 @@
 
 - (void)getData{
 
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kScremWidth, kScremHeight)];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kScremWidth, kScremHeight + 50)];
     NSURL *url = [NSURL URLWithString:KCommonDrugListURL(self.commonNDModel.drugId)];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     

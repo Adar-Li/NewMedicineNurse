@@ -24,6 +24,10 @@
 		C242BCCA1BCE3D6E003E5950 /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC61BCE3D6E003E5950 /* user.jpg */; settings = {ASSET_TAGS = (); }; };
 		C242BCCB1BCE3D6E003E5950 /* common.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC71BCE3D6E003E5950 /* common.jpg */; settings = {ASSET_TAGS = (); }; };
 		C242BCCC1BCE3D6E003E5950 /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C242BCC81BCE3D6E003E5950 /* home.jpg */; settings = {ASSET_TAGS = (); }; };
+		C242BCD61BCE4EBB003E5950 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = C242BCD51BCE4EBB003E5950 /* UserController.m */; settings = {ASSET_TAGS = (); }; };
+		C242BCD81BCE50DE003E5950 /* xuhua.png in Resources */ = {isa = PBXBuildFile; fileRef = C242BCD71BCE50DE003E5950 /* xuhua.png */; settings = {ASSET_TAGS = (); }; };
+		C242BCDE1BCE564B003E5950 /* UserFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = C242BCDD1BCE564B003E5950 /* UserFindController.m */; settings = {ASSET_TAGS = (); }; };
+		C242BCE11BCE5659003E5950 /* UserRigisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C242BCE01BCE5659003E5950 /* UserRigisViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF41BCE220B00057CDD /* SufferDeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF51BCE220B00057CDD /* SufferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF11BCE220B00057CDD /* SufferTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF31BCE220B00057CDD /* SufferViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -128,6 +132,13 @@
 		C242BCC61BCE3D6E003E5950 /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
 		C242BCC71BCE3D6E003E5950 /* common.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = common.jpg; sourceTree = "<group>"; };
 		C242BCC81BCE3D6E003E5950 /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		C242BCD41BCE4EBB003E5950 /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
+		C242BCD51BCE4EBB003E5950 /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
+		C242BCD71BCE50DE003E5950 /* xuhua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xuhua.png; path = ../xuhua.png; sourceTree = "<group>"; };
+		C242BCDC1BCE564B003E5950 /* UserFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFindController.h; sourceTree = "<group>"; };
+		C242BCDD1BCE564B003E5950 /* UserFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFindController.m; sourceTree = "<group>"; };
+		C242BCDF1BCE5659003E5950 /* UserRigisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRigisViewController.h; sourceTree = "<group>"; };
+		C242BCE01BCE5659003E5950 /* UserRigisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRigisViewController.m; sourceTree = "<group>"; };
 		C2500FEE1BCE220B00057CDD /* SufferDeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferDeTableViewController.h; sourceTree = "<group>"; };
 		C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferDeTableViewController.m; sourceTree = "<group>"; };
 		C2500FF01BCE220B00057CDD /* SufferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferTableViewController.h; sourceTree = "<group>"; };
@@ -290,6 +301,7 @@
 		C23A32F11BC558E4007320E1 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				C242BCD71BCE50DE003E5950 /* xuhua.png */,
 				C242BCC51BCE3D6E003E5950 /* suffer.jpg */,
 				C242BCC61BCE3D6E003E5950 /* user.jpg */,
 				C242BCC71BCE3D6E003E5950 /* common.jpg */,
@@ -312,6 +324,15 @@
 				C23A32F71BC558E4007320E1 /* Mentality.png */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		C242BCCD1BCE4CF7003E5950 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C242BCD41BCE4EBB003E5950 /* UserController.h */,
+				C242BCD51BCE4EBB003E5950 /* UserController.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		C2500FED1BCE220B00057CDD /* SufferControl */ = {
@@ -551,6 +572,7 @@
 		C28EA9621BC3FEFF00B394F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C242BCCD1BCE4CF7003E5950 /* User */,
 				C2D0B7CB1BCE2866001745D0 /* Common */,
 				C2FC63D91BCDFE3A00B2B22E /* Home */,
 				C25015EA1BCE24E800057CDD /* SufferWeb */,
@@ -618,6 +640,10 @@
 			children = (
 				C2D0B7D81BCE2D5C001745D0 /* UserListController.h */,
 				C2D0B7D91BCE2D5C001745D0 /* UserListController.m */,
+				C242BCDC1BCE564B003E5950 /* UserFindController.h */,
+				C242BCDD1BCE564B003E5950 /* UserFindController.m */,
+				C242BCDF1BCE5659003E5950 /* UserRigisViewController.h */,
+				C242BCE01BCE5659003E5950 /* UserRigisViewController.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -857,6 +883,7 @@
 				C23A33051BC558E4007320E1 /* Skin.png in Resources */,
 				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
 				C2FC64191BCE029A00B2B22E /* IanScrollViewDefault@2x.png in Resources */,
+				C242BCD81BCE50DE003E5950 /* xuhua.png in Resources */,
 				C23A33061BC558E4007320E1 /* Surgery.png in Resources */,
 				C2D0B7F01BCE3443001745D0 /* 111.jpg in Resources */,
 				C23A33011BC558E4007320E1 /* Medicin.png in Resources */,
@@ -945,11 +972,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FC64171BCE029A00B2B22E /* IanScrollImageView.m in Sources */,
+				C242BCDE1BCE564B003E5950 /* UserFindController.m in Sources */,
 				C2FC63FE1BCE013B00B2B22E /* HCCell.m in Sources */,
 				C2CFB8CC1BC8ADD10002AAB2 /* CommonClickCell.m in Sources */,
 				C2FC63EF1BCE00A100B2B22E /* HPublicController.m in Sources */,
 				C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */,
 				C216DFDE1BCB487B009974FF /* CommonDrugDetailsController.m in Sources */,
+				C242BCE11BCE5659003E5950 /* UserRigisViewController.m in Sources */,
 				C25015E91BCE235200057CDD /* SufferModel.m in Sources */,
 				C2D0B7C91BCE2807001745D0 /* CommonSymptomsModel.m in Sources */,
 				C23A34711BC562CA007320E1 /* CommonHelper.m in Sources */,
@@ -986,6 +1015,7 @@
 				C2FC63EE1BCE00A100B2B22E /* HomeSBController.m in Sources */,
 				C2FC64081BCE018400B2B22E /* HomeHelper.m in Sources */,
 				C2FC641F1BCE03D100B2B22E /* RecommendModel.m in Sources */,
+				C242BCD61BCE4EBB003E5950 /* UserController.m in Sources */,
 				C25015E21BCE229300057CDD /* SufferTableViewCell.m in Sources */,
 				C2D0B7C81BCE2807001745D0 /* CommonDetailModel.m in Sources */,
 			);

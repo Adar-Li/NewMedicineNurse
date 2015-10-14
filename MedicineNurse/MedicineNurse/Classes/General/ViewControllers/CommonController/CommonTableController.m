@@ -29,6 +29,8 @@
     [GiFHUD setGifWithImageName:@"mie.gif"];
     [GiFHUD show];
     
+    self.navigationItem.title = @"专题";
+    
     //注册Cell
     [self.tableView registerNib:[UINib nibWithNibName:@"CommonClickCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
