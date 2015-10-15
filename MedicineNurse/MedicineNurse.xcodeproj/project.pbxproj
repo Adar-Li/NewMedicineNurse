@@ -63,6 +63,7 @@
 		C26829321BCF7E9C00C75C49 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C26829311BCF7E9C00C75C49 /* image.jpg */; settings = {ASSET_TAGS = (); }; };
 		C268293B1BCF90A900C75C49 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26829381BCF90A900C75C49 /* OnboardingContentViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C268293C1BCF90A900C75C49 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C268293A1BCF90A900C75C49 /* OnboardingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C26829971BCFC99B00C75C49 /* fanhui.png in Resources */ = {isa = PBXBuildFile; fileRef = C26829961BCFC99B00C75C49 /* fanhui.png */; settings = {ASSET_TAGS = (); }; };
 		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
 		C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6821BC3A9DA00B394F5 /* Main.storyboard */; };
 		C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */; };
@@ -228,6 +229,7 @@
 		C26829381BCF90A900C75C49 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
 		C26829391BCF90A900C75C49 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
 		C268293A1BCF90A900C75C49 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
+		C26829961BCFC99B00C75C49 /* fanhui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fanhui.png; sourceTree = "<group>"; };
 		C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNurse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28EA67A1BC3A9DA00B394F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C28EA6831BC3A9DA00B394F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 		C23A32F11BC558E4007320E1 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				C26829961BCFC99B00C75C49 /* fanhui.png */,
 				C242BDCA1BCE7D18003E5950 /* share.png */,
 				C242BCD71BCE50DE003E5950 /* xuhua.png */,
 				C242BCC51BCE3D6E003E5950 /* suffer.jpg */,
@@ -1080,6 +1083,7 @@
 				C2FC64031BCE013B00B2B22E /* HomeCell.xib in Resources */,
 				C23A346E1BC55D0C007320E1 /* hand.png in Resources */,
 				C23A33021BC558E4007320E1 /* Mentality.png in Resources */,
+				C26829971BCFC99B00C75C49 /* fanhui.png in Resources */,
 				C23A32FE1BC558E4007320E1 /* Chinese.png in Resources */,
 				C268291A1BCF44F700C75C49 /* UMSCommentInputControlleriPad.xib in Resources */,
 				C26829321BCF7E9C00C75C49 /* image.jpg in Resources */,

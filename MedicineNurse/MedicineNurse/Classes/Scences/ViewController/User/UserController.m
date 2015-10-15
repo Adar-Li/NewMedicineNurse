@@ -58,11 +58,18 @@
     }];
 }
 - (IBAction)btn4Regis:(id)sender {
-
+    
 }
 - (IBAction)btn4Find:(id)sender {
 }
-
+- (IBAction)btn4Back:(id)sender {
+    self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+//撤销键盘
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 
