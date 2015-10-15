@@ -58,7 +58,7 @@
  
         //添加手势
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(TapChange)];
-    tap.numberOfTapsRequired = 2;
+    tap.numberOfTapsRequired = 1;
     [_Img addGestureRecognizer:tap];
     [self.view addSubview:_Img];
     

@@ -55,6 +55,7 @@
 		C242BDC91BCE7B8D003E5950 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C242BDC81BCE7B8D003E5950 /* libz.tbd */; };
 		C242BDCB1BCE7D18003E5950 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C242BDCA1BCE7D18003E5950 /* share.png */; settings = {ASSET_TAGS = (); }; };
 		C242BDCD1BCE7F5B003E5950 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C242BDCC1BCE7F5B003E5950 /* libc++abi.tbd */; };
+		C249D70F1BCEA7C00093BDBD /* regist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C249D70E1BCEA7C00093BDBD /* regist.jpg */; settings = {ASSET_TAGS = (); }; };
 		C2500FF41BCE220B00057CDD /* SufferDeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF51BCE220B00057CDD /* SufferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF11BCE220B00057CDD /* SufferTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2500FF31BCE220B00057CDD /* SufferViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -210,6 +211,7 @@
 		C242BDC81BCE7B8D003E5950 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C242BDCA1BCE7D18003E5950 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		C242BDCC1BCE7F5B003E5950 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		C249D70E1BCEA7C00093BDBD /* regist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = regist.jpg; sourceTree = "<group>"; };
 		C2500FEE1BCE220B00057CDD /* SufferDeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferDeTableViewController.h; sourceTree = "<group>"; };
 		C2500FEF1BCE220B00057CDD /* SufferDeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SufferDeTableViewController.m; sourceTree = "<group>"; };
 		C2500FF01BCE220B00057CDD /* SufferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SufferTableViewController.h; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				C2500FF31BCE220B00057CDD /* SufferViewController.m */,
 				C235AAE01BCE42CF002308FB /* WeathViewController.h */,
 				C235AAE11BCE42CF002308FB /* WeathViewController.m */,
+				C249D70E1BCEA7C00093BDBD /* regist.jpg */,
 			);
 			path = SufferControl;
 			sourceTree = "<group>";
@@ -1063,6 +1066,7 @@
 				C242BCCB1BCE3D6E003E5950 /* common.jpg in Resources */,
 				C242BDA01BCE79AD003E5950 /* UMSShareListController.xib in Resources */,
 				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
+				C249D70F1BCEA7C00093BDBD /* regist.jpg in Resources */,
 				C2FC63FF1BCE013B00B2B22E /* HCCell.xib in Resources */,
 				C25015EF1BCE2D7800057CDD /* image.jpg in Resources */,
 				C242BD9F1BCE79AD003E5950 /* UMSnsAccountViewController.xib in Resources */,
@@ -1358,7 +1362,7 @@
 					"$(PROJECT_DIR)/MedicineNurse/Classes/AppDalegate/TencentOpenAPI",
 					"$(PROJECT_DIR)/MedicineNurse/Classes/AppDalegate/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1386,7 +1390,7 @@
 					"$(PROJECT_DIR)/MedicineNurse/Classes/AppDalegate/TencentOpenAPI",
 					"$(PROJECT_DIR)/MedicineNurse/Classes/AppDalegate/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

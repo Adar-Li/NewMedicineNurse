@@ -92,7 +92,9 @@
     [userdefaults setObject:_textField4Name.text forKey:@"userName"];
     [userdefaults setObject:_textField4Password.text forKey:@"Passward"];
     [userdefaults synchronize];
-   
+    
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"恭喜你注册成功" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [alertView show];
     
 }
 
