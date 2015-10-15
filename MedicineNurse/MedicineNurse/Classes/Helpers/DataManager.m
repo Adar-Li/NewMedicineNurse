@@ -77,15 +77,16 @@ static  FMDatabase * db = nil;
         return nil;
     }
     NSMutableArray * mutArray = [NSMutableArray array];
-    HLoverModel * model = [HLoverModel new];
+    
     NSString *sql = [NSString stringWithFormat:@"SELECT * FROM %@" ,tableName];
     FMResultSet *resultSet = [db executeQuery:sql];
     while ([resultSet next]) {
-    model.title = [resultSet stringForColumn:title];
-    model.picUrl = [resultSet stringForColumn:url];
-    model.ID =  [resultSet stringForColumn:mainKey];
+        HLoverModel * model = [HLoverModel new];
+        model.title = [resultSet stringForColumn:title];
+        model.picUrl = [resultSet stringForColumn:url];
+        model.ID =  [resultSet stringForColumn:mainKey];
         [mutArray addObject:model];
-        }
+    }
     [db close];
     return mutArray;
 }
@@ -98,7 +99,7 @@ static  FMDatabase * db = nil;
     if ([db executeUpdate:clearStr]) {
         NSLog(@"清理表成功");
     }else{
-         NSLog(@"清理表失败");
+        NSLog(@"清理表失败");
     }
     [db close];
     

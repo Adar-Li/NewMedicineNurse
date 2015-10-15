@@ -12,6 +12,9 @@
 #import "UserController.h"
 #import "UIImageView+WebCache.h"
 #import "UMSocial.h"
+#import "DataManager.h"
+#import "HCollectController.h"
+
 #define BUFFERX 20
 #define BUFFERY 66
 
@@ -102,8 +105,11 @@
     outerRoundFlashButton.textLabel.text = @"收藏";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
+    //点击按钮时的事件
     outerRoundFlashButton.clickBlock = ^(void) {
-        NSLog(@"收藏");
+        
+        [self collectAction];
+        
     };
     [self.cardView addSubview:outerRoundFlashButton];
 }
@@ -115,7 +121,8 @@
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     outerRoundFlashButton.clickBlock = ^(void) {
-        NSLog(@"清理缓存");
+        [self clearAction];
+       
     };
     [self.cardView addSubview:outerRoundFlashButton];
 }
@@ -124,6 +131,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark ---收藏,清理缓存事件----
+//收藏事件
+- (void)collectAction{
+    
+    HCollectController * collectVC = [HCollectController new];
+    
+    [self.navigationController pushViewController:collectVC animated:YES];
+    
+}
+//清理缓存事件
+- (void)clearAction{
+    
+    [[DataManager shareDatamanager]clearTableWithTableName:kLoverTable];
+    UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"清理缓存成功" message:@"清理缓存成功" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:allertVC animated:YES completion:nil];
+    UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+    
+    [allertVC addAction:alertAction];
+    
+    
+}
+
+
 
 /*
 #pragma mark - Navigation

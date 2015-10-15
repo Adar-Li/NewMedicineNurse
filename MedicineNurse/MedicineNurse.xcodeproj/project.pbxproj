@@ -72,6 +72,7 @@
 		C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */; };
 		C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */; settings = {ASSET_TAGS = (); }; };
 		C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0C1BCA70D300466B76 /* CommonTableController.m */; settings = {ASSET_TAGS = (); }; };
+		C2BF17611BCFC1AD00736757 /* HCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17601BCFC1AD00736757 /* HCollectController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB89D1BC8AD410002AAB2 /* CommonController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -245,6 +246,8 @@
 		C2953E091BCA5F8900466B76 /* CommonNewsDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNewsDetailsController.h; sourceTree = "<group>"; };
 		C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNewsDetailsController.m; sourceTree = "<group>"; };
 		C2953E0C1BCA70D300466B76 /* CommonTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableController.m; sourceTree = "<group>"; };
+		C2BF175F1BCFC1AD00736757 /* HCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCollectController.h; sourceTree = "<group>"; };
+		C2BF17601BCFC1AD00736757 /* HCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCollectController.m; sourceTree = "<group>"; };
 		C2CFB89C1BC8AD410002AAB2 /* CommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonController.h; sourceTree = "<group>"; };
 		C2CFB89D1BC8AD410002AAB2 /* CommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonController.m; sourceTree = "<group>"; };
 		C2CFB89E1BC8AD410002AAB2 /* CommonTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableController.h; sourceTree = "<group>"; };
@@ -885,6 +888,8 @@
 				C2FC63EC1BCE00A100B2B22E /* HSBDetailController.m */,
 				C2FC63E21BCDFFBB00B2B22E /* HDetailController.h */,
 				C2FC63E31BCDFFBB00B2B22E /* HDetailController.m */,
+				C2BF175F1BCFC1AD00736757 /* HCollectController.h */,
+				C2BF17601BCFC1AD00736757 /* HCollectController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1195,6 +1200,7 @@
 				C2D0B7CA1BCE2807001745D0 /* DrugAndnewsListModel.m in Sources */,
 				C268293C1BCF90A900C75C49 /* OnboardingViewController.m in Sources */,
 				C2D0B7E61BCE2F68001745D0 /* GiFHUD.m in Sources */,
+				C2BF17611BCFC1AD00736757 /* HCollectController.m in Sources */,
 				C25015ED1BCE24E800057CDD /* ViewController.m in Sources */,
 				C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */,
 				C2D0B7E71BCE2F68001745D0 /* RKCardView.m in Sources */,
