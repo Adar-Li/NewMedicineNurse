@@ -15,4 +15,7 @@
 //标题
 @property(nonatomic,strong)NSString * titleName;
 
+//小照片的网址
+@property(nonatomic,strong)NSString * picUrl;
+
 @end

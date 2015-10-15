@@ -10,4 +10,9 @@
 
 @interface WeathViewController : UIViewController
 
+
+
+@property (nonatomic ,strong)NSArray  *Message;
+@property (nonatomic ,assign)NSInteger  *CurrentIndex;
+
 @end

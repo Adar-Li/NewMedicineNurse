@@ -45,6 +45,7 @@
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+         
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"尽情享受吧" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -83,6 +84,26 @@
     
     
 }
+
+
+//
+- (void)P_saveUserInfo
+{
+    NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
+    [userdefaults setObject:_textField4Name.text forKey:@"userName"];
+    [userdefaults setObject:_textField4Password.text forKey:@"Passward"];
+    [userdefaults synchronize];
+    
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"恭喜你注册成功" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [alertView show];
+    
+}
+
+
+
+
+
+
 - (IBAction)btn4Cancel:(id)sender {
     self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self dismissViewControllerAnimated:YES completion:nil];

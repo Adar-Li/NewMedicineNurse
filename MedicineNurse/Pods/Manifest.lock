@@ -21,6 +21,11 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - AVOSCloud (3.1.5.1)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -29,12 +34,14 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
   - AVOSCloud
+  - FMDB
   - SDWebImage
   - SVPullToRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   AVOSCloud: 02766b9bbe7202a44b8beaf52f585607d1a5ad25
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 

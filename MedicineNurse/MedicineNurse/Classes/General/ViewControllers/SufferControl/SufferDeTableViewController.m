@@ -81,6 +81,10 @@
     SufferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.data = model;
  
+    cell.ArticleLabel.text = [model.articleDate substringToIndex:10];
+    
+    
+    
     return cell;
 }
 

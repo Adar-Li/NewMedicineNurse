@@ -50,7 +50,7 @@
     [self.cardView addShadow]; // comment this out if you don't want a shadow
     [self.view addSubview:self.cardView];
 
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY, kScremWidth -2*BUFFERX, 50)];
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY, kScremWidth -2*BUFFERX, 45)];
     outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
     outerRoundFlashButton.textLabel.text = @"微博登陆";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
@@ -83,7 +83,7 @@
 }
 
 - (void)drawMyButton{
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 55, kScremWidth -2*BUFFERX, 50)];
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 50, kScremWidth -2*BUFFERX, 45)];
     outerRoundFlashButton.buttonType = WZFlashButtonTypeInner;
     outerRoundFlashButton.textLabel.text = @"登陆";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
@@ -97,7 +97,7 @@
 }
 
 - (void)LikeMyButton{
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 110, kScremWidth -2*BUFFERX, 50)];
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 100, kScremWidth -2*BUFFERX, 45)];
     outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
     outerRoundFlashButton.textLabel.text = @"收藏";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
@@ -111,7 +111,7 @@
 }
 
 - (void)ClearMyButton{
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 165, kScremWidth -2*BUFFERX, 50)];
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 150, kScremWidth -2*BUFFERX, 45)];
     outerRoundFlashButton.buttonType = WZFlashButtonTypeInner;
     outerRoundFlashButton.textLabel.text = @"清理缓存";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
