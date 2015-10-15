@@ -11,7 +11,7 @@
 #import "GiFHUD.h"
 #import "UMSocial.h"
 
-@interface CommonNewsDetailsController ()
+@interface CommonNewsDetailsController () <UMSocialUIDelegate>
 {
     NSInteger index;
 }
@@ -109,7 +109,17 @@
                                          appKey:@"561c6d93e0f55a0eeb00a2b4"
                                       shareText:KCommonNewsListURL(self.commonNDModel.infoId)
                                      shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
-                                       delegate:nil];
+                                       delegate:self];
+}
+
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

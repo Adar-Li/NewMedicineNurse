@@ -10,7 +10,7 @@
 #import "GiFHUD.h"
 #import "UMSocial.h"
 
-@interface ViewController ()<UIWebViewDelegate>
+@interface ViewController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
     NSInteger index;
 }
@@ -101,7 +101,17 @@
                                          appKey:@"561c6d93e0f55a0eeb00a2b4"
                                       shareText:self.str
                                      shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
-                                       delegate:nil];
+                                       delegate:self];
+}
+
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
 }
 
 #pragma mark -- webView的代理事件---
@@ -118,6 +128,7 @@
         [_web stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%'"];
     }
 }
+
 
 
 - (void)didReceiveMemoryWarning {

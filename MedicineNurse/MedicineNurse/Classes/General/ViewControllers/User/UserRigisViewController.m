@@ -45,6 +45,7 @@
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+         
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"尽情享受吧" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
