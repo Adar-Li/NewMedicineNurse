@@ -11,7 +11,7 @@
 #import "HDetailModel.h"
 #import "UMSocial.h"
 
-@interface HDetailController ()<UIWebViewDelegate>
+@interface HDetailController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
     NSInteger index;
 }
@@ -116,8 +116,17 @@
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"561c6d93e0f55a0eeb00a2b4"
                                       shareText:kHomeCellURL(self.ID)
-                                     shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
-                                       delegate:nil];
+                                     shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,UMShareToWechatSession,UMShareToFacebook,UMShareToTwitter, nil]
+                                       delegate:self];
+}
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
 }
 
 #pragma mark -- webView的代理事件---
