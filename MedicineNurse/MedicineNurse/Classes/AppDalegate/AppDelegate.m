@@ -11,6 +11,8 @@
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "OnboardingViewController.h"
+#import "OnboardingContentViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,21 +26,50 @@
    [UMSocialData setAppKey:@"561c6d93e0f55a0eeb00a2b4"];
     [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:@"http://www.umeng.com/social"];
 
-    
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor cyanColor];
-    
-    RootViewController *Root = [[RootViewController alloc]init];
-
     [AVOSCloud setApplicationId:@"qdBwKAv6gXz7SgtXKilwJHC6"
                       clientKey:@"ihIQvOfM8gIDip3lBd0OgALP"];
     
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = Root;
-
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"first"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"first"];
+        self.window.rootViewController = [self generateThirdDemoVC];
+    }else{
+        
+        self.window.rootViewController = [[RootViewController alloc]init];
+    }
+    
+    application.statusBarStyle = UIStatusBarStyleLightContent;
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)setupNormalRootViewController {
+    // create whatever your root view controller is going to be, in this case just a simple view controller
+    // wrapped in a navigation controller
+    self.window.rootViewController = [[RootViewController alloc]init];
+}
+
+- (OnboardingViewController *)generateThirdDemoVC {
+    OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"image.jpg"] buttonText:nil action:nil];
+    firstPage.bodyFontSize = 25;
+    
+    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"111.jpg"] buttonText:nil action:nil];
+    secondPage.bodyFontSize = 24;
+    
+    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"xuhua"] buttonText:nil action:nil];
+    
+    OnboardingContentViewController *fourthPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"xuhua"] buttonText:@"See Ya Later!" action:^{
+        [self setupNormalRootViewController];
+    }];
+    
+    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"milky_way.jpg"] contents:@[firstPage, secondPage, thirdPage, fourthPage]];
+    onboardingVC.shouldMaskBackground = NO;
+    onboardingVC.shouldBlurBackground = YES;
+    return onboardingVC;
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

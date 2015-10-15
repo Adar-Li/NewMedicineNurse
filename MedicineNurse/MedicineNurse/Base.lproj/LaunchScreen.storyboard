@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sheep1.png" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-Ct-gjE">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yGb-Ct-gjE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Q4l-6W-sUh"/>
-                            <constraint firstItem="yGb-Ct-gjE" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="Yda-js-3bV"/>
-                            <constraint firstItem="yGb-Ct-gjE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="baJ-qf-jZl"/>
-                            <constraint firstAttribute="trailing" secondItem="yGb-Ct-gjE" secondAttribute="trailing" id="fvj-Rl-qZk"/>
+                            <constraint firstItem="yGb-Ct-gjE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cLO-5u-40W"/>
+                            <constraint firstAttribute="trailing" secondItem="yGb-Ct-gjE" secondAttribute="trailing" id="cYz-Bx-wfa"/>
+                            <constraint firstItem="yGb-Ct-gjE" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="p9d-7W-Fdu"/>
+                            <constraint firstItem="yGb-Ct-gjE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rg3-Es-sLQ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

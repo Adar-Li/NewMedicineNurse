@@ -60,6 +60,8 @@
 		C268292F1BCF450100C75C49 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26829271BCF450100C75C49 /* libSocialWechat.a */; settings = {ASSET_TAGS = (); }; };
 		C26829301BCF450100C75C49 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26829281BCF450100C75C49 /* libWeChatSDK.a */; settings = {ASSET_TAGS = (); }; };
 		C26829321BCF7E9C00C75C49 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C26829311BCF7E9C00C75C49 /* image.jpg */; settings = {ASSET_TAGS = (); }; };
+		C268293B1BCF90A900C75C49 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26829381BCF90A900C75C49 /* OnboardingContentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C268293C1BCF90A900C75C49 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C268293A1BCF90A900C75C49 /* OnboardingViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
 		C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6821BC3A9DA00B394F5 /* Main.storyboard */; };
 		C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */; };
@@ -218,6 +220,10 @@
 		C268292A1BCF450100C75C49 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		C268292B1BCF450100C75C49 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		C26829311BCF7E9C00C75C49 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		C26829371BCF90A900C75C49 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController.h; sourceTree = "<group>"; };
+		C26829381BCF90A900C75C49 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
+		C26829391BCF90A900C75C49 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
+		C268293A1BCF90A900C75C49 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 		C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNurse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28EA67A1BC3A9DA00B394F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C28EA6831BC3A9DA00B394F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -521,6 +527,17 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		C26829361BCF90A900C75C49 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C26829371BCF90A900C75C49 /* OnboardingContentViewController.h */,
+				C26829381BCF90A900C75C49 /* OnboardingContentViewController.m */,
+				C26829391BCF90A900C75C49 /* OnboardingViewController.h */,
+				C268293A1BCF90A900C75C49 /* OnboardingViewController.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		C28EA66D1BC3A9DA00B394F5 = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +688,7 @@
 		C28EA6B81BC3C52700B394F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C26829361BCF90A900C75C49 /* Source */,
 				C2D0B7DD1BCE2F68001745D0 /* GIFHUD */,
 				C2D0B7E01BCE2F68001745D0 /* RKCard */,
 				C2D0B7E31BCE2F68001745D0 /* WZFlashButton */,
@@ -1160,6 +1178,7 @@
 				C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */,
 				C2D0B7E81BCE2F68001745D0 /* WZFlashButton.m in Sources */,
 				C2D0B7CA1BCE2807001745D0 /* DrugAndnewsListModel.m in Sources */,
+				C268293C1BCF90A900C75C49 /* OnboardingViewController.m in Sources */,
 				C2D0B7E61BCE2F68001745D0 /* GiFHUD.m in Sources */,
 				C25015ED1BCE24E800057CDD /* ViewController.m in Sources */,
 				C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */,
@@ -1168,6 +1187,7 @@
 				C2FC64081BCE018400B2B22E /* HomeHelper.m in Sources */,
 				C2FC641F1BCE03D100B2B22E /* RecommendModel.m in Sources */,
 				C242BCD61BCE4EBB003E5950 /* UserController.m in Sources */,
+				C268293B1BCF90A900C75C49 /* OnboardingContentViewController.m in Sources */,
 				C25015E21BCE229300057CDD /* SufferTableViewCell.m in Sources */,
 				C2D0B7C81BCE2807001745D0 /* CommonDetailModel.m in Sources */,
 			);
