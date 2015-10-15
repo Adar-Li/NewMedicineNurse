@@ -44,6 +44,7 @@
 {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.tabBar.backgroundColor = [UIColor whiteColor];
     //四个模块：首页、常见病症、医药资讯、我
     
     UINavigationController * homeNC = [[UINavigationController alloc] initWithRootViewController:[HomeController new]];

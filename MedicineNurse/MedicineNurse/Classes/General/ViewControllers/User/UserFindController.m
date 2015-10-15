@@ -47,10 +47,14 @@
     
 }
 - (IBAction)btn4Cancel:(id)sender {
-    self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//撤销键盘
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 
