@@ -74,6 +74,7 @@
 		C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */; settings = {ASSET_TAGS = (); }; };
 		C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0C1BCA70D300466B76 /* CommonTableController.m */; settings = {ASSET_TAGS = (); }; };
 		C2BF17611BCFC1AD00736757 /* HCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17601BCFC1AD00736757 /* HCollectController.m */; settings = {ASSET_TAGS = (); }; };
+		C2BF17641BCFD74100736757 /* MyCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17631BCFD74100736757 /* MyCollectController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB89D1BC8AD410002AAB2 /* CommonController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -250,6 +251,8 @@
 		C2953E0C1BCA70D300466B76 /* CommonTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableController.m; sourceTree = "<group>"; };
 		C2BF175F1BCFC1AD00736757 /* HCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCollectController.h; sourceTree = "<group>"; };
 		C2BF17601BCFC1AD00736757 /* HCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCollectController.m; sourceTree = "<group>"; };
+		C2BF17621BCFD74100736757 /* MyCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectController.h; sourceTree = "<group>"; };
+		C2BF17631BCFD74100736757 /* MyCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectController.m; sourceTree = "<group>"; };
 		C2CFB89C1BC8AD410002AAB2 /* CommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonController.h; sourceTree = "<group>"; };
 		C2CFB89D1BC8AD410002AAB2 /* CommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonController.m; sourceTree = "<group>"; };
 		C2CFB89E1BC8AD410002AAB2 /* CommonTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableController.h; sourceTree = "<group>"; };
@@ -893,6 +896,8 @@
 				C2FC63E31BCDFFBB00B2B22E /* HDetailController.m */,
 				C2BF175F1BCFC1AD00736757 /* HCollectController.h */,
 				C2BF17601BCFC1AD00736757 /* HCollectController.m */,
+				C2BF17621BCFD74100736757 /* MyCollectController.h */,
+				C2BF17631BCFD74100736757 /* MyCollectController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1187,6 +1192,7 @@
 				C2FC64001BCE013B00B2B22E /* HEDCell.m in Sources */,
 				C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */,
 				C2500FF51BCE220B00057CDD /* SufferTableViewController.m in Sources */,
+				C2BF17641BCFD74100736757 /* MyCollectController.m in Sources */,
 				C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */,
 				C2FC63F01BCE00A100B2B22E /* HSBDetailController.m in Sources */,
 				C2D0B7D11BCE2866001745D0 /* CommonDetailsController.m in Sources */,

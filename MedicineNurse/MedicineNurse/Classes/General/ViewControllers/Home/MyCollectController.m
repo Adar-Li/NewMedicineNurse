@@ -1,18 +1,19 @@
 //
-//  HDetailController.m
+//  MyCollectController.m
 //  MedicineNurse
 //
-//  Created by lanou3g on 15/10/9.
+//  Created by lanou3g on 15/10/15.
 //  Copyright © 2015年 Adar-Li. All rights reserved.
 //
 
-#import "HDetailController.h"
+#import "MyCollectController.h"
 #import <AFNetworking.h>
 #import "HDetailModel.h"
 #import "UMSocial.h"
 #import "DataManager.h"
 
-@interface HDetailController ()<UIWebViewDelegate,UMSocialUIDelegate>
+@interface MyCollectController ()<UIWebViewDelegate,UMSocialUIDelegate>
+
 {
     NSInteger collectIndex;
     NSInteger index;
@@ -24,26 +25,30 @@
 //创建头视图
 @property(nonatomic,strong)UIView * headerView;
 
+
 @end
 
-@implementation HDetailController
+@implementation MyCollectController
+
+
+
 
 //界面将要消失时隐藏
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];
     self.headerView.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.headerView.hidden = NO;
     collectIndex = 0 ;
-    
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 
 - (void)viewDidLoad {
-
     index = 0;
     [super viewDidLoad];
     [self analysisCellData];
@@ -64,7 +69,7 @@
 - (void)analysisCellData{
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     
-    [manager GET:kHomeCellURL(self.ID) parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager GET:self.URL parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         
         NSArray * array = responseObject[@"data"][@"items"];
         NSDictionary * dict = [array firstObject];
@@ -80,7 +85,7 @@
 //绘制webView
 - (void)drawUI{
     
-    _webView  = [[UIWebView alloc]initWithFrame:CGRectMake(10,0, kScremWidth -20, kScremHeight )];
+    _webView  = [[UIWebView alloc]initWithFrame:CGRectMake(10,64, kScremWidth -20, kScremHeight - 64)];
     _webView.delegate = self;
     _webView .scalesPageToFit = YES;
     [_webView loadHTMLString:self.detailModel.content baseURL:nil];
@@ -123,7 +128,7 @@
 - (void)shareAction{
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"561c6d93e0f55a0eeb00a2b4"
-                                      shareText:kHomeCellURL(self.ID)
+                                      shareText:self.URL
                                      shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,UMShareToWechatSession,UMShareToFacebook,UMShareToTwitter, nil]
                                        delegate:self];
 }
@@ -146,7 +151,7 @@
         
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
         
-        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kHomeCellURL(self.ID) title:self.titleName URL:self.picUrl];
+        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.URL title:self.titleName URL:self.picUrl];
         [[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
     }else{
         
@@ -183,15 +188,5 @@
 
 
 
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

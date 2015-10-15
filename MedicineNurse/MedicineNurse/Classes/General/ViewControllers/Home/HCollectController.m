@@ -11,6 +11,8 @@
 #import "RecommendModel.h"
 #import "DataManager.h"
 #import "HLoverModel.h"
+#import "HDetailController.h"
+#import "MyCollectController.h"
 
 
 @interface HCollectController ()<UITableViewDelegate,UITableViewDataSource>
@@ -34,10 +36,9 @@ static NSString * hccCell = @"hccCellID";
     
     self.itemArray =  [[[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL] mutableCopy];
     self.tabBarController.tabBar.hidden = YES;
-    self.navigationItem.title = @"我收藏的文章";
-    //注册自定义cell
-    //    [self.tableView registerNib:[UINib nibWithNibName:@"HCCell" bundle:nil] forCellReuseIdentifier:hccCell];
-    
+    self.navigationItem.title = @"我的收藏";
+    self.automaticallyAdjustsScrollViewInsets =NO;
+
     [self drawCollectTableView];
 }
 
@@ -52,7 +53,7 @@ static NSString * hccCell = @"hccCellID";
 //绘制tableView
 - (void)drawCollectTableView{
     
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, kScremWidth, kScremHeight) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,64, kScremWidth, kScremHeight) style:UITableViewStylePlain];
     [self.tableView registerNib:[UINib nibWithNibName:@"HCCell" bundle:nil] forCellReuseIdentifier:hccCell];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -93,8 +94,13 @@ static NSString * hccCell = @"hccCellID";
 //cell的点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    MyCollectController * detailVC = [MyCollectController new];
+    HLoverModel * model  = self.itemArray[indexPath.row];
+    detailVC.title = model.title;
+    detailVC.picUrl = model.picUrl;
     
-    
+    detailVC.URL = model.ID;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 
