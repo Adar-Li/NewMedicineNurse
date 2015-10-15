@@ -40,7 +40,7 @@
     AVUser *user = [AVUser user];
     user.username = _textField4Name.text;
     user.password =  _textField4Password.text;
-    //user.email = _textField4Email.text;
+    user.email = _textField4Email.text;
     //[user setObject:@"186-1234-0000" forKey:@"phone"];
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

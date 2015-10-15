@@ -26,8 +26,8 @@
    [UMSocialData setAppKey:@"561c6d93e0f55a0eeb00a2b4"];
     [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:@"http://www.umeng.com/social"];
 
-    [AVOSCloud setApplicationId:@"qdBwKAv6gXz7SgtXKilwJHC6"
-                      clientKey:@"ihIQvOfM8gIDip3lBd0OgALP"];
+    [AVOSCloud setApplicationId:@"EmuufWEMzBDTssl65QtYfzXl"
+                      clientKey:@"eiyJOovboqO9EASi0Ybfr1i3"];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

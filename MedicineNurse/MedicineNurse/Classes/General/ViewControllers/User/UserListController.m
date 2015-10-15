@@ -103,9 +103,7 @@
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     outerRoundFlashButton.clickBlock = ^(void) {
-        UserController *user = [UserController new];
-        user.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        [self presentViewController:user animated:YES completion:nil];
+        NSLog(@"收藏");
     };
     [self.cardView addSubview:outerRoundFlashButton];
 }
