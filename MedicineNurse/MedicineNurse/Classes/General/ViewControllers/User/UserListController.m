@@ -10,10 +10,14 @@
 #import "RKCardView.h"
 #import "WZFlashButton.h"
 #import "UserController.h"
+#import "UIImageView+WebCache.h"
+#import "UMSocial.h"
 #define BUFFERX 20
 #define BUFFERY 66
 
 @interface UserListController ()
+
+@property(nonatomic,strong)NSString *imageURL;
 
 @property (nonatomic ,strong ) RKCardView* cardView;
 
@@ -46,23 +50,41 @@
     [self.cardView addShadow]; // comment this out if you don't want a shadow
     [self.view addSubview:self.cardView];
 
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(50, 300, 200, 50)];
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY, kScremWidth -2*BUFFERX, 50)];
     outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
     outerRoundFlashButton.textLabel.text = @"微博登陆";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     outerRoundFlashButton.clickBlock = ^(void) {
-    
+        // 使用Sina微博账号登录
+        UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+        snsPlatform.loginClickHandler(self, [UMSocialControllerService defaultControllerService], YES, ^(UMSocialResponseEntity *response) {
+            //NSLog(@"response is %@", response);
+            // 如果是授权到新浪微博，SSO之后如果想获取用户的昵称、头像等需要再获取一次账户信息
+            [[UMSocialDataService defaultDataService]requestSocialAccountWithCompletion:^(UMSocialResponseEntity *response) {
+                
+                self.cardView.titleLabel.text = [[[response.data objectForKey:@"accounts"]objectForKey:UMShareToSina] objectForKey:@"username"];
+                
+                self.imageURL = [NSString new];
+                self.imageURL=[[[response.data objectForKey:@"accounts"]objectForKey:UMShareToSina] objectForKey:@"icon"];
+                
+                [self.cardView.coverImageView sd_setImageWithURL:[NSURL URLWithString:self.imageURL]];
+                [self.cardView.profileImageView sd_setImageWithURL:[NSURL URLWithString:self.imageURL]];
+            }];
+        });
+
         
     };
     
     [self.cardView addSubview:outerRoundFlashButton];
     [self drawMyButton];
+    [self LikeMyButton];
+    [self ClearMyButton];
 }
 
 - (void)drawMyButton{
-    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(50, 400, 200, 50)];
-    outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 55, kScremWidth -2*BUFFERX, 50)];
+    outerRoundFlashButton.buttonType = WZFlashButtonTypeInner;
     outerRoundFlashButton.textLabel.text = @"登陆";
     outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
@@ -73,6 +95,33 @@
     };
     [self.cardView addSubview:outerRoundFlashButton];
 }
+
+- (void)LikeMyButton{
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 110, kScremWidth -2*BUFFERX, 50)];
+    outerRoundFlashButton.buttonType = WZFlashButtonTypeOuter;
+    outerRoundFlashButton.textLabel.text = @"收藏";
+    outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
+    outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
+    outerRoundFlashButton.clickBlock = ^(void) {
+        UserController *user = [UserController new];
+        user.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:user animated:YES completion:nil];
+    };
+    [self.cardView addSubview:outerRoundFlashButton];
+}
+
+- (void)ClearMyButton{
+    WZFlashButton *outerRoundFlashButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 165, kScremWidth -2*BUFFERX, 50)];
+    outerRoundFlashButton.buttonType = WZFlashButtonTypeInner;
+    outerRoundFlashButton.textLabel.text = @"清理缓存";
+    outerRoundFlashButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
+    outerRoundFlashButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
+    outerRoundFlashButton.clickBlock = ^(void) {
+        NSLog(@"清理缓存");
+    };
+    [self.cardView addSubview:outerRoundFlashButton];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

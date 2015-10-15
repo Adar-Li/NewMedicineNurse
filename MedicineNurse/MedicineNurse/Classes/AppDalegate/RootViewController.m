@@ -56,7 +56,7 @@
     
     UINavigationController *suffer = [[UINavigationController alloc]initWithRootViewController:[SufferViewController new]];
     suffer.tabBarItem.title = @"用药助手";
-    suffer.navigationBar.backgroundColor = [UIColor colorWithRed:0.502 green:1.000 blue:0.000 alpha:1.000];
+    suffer.navigationBar.backgroundColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
     
     UINavigationController *User = [[UINavigationController alloc]initWithRootViewController:[UserListController new]];
     User.tabBarItem.title = @"用户";
