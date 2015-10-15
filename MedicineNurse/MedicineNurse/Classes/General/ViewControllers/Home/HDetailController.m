@@ -10,9 +10,11 @@
 #import <AFNetworking.h>
 #import "HDetailModel.h"
 #import "UMSocial.h"
+#import "DataManager.h"
 
 @interface HDetailController ()<UIWebViewDelegate>
 {
+    NSInteger collectIndex;
     NSInteger index;
 }
 
@@ -35,6 +37,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.headerView.hidden = NO;
+    collectIndex = 0 ;
     
 }
 
@@ -47,7 +50,9 @@
     self.navigationController.navigationBarHidden = NO;
     //调用绘制表头事件
     [self drawHeader];
-    [self drawbutton];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +71,7 @@
         _detailModel = [HDetailModel new];
         [_detailModel setValuesForKeysWithDictionary:dict];
         [self drawUI];
+        
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         
     }];
@@ -87,37 +93,62 @@
 //绘制button事件
 - (void)drawHeader{
     
-    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(90, 0,  kScremWidth -90 , 44)];
+    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(65, 0,  kScremWidth - 70 , 44)];
     [self.navigationController.navigationBar addSubview:self.headerView];
-    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180, 0, 35, 35)];
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180,10, 30, 30)];
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:SizeButton];
+    //绘制保存按钮
+    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
+    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+    [self.headerView addSubview:collectButton];
+    //分享按钮
+    UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 110,12, 27, 27)];
+    [shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:shareButton];
     
     //标题
-    UILabel * titleLable = [[UILabel alloc]initWithFrame:CGRectMake(5, 9, kScremWidth - 190, 35)];
+    UILabel * titleLable = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, kScremWidth - 185, 35)];
     titleLable.text = self.titleName;
     titleLable.font = [UIFont systemFontOfSize:15];
     titleLable.textAlignment = NSTextAlignmentCenter;
     [self.headerView addSubview:titleLable];
-    
 }
 
-- (void)drawbutton{
-    
-    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 140, 0, 32, 32)];
-    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
-    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.headerView addSubview:SizeButton];
-}
 
 - (void)shareAction{
-
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"561c6d93e0f55a0eeb00a2b4"
                                       shareText:kHomeCellURL(self.ID)
                                      shareImage:[UIImage imageNamed:@"111.jpg"]                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToQQ,UMShareToQzone,UMShareToDouban,UMShareToWechatSession, nil]
                                        delegate:nil];
+}
+
+
+#pragma mark -- 收藏事件---
+- (void)collectAction{
+    collectIndex ++;
+    if (collectIndex <= 1) {
+        collectIndex = 2;
+        
+        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
+        
+        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kHomeCellURL(self.ID) title:self.titleName URL:self.picUrl];
+        [[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
+    }else{
+        
+        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [self presentViewController:allertVC animated:YES completion:nil];
+        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        
+        [allertVC addAction:alertAction];
+    }
+    
 }
 
 #pragma mark -- webView的代理事件---

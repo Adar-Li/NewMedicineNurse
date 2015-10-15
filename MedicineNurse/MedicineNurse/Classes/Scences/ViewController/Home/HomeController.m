@@ -76,6 +76,8 @@ static NSString * hccCell = @"hccCellID";
     self.navigationController.navigationBarHidden = YES;
     [super viewDidLoad];
     [self drawMainScrollview];
+    //设置标题
+    self.navigationItem.title = @"首页";
     
     //调用请求数据与绘制界面的方法
     [self analysisDataAndDrawUI];
@@ -339,6 +341,7 @@ static NSString * hccCell = @"hccCellID";
         HDetailController * detailVC = [[HDetailController alloc]init];
         detailVC.ID = item.ID;
         detailVC.titleName = item.title;
+        detailVC.picUrl = item.cover_small;
         [self.navigationController pushViewController:detailVC animated:YES];
     }
 }

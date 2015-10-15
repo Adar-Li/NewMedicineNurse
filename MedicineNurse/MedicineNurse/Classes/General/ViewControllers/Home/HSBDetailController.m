@@ -31,6 +31,9 @@ static  NSString * hccCell = @"hcccellID";
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
+    //设置标题
+    self.navigationItem.title = @"专题";
+  
 }
 //视图将要消失的时候
 - (void)viewWillDisappear:(BOOL)animated{
@@ -121,6 +124,7 @@ static  NSString * hccCell = @"hcccellID";
             [self.mutArray addObject:detailModel];
             //下载完重新加载
             [self.tableView reloadData];
+
         }
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
@@ -165,6 +169,8 @@ static  NSString * hccCell = @"hcccellID";
     HDetailController * detailVC = [[HDetailController alloc]init];
     detailVC.ID = model.ID;
     detailVC.titleName = model.title;
+    detailVC.picUrl = model.cover_small;
+    
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

@@ -93,6 +93,8 @@
 		C2D0B7F01BCE3443001745D0 /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2D0B7ED1BCE3443001745D0 /* 111.jpg */; settings = {ASSET_TAGS = (); }; };
 		C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D1396B1BC5F9CA00D4B1F7 /* Male.png */; settings = {ASSET_TAGS = (); }; };
 		C2D1396E1BC5F9D100D4B1F7 /* Female.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D1396D1BC5F9D100D4B1F7 /* Female.png */; settings = {ASSET_TAGS = (); }; };
+		C2E4DE971BCF5A1000547159 /* HLoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E4DE961BCF5A1000547159 /* HLoverModel.m */; settings = {ASSET_TAGS = (); }; };
+		C2E4DE9A1BCF5B2200547159 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E4DE991BCF5B2200547159 /* DataManager.m */; settings = {ASSET_TAGS = (); }; };
 		C2EB3E961BC7FA3B003E81A9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EB3E951BC7FA3B003E81A9 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C61BC7B6EC00934592 /* lovew.png */; settings = {ASSET_TAGS = (); }; };
 		C2EC44CA1BC7B6EC00934592 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EC44C71BC7B6EC00934592 /* share.png */; settings = {ASSET_TAGS = (); }; };
@@ -279,6 +281,10 @@
 		C2D1396D1BC5F9D100D4B1F7 /* Female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Female.png; sourceTree = "<group>"; };
 		C2D15F0F1BC535CD000CB956 /* MedicineNurse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicineNurse.pch; sourceTree = "<group>"; };
 		C2D15F101BC536E9000CB956 /* URLAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLAPI.h; sourceTree = "<group>"; };
+		C2E4DE951BCF5A1000547159 /* HLoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLoverModel.h; sourceTree = "<group>"; };
+		C2E4DE961BCF5A1000547159 /* HLoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLoverModel.m; sourceTree = "<group>"; };
+		C2E4DE981BCF5B2200547159 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		C2E4DE991BCF5B2200547159 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		C2EB3E941BC7FA3B003E81A9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		C2EB3E951BC7FA3B003E81A9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		C2EC44C61BC7B6EC00934592 /* lovew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lovew.png; sourceTree = "<group>"; };
@@ -667,6 +673,8 @@
 				C2FC64071BCE018400B2B22E /* HomeHelper.m */,
 				C23A346F1BC562CA007320E1 /* CommonHelper.h */,
 				C23A34701BC562CA007320E1 /* CommonHelper.m */,
+				C2E4DE981BCF5B2200547159 /* DataManager.h */,
+				C2E4DE991BCF5B2200547159 /* DataManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -909,6 +917,8 @@
 				C2FC640B1BCE01F900B2B22E /* HDetailModel.m */,
 				C2FC640C1BCE01F900B2B22E /* HSubjectModel.h */,
 				C2FC640D1BCE01F900B2B22E /* HSubjectModel.m */,
+				C2E4DE951BCF5A1000547159 /* HLoverModel.h */,
+				C2E4DE961BCF5A1000547159 /* HLoverModel.m */,
 			);
 			path = HomeModel;
 			sourceTree = "<group>";
@@ -1145,6 +1155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FC64171BCE029A00B2B22E /* IanScrollImageView.m in Sources */,
+				C2E4DE9A1BCF5B2200547159 /* DataManager.m in Sources */,
 				C242BCDE1BCE564B003E5950 /* UserFindController.m in Sources */,
 				C2FC63FE1BCE013B00B2B22E /* HCCell.m in Sources */,
 				C2CFB8CC1BC8ADD10002AAB2 /* CommonClickCell.m in Sources */,
@@ -1186,6 +1197,7 @@
 				C25015ED1BCE24E800057CDD /* ViewController.m in Sources */,
 				C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */,
 				C2D0B7E71BCE2F68001745D0 /* RKCardView.m in Sources */,
+				C2E4DE971BCF5A1000547159 /* HLoverModel.m in Sources */,
 				C2FC63EE1BCE00A100B2B22E /* HomeSBController.m in Sources */,
 				C2FC64081BCE018400B2B22E /* HomeHelper.m in Sources */,
 				C2FC641F1BCE03D100B2B22E /* RecommendModel.m in Sources */,

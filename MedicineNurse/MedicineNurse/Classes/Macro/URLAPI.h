@@ -45,7 +45,13 @@
 //通知
 #define kChoose @"choooseAction"
 #define kBackChoose @"backChoose"
-
+//数据库沙河地址
+#define kDataPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"myDataBase"]
+//创建数据库需要的值
+#define kLoverKey @"loverKey"
+#define kLoverTitle @"loverTitle"
+#define kLoverTable @"loverTable"
+#define kLoverURL @"loverUrl"
 
 //常见病症网址
 //常见病症列表网址
