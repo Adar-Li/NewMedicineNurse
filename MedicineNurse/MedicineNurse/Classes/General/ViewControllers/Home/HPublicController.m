@@ -154,6 +154,7 @@ static NSString * hcCCell = @"hccCellID";
         HDetailController * detaiVC = [HDetailController new];
         detaiVC.ID = item.ID;
         detaiVC.titleName = item.title;
+        detaiVC.picUrl = item.cover_small;
         [self.navigationController pushViewController:detaiVC animated:YES];
         
     }
