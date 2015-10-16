@@ -10,10 +10,13 @@
 #import "AFHTTPSessionManager.h"
 #import "GiFHUD.h"
 #import "UMSocial.h"
+#import "DataManager.h"
 
 @interface CommonNewsDetailsController () <UMSocialUIDelegate>
 {
+    NSInteger collectIndex;
     NSInteger index;
+    NSString *titleName;
 }
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -45,8 +48,8 @@
     index = 0;
     [self requestNewsDetail];
     //调用绘制表头事件
-    [self drawHeader];
-    [self drawbutton];
+//    [self drawHeader];
+//    [self drawbutton];
 }
 
 - (void)requestNewsDetail{
@@ -57,7 +60,7 @@
         
         self.newsDetail = responseObject[@"data"][@"newsInfo"][@"content"];
         //标题
-        self.navigationItem.title = responseObject[@"data"][@"newsInfo"][@"dataTitle"];
+        titleName = responseObject[@"data"][@"newsInfo"][@"dataTitle"];
         
         //webView
         self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, kScremWidth, kScremHeight-50)];
@@ -65,22 +68,53 @@
         _webView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:_webView];
         [GiFHUD dismiss];
+        [self drawHeader];
     } failure:^(NSURLSessionDataTask *  task, NSError *  error) {
         
     }];
 }
 
+////绘制button事件
+//- (void)drawHeader{
+//    
+//    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(kScremWidth /1.2, 0, 2 * kScremWidth /3, 44)];
+//    [self.navigationController.navigationBar addSubview:self.headerView];
+//    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+//    [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
+//    [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
+//    [self.headerView addSubview:SizeButton];
+//}
+////
 //绘制button事件
 - (void)drawHeader{
     
-    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(kScremWidth /1.2, 0, 2 * kScremWidth /3, 44)];
+    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(65, 0,  kScremWidth - 70 , 44)];
     [self.navigationController.navigationBar addSubview:self.headerView];
-    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 35, 35)];
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180,10, 30, 30)];
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:SizeButton];
+    //绘制保存按钮
+    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
+    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+    [self.headerView addSubview:collectButton];
+    //分享按钮
+    UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 110,12, 27, 27)];
+    [shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:shareButton];
     
+    //标题
+    UILabel * titleLable = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, kScremWidth - 185, 35)];
+    titleLable.text = titleName;
+    titleLable.font = [UIFont systemFontOfSize:15];
+    titleLable.textAlignment = NSTextAlignmentCenter;
+    [self.headerView addSubview:titleLable];
 }
+
+
 
 //改变字体大小
 - (void)changeTextSize{
@@ -94,14 +128,14 @@
         [_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%'"];
     }
 }
-
-- (void)drawbutton{
-    
-    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(30, 0, 35, 35)];
-    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
-    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.headerView addSubview:SizeButton];
-}
+//
+//- (void)drawbutton{
+//    
+//    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(30, 0, 35, 35)];
+//    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+//    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.headerView addSubview:SizeButton];
+//}
 
 - (void)shareAction{
     
@@ -126,6 +160,40 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+////收藏
+//- (void)loveButton{
+//    
+//    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(30, 0, 35, 35)];
+//    [SizeButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
+//    [SizeButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.headerView addSubview:SizeButton];
+//}
+
+#pragma mark -- 收藏事件---
+- (void)collectAction{
+    collectIndex ++;
+    if (collectIndex <= 1) {
+        collectIndex = 2;
+        
+        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
+        
+        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.newsDetail title:self.commonNDModel.infoTitle URL:self.commonNDModel.infoLogo];
+  
+    }else{
+        
+        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [self presentViewController:allertVC animated:YES completion:nil];
+        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        
+        [allertVC addAction:alertAction];
+    }
+    
+}
+
+
+
 
 /*
 #pragma mark - Navigation
