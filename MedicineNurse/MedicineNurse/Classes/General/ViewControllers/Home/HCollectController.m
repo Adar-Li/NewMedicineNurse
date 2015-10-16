@@ -79,9 +79,7 @@ static NSString * hccCell = @"hccCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     HLoverModel * model = self.itemArray[indexPath.row];
-     if ([model.type isEqualToString:@"1"])  {
-        
-   
+    
     HCCell * cell  = [tableView dequeueReusableCellWithIdentifier:hccCell forIndexPath:indexPath];
     
     RecommendModel * item = [RecommendModel new];
@@ -89,19 +87,7 @@ static NSString * hccCell = @"hccCellID";
     item.cover_small = model.picUrl;
     [cell setvalueWithModel:item];
           return cell;
-     }else if ([model.type isEqualToString:@"2"]){
-    HCCell * cell  = [tableView dequeueReusableCellWithIdentifier:hccCell forIndexPath:indexPath];
-         RecommendModel * item = [RecommendModel new];
-         item.title = model.title;
-         item.cover_small = model.picUrl;
-         item.url = model.ID;
-         [cell setvalueWithModel:item];
-           return cell;
-     }
-    
-    
-         return nil;
-}
+    }
 
 //设置cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -118,7 +104,7 @@ static NSString * hccCell = @"hccCellID";
     detailVC.picUrl = model.picUrl;
     detailVC.URL = model.ID;
     [self.navigationController pushViewController:detailVC animated:YES];
-<<<<<<< HEAD
+
     }else if ([model.type isEqualToString:@"2"]){
         
          DrugAndnewsListModel * commonNDModel = [DrugAndnewsListModel new];
@@ -131,12 +117,12 @@ static NSString * hccCell = @"hccCellID";
         [self.navigationController pushViewController:commonNDC animated:YES];
         
     
-=======
+
     }else if ([model.type isEqualToString:@"3"]){
         ViewController *view = [ViewController new];
         view.str = model.ID;
         [self.navigationController pushViewController:view animated:YES];
->>>>>>> 09fce63bf3fb7c1eac7063ca73a5b5d30b6941a5
+
     }
 }
 
