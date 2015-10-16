@@ -10,6 +10,8 @@
 #import "GiFHUD.h"
 #import "UMSocial.h"
 #import "DataManager.h"
+#import "AVUser.h"
+#import "UserController.h"
 
 @interface ViewController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
@@ -146,6 +148,16 @@
 
 #pragma mark -- 收藏事件---
 - (void)collectAction{
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+    } else {
+        UserController *userLogin = [UserController new];
+        //        [self popoverPresentationController];
+        [self.navigationController pushViewController:userLogin animated:YES];
+        
+    }
+
+    
     collectIndex ++;
     if (collectIndex <= 1) {
         collectIndex = 2;
