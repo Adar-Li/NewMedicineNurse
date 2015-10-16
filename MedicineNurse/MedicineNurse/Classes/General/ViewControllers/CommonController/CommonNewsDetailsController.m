@@ -22,6 +22,7 @@
 @property (nonatomic, strong) UIWebView *webView;
 //创建头视图
 @property(nonatomic,strong)UIView * headerView;
+@property (nonatomic, strong)UIButton * collectButton;
 
 @end
 
@@ -95,11 +96,11 @@
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:SizeButton];
     //绘制保存按钮
-    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
-    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
-    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
-    [self.headerView addSubview:collectButton];
+    self.collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
+    [self.collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+    [self.headerView addSubview:_collectButton];
     //分享按钮
     UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 110,12, 27, 27)];
     [shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
@@ -176,19 +177,24 @@
     if (collectIndex <= 1) {
         collectIndex = 2;
         
+        [self.collectButton setImage:[UIImage imageNamed:@"Collected"] forState:UIControlStateNormal];
+        
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
         
         [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:KCommonNewsListURL(self.commonNDModel.infoId) title:self.commonNDModel.infoTitle URL:self.commonNDModel.infoLogo type:@"2"];
 
   
     }else{
+        collectIndex = 0;
+//        [self.collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+//        [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:KCommonNewsListURL(self.commonNDModel.infoId)];
         
-        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
-        
-        [self presentViewController:allertVC animated:YES completion:nil];
-        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-        
-        [allertVC addAction:alertAction];
+//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        [self presentViewController:allertVC animated:YES completion:nil];
+//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+//        
+//        [allertVC addAction:alertAction];
     }
     
 }

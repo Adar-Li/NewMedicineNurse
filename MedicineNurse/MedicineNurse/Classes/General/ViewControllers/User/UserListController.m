@@ -97,6 +97,7 @@
         [self presentViewController:user animated:YES completion:nil];
     };
     [self.cardView addSubview:outerRoundFlashButton];
+    
 }
 
 - (void)LikeMyButton{
