@@ -57,7 +57,7 @@ static NSString * hcCCell = @"hccCellID";
     pageIndex ++;
      __weak HPublicController * weakSelf = self;
     
-    NSString * pageStr = [NSString stringWithFormat:@"page_index=%ld",pageIndex];
+    NSString * pageStr = [NSString stringWithFormat:@"page_index=%ld",(long)pageIndex];
     NSString * URL = [weakSelf.URLStr stringByReplacingOccurrencesOfString:@"page_index=1" withString:pageStr];
     AFHTTPRequestOperationManager * manager =[AFHTTPRequestOperationManager manager];
     

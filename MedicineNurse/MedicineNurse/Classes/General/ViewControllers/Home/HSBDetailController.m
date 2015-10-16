@@ -90,7 +90,7 @@ static  NSString * hccCell = @"hcccellID";
     pageIndex ++;
     __weak HSBDetailController * weakself = self;
     AFHTTPRequestOperationManager * manager =[AFHTTPRequestOperationManager manager];
-    NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&order=publishTime&page_index=%ld&special_id=%@&vc=4.0.5",pageIndex,self.model.ID];
+    NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&order=publishTime&page_index=%ld&special_id=%@&vc=4.0.5",(long)pageIndex,self.model.ID];
     
     [manager GET:URL parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSArray * array = responseObject[@"data"][@"items"];

@@ -59,7 +59,7 @@ static NSString * hsbcell = @"hsbcell";
     pageIndex ++;
     __weak HomeSBController * weakSelf = self;
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
-    NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/special/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=%ld&vc=4.0.5",pageIndex];
+    NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/special/list?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=%ld&vc=4.0.5",(long)pageIndex];
     
     [manager GET:URL parameters:nil success:^(AFHTTPRequestOperation * operation, id   responseObject) {
         NSArray * array =  responseObject[@"data"][@"items"];
