@@ -178,11 +178,11 @@
     
     AVUser *currentUser = [AVUser currentUser];
     if (currentUser != nil) {
-        NSLog(@"登陆成功");
     } else {
         UserController *userLogin = [UserController new];
-        
-        [self presentViewController:userLogin animated:YES completion:nil];
+//        [self popoverPresentationController];
+        [self.navigationController pushViewController:userLogin animated:YES];
+     
     }
     
     collectIndex ++;
@@ -194,19 +194,11 @@
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
         
         [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:KCommonNewsListURL(self.commonNDModel.infoId) title:self.commonNDModel.infoTitle URL:self.commonNDModel.infoLogo type:@"2"];
-
-  
     }else{
         collectIndex = 0;
         [self.collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
         [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:KCommonNewsListURL(self.commonNDModel.infoId)];
         
-//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
-//        
-//        [self presentViewController:allertVC animated:YES completion:nil];
-//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-//        
-//        [allertVC addAction:alertAction];
     }
     
 }

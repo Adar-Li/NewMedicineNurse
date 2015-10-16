@@ -11,7 +11,9 @@
 #import "HDetailModel.h"
 #import "UMSocial.h"
 #import "DataManager.h"
-
+#import "GiFHUD.h"
+#import "AVUser.h"
+#import "UserController.h"
 @interface HDetailController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
     NSInteger collectIndex;
@@ -51,6 +53,9 @@
     //调用绘制表头事件
     [self drawHeader];
     
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+ 
     
     
 }
@@ -65,6 +70,7 @@
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     
     [manager GET:kHomeCellURL(self.ID) parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        [GiFHUD dismiss];
         
         NSArray * array = responseObject[@"data"][@"items"];
         NSDictionary * dict = [array firstObject];
@@ -141,6 +147,15 @@
 
 #pragma mark -- 收藏事件---
 - (void)collectAction{
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+    } else {
+        UserController *userLogin = [UserController new];
+        //        [self popoverPresentationController];
+        [self.navigationController pushViewController:userLogin animated:YES];
+        
+    }
+
     collectIndex ++;
     if (collectIndex <= 1) {
         collectIndex = 2;

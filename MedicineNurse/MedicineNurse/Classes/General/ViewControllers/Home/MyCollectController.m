@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import "HDetailModel.h"
 #import "UMSocial.h"
+#import "GiFHUD.h"
 
 @interface MyCollectController ()<UIWebViewDelegate,UMSocialUIDelegate>
 
@@ -53,6 +54,8 @@
     [super viewDidLoad];
     [self analysisCellData];
     self.navigationController.navigationBarHidden = NO;
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
     
     //调用绘制表头事件
     [self drawHeader];
@@ -69,6 +72,7 @@
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     
     [manager GET:self.URL parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        [GiFHUD dismiss];
         
         NSArray * array = responseObject[@"data"][@"items"];
         NSDictionary * dict = [array firstObject];

@@ -13,7 +13,7 @@
 #import "HSubjectModel.h"
 #import "HSBDetailController.h"
 #import <SVPullToRefresh.h>
-
+#import "GiFHUD.h"
 @interface HomeSBController ()
 {
     NSInteger pageIndex;
@@ -32,6 +32,10 @@ static NSString * hsbcell = @"hsbcell";
     [super viewDidLoad];
     [self analysisData];
 
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+  
+    
     //注册自定义cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HSBCell" bundle:nil] forCellReuseIdentifier:hsbcell];
     
@@ -106,6 +110,8 @@ static NSString * hsbcell = @"hsbcell";
     __weak HomeSBController * weakSelf = self;
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     [manager GET:kHomeSBURL parameters:nil success:^(AFHTTPRequestOperation * operation, id   responseObject) {
+        //动画结束
+         [GiFHUD dismiss];
          [weakSelf.SBMutArray removeAllObjects];
        NSArray * array =  responseObject[@"data"][@"items"];
         for (NSDictionary * dict in array) {

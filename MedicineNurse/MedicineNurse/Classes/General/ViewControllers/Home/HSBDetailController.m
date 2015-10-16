@@ -12,6 +12,7 @@
 #import "RecommendModel.h"
 #import "HDetailController.h"
 #import <SVPullToRefresh.h>
+#import "GiFHUD.h"
 
 @interface HSBDetailController ()
 {
@@ -46,6 +47,10 @@ static  NSString * hccCell = @"hcccellID";
     pageIndex = 1 ;
     //解析数据
     [self analysisdata];
+    
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+   
 
     //注册自定义cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HCCell" bundle:nil] forCellReuseIdentifier:hccCell];
@@ -117,6 +122,7 @@ static  NSString * hccCell = @"hcccellID";
     AFHTTPRequestOperationManager * manager =[AFHTTPRequestOperationManager manager];
     NSString * URLStr = kHomeSBDetailURL(self.model.ID);
     [manager GET:URLStr parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        [GiFHUD dismiss];
        NSArray * array = responseObject[@"data"][@"items"];
         for (NSDictionary * dict in array) {
             RecommendModel * detailModel = [RecommendModel new];

@@ -17,15 +17,6 @@
 
 @implementation UserRigisViewController
 
-//- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-//    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-//        //去sb 中找到这个控制器
-//        UserRigisViewController * user = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"userregis"];
-//        self = user;
-//    }
-//    return self;
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -56,6 +47,17 @@
                 
                 [self dismissViewControllerAnimated:YES completion:nil];
 
+            //发出通知.自动登陆
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"loginAction" object:nil userInfo:@{@"name":_textField4Name.text}];
+            
+            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"尽情享受吧" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            }];
+            UIAlertAction *twoAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+                [self dismissViewControllerAnimated:YES completion:nil];
+                
             }];
             [alert addAction:oneAc];
             [alert addAction:twoAc];
@@ -79,22 +81,8 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
     }];
-   
-}
- 
-//
-- (void)P_saveUserInfo
-{
-    NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
-    [userdefaults setObject:_textField4Name.text forKey:@"userName"];
-    [userdefaults setObject:_textField4Password.text forKey:@"Passward"];
-    [userdefaults synchronize];
-    
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"恭喜你注册成功" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
-    [alertView show];
     
 }
-
 
 - (IBAction)btn4Cancel:(id)sender {
     self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
@@ -107,13 +95,13 @@
     [self.view endEditing:YES];
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
