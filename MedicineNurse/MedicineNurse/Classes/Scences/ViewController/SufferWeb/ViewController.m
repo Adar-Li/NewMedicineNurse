@@ -19,6 +19,7 @@
 @property(nonatomic,strong)UIWebView *web;
 //创建头视图
 @property(nonatomic,strong)UIView * headerView;
+@property (nonatomic, strong)UIButton *collButton;
 
 @property (nonatomic ,strong)UIButton  *SufferCollecButtpn;
 
@@ -90,12 +91,20 @@
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     
-    _SufferCollecButtpn = [UIButton buttonWithType:UIButtonTypeSystem];
+   _SufferCollecButtpn = [UIButton buttonWithType:UIButtonTypeSystem];
     _SufferCollecButtpn.frame = CGRectMake(kScremWidth/3, 0, 35, 35);
     [_SufferCollecButtpn addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
     [_SufferCollecButtpn setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
     [self.headerView addSubview:SizeButton];
     [self.headerView addSubview:_SufferCollecButtpn];
+
+//    self.collButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    self.collButton.frame = CGRectMake(kScremWidth/3, 0, 35, 35);
+//    [self.collButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.collButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+//    [self.headerView addSubview:SizeButton];
+//    [self.headerView addSubview:self.collButton];
+
 }
 
 - (void)drawbutton{
@@ -146,7 +155,7 @@
     collectIndex ++;
     if (collectIndex <= 1) {
         collectIndex = 2;
-        
+        [self.collButton setImage:[UIImage imageNamed:@"Collected"] forState:UIControlStateNormal];
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
         [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.str title:self.titlename URL:self.image type:@"3"];
         

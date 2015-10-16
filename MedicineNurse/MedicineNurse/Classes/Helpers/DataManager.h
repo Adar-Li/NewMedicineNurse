@@ -25,7 +25,7 @@
 - (NSMutableArray *)selectAllDataWithTableName:(NSString *)tableName mainKey:(NSString *)mainKey title:(NSString *)title URl:(NSString *)url type:(NSString*)type;
 //清楚表
 - (void)clearTableWithTableName:(NSString *)tableName;
-
-
+//根据网址清楚收藏项
+- (void)clearTableCollectWithTableName:(NSString *)tableName collectID:(NSString *)collectID;
 
 @end
