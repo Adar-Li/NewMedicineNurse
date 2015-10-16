@@ -34,9 +34,10 @@ static NSString * hccCell = @"hccCellID";
     [super viewDidLoad];
     //绘制tableView界面
     
-    self.itemArray =  [[[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL] mutableCopy];
+     self.itemArray =  [[[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType] mutableCopy];
+    
     self.tabBarController.tabBar.hidden = YES;
-    self.navigationItem.title = @"我的收藏";
+    self.navigationItem.title = @"收藏";
     self.automaticallyAdjustsScrollViewInsets =NO;
 
     [self drawCollectTableView];
@@ -96,11 +97,12 @@ static NSString * hccCell = @"hccCellID";
     
     MyCollectController * detailVC = [MyCollectController new];
     HLoverModel * model  = self.itemArray[indexPath.row];
+    if ([model.type isEqualToString:@"1"]) {
     detailVC.title = model.title;
     detailVC.picUrl = model.picUrl;
-    
     detailVC.URL = model.ID;
     [self.navigationController pushViewController:detailVC animated:YES];
+         }
 }
 
 

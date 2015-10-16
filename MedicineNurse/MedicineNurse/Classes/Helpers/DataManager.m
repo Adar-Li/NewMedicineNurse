@@ -24,14 +24,14 @@ static  FMDatabase * db = nil;
     return  manager;
 }
 
-- (BOOL)creatTableWithTableName:(NSString *)tableName mainKey:(NSString *)mainKey title:(NSString *)title URl:(NSString *)url{
+- (BOOL)creatTableWithTableName:(NSString *)tableName mainKey:(NSString *)mainKey title:(NSString *)title URl:(NSString *)url type:(NSString*)type{
     BOOL state = NO;
     if (![db open]) {
         return NO;
     }
     if (![self isTableExistWithTableName:tableName]) {
         
-        NSString * sqlString = [NSString stringWithFormat:@"CREATE TABLE %@ (%@ TEXT PRIMARY KEY, %@ TEXT DEAFAULT '', %@ TEXT DEAFAULT '')",tableName,mainKey,title,url];
+        NSString * sqlString = [NSString stringWithFormat:@"CREATE TABLE %@ (%@ TEXT PRIMARY KEY, %@ TEXT DEAFAULT '', %@ TEXT DEAFAULT '', %@ TEXT DEAFAULT '')",tableName,mainKey,title,url,type];
         state = [db executeStatements:sqlString];
     }
     [db close];
@@ -55,12 +55,12 @@ static  FMDatabase * db = nil;
 }
 
 //向表中插入数据
-- (void)InsertIntoTableName:(NSString *)tableName WithMainKey:(NSString *)mainKey title:(NSString *)title URL:(NSString *)url{
+- (void)InsertIntoTableName:(NSString *)tableName WithMainKey:(NSString *)mainKey title:(NSString *)title URL:(NSString *)url type:(NSString*)type{
     
     if (![db open]) {
         return ;
     }
-    NSString *sqlInsert = [NSString stringWithFormat:@"insert into %@ (%@,%@,%@) values('%@','%@','%@')",tableName,kLoverKey,kLoverTitle,kLoverURL,mainKey,title,url];
+    NSString *sqlInsert = [NSString stringWithFormat:@"insert into %@ (%@,%@,%@,%@) values('%@','%@','%@','%@')",tableName,kLoverKey,kLoverTitle,kLoverURL,kLoverType,mainKey,title,url,type];
     
     BOOL isSuc = [db executeUpdate:sqlInsert];
     if (isSuc) {
@@ -72,7 +72,7 @@ static  FMDatabase * db = nil;
 }
 
 //查询所有数据
-- (NSMutableArray *)selectAllDataWithTableName:(NSString *)tableName mainKey:(NSString *)mainKey title:(NSString *)title URl:(NSString *)url{
+- (NSMutableArray *)selectAllDataWithTableName:(NSString *)tableName mainKey:(NSString *)mainKey title:(NSString *)title URl:(NSString *)url type:(NSString*)type{
     if (![db open]) {
         return nil;
     }
@@ -85,6 +85,7 @@ static  FMDatabase * db = nil;
         model.title = [resultSet stringForColumn:title];
         model.picUrl = [resultSet stringForColumn:url];
         model.ID =  [resultSet stringForColumn:mainKey];
+        model.type = [resultSet stringForColumn:type];
         [mutArray addObject:model];
     }
     [db close];

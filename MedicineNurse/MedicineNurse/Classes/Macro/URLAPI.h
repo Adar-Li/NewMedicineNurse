@@ -50,8 +50,9 @@
 //创建数据库需要的值
 #define kLoverKey @"loverKey"
 #define kLoverTitle @"loverTitle"
-#define kLoverTable @"loverTable"
+#define kLoverTable @"MyloverTable"
 #define kLoverURL @"loverUrl"
+#define kLoverType @"loverType"
 
 //常见病症网址
 //常见病症列表网址

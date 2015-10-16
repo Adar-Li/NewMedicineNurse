@@ -144,10 +144,9 @@
     if (collectIndex <= 1) {
         collectIndex = 2;
         
-        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
-        
-        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kHomeCellURL(self.ID) title:self.titleName URL:self.picUrl];
-        [[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
+        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
+         [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kHomeCellURL(self.ID) title:self.titleName URL:self.picUrl type:@"1"];
+    
     }else{
         
         UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];

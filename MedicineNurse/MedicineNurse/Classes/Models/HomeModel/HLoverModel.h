@@ -15,6 +15,7 @@
 @property(nonatomic,strong)NSString * picUrl;
 //ID
 @property(nonatomic,strong)NSString * ID;
-//
+//类型
+@property(nonatomic,strong)NSString * type;
 
 @end
