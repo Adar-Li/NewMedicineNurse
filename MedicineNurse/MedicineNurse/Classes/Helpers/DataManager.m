@@ -106,6 +106,7 @@ static  FMDatabase * db = nil;
     
 }
 
+
 //根据网址清楚收藏项
 - (void)clearTableCollectWithTableName:(NSString *)tableName collectID:(NSString *)collectID{
     [db open];
@@ -118,6 +119,7 @@ static  FMDatabase * db = nil;
     }
     [db close];
 }
+
 
 
 

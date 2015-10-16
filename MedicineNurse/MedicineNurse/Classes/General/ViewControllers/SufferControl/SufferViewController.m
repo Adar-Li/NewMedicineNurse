@@ -79,14 +79,12 @@
     [self.view addSubview:_datalabel];
     
     _label1 = [[UILabel alloc]initWithFrame:CGRectMake(10,CGRectGetMaxY(_datalabel.frame)+3, KWith/2, Kheight / 21)];
-    _label1.textColor = [UIColor cyanColor];
     [self.view addSubview:_label1];
     
     _labelwind = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_label1.frame), CGRectGetMaxY(_datalabel.frame)+3, KWith/3, Kheight / 21)];
     [self.view addSubview:_labelwind];
     
     _Deslabel = [[UILabel alloc]initWithFrame:CGRectMake(3, CGRectGetMaxY(_label1.frame), KWith - 6, Kheight/13)];
-    _Deslabel.textColor = [UIColor orangeColor];
     _Deslabel.numberOfLines = 0;
     _Deslabel.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:_Deslabel];
