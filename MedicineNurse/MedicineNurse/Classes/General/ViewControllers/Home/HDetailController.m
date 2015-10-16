@@ -11,7 +11,7 @@
 #import "HDetailModel.h"
 #import "UMSocial.h"
 #import "DataManager.h"
-
+#import "GiFHUD.h"
 @interface HDetailController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
     NSInteger collectIndex;
@@ -51,6 +51,9 @@
     //调用绘制表头事件
     [self drawHeader];
     
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+ 
     
     
 }
@@ -65,6 +68,7 @@
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
     
     [manager GET:kHomeCellURL(self.ID) parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        [GiFHUD dismiss];
         
         NSArray * array = responseObject[@"data"][@"items"];
         NSDictionary * dict = [array firstObject];

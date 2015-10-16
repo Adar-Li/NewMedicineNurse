@@ -20,6 +20,7 @@
 #import "HEDController.h"
 #import "HDetailModel.h"
 #import <SVPullToRefresh.h>
+#import "GiFHUD.h"
 
 @interface HomeController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 {
@@ -74,6 +75,11 @@ static NSString * hccCell = @"hccCellID";
     self.currentIndex = 0 ;
     //隐藏navigation标题栏
     self.navigationController.navigationBarHidden = YES;
+    //动画效果
+    
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+    
     [super viewDidLoad];
     [self drawMainScrollview];
     //设置标题
@@ -98,6 +104,7 @@ static NSString * hccCell = @"hccCellID";
     __weak HomeController * weakSelf = self;
     //解析完数据绘制UI界面
     [[HomeHelper shareHomeHelper]analysisDataWithURL:kHomeTJURL :^{
+        [GiFHUD dismiss];
         [weakSelf drawTableView];
         [weakSelf.tableView.pullToRefreshView stopAnimating];
         [weakSelf.tableView.infiniteScrollingView stopAnimating];
