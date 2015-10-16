@@ -10,7 +10,6 @@
 #import <AFNetworking.h>
 #import "HDetailModel.h"
 #import "UMSocial.h"
-#import "DataManager.h"
 
 @interface MyCollectController ()<UIWebViewDelegate,UMSocialUIDelegate>
 
@@ -25,6 +24,7 @@
 //创建头视图
 @property(nonatomic,strong)UIView * headerView;
 
+@property(nonatomic,strong)UIButton * collectButton;
 
 @end
 
@@ -53,10 +53,9 @@
     [super viewDidLoad];
     [self analysisCellData];
     self.navigationController.navigationBarHidden = NO;
+    
     //调用绘制表头事件
     [self drawHeader];
-    
-    
     
 }
 
@@ -85,7 +84,7 @@
 //绘制webView
 - (void)drawUI{
     
-    _webView  = [[UIWebView alloc]initWithFrame:CGRectMake(10,64, kScremWidth -20, kScremHeight - 64)];
+    _webView  = [[UIWebView alloc]initWithFrame:CGRectMake(10,0, kScremWidth -20, kScremHeight )];
     _webView.delegate = self;
     _webView .scalesPageToFit = YES;
     [_webView loadHTMLString:self.detailModel.content baseURL:nil];
@@ -99,19 +98,15 @@
 - (void)drawHeader{
     
     self.headerView = [[UIView alloc]initWithFrame:CGRectMake(65, 0,  kScremWidth - 70 , 44)];
+    self.navigationItem.title = nil;
     [self.navigationController.navigationBar addSubview:self.headerView];
-    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180,10, 30, 30)];
+    UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 165,10, 30, 30)];
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:SizeButton];
-//    //绘制保存按钮
-//    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
-//    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
-//    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
-//    [self.headerView addSubview:collectButton];
+
     //分享按钮
-    UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 110,12, 27, 27)];
+    UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 120,12, 27, 27)];
     [shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
     [shareButton addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:shareButton];
@@ -142,29 +137,6 @@
     }
 }
 
-
-#pragma mark -- 收藏事件---
-//- (void)collectAction{
-//    collectIndex ++;
-//    if (collectIndex <= 1) {
-//        collectIndex = 2;
-//        
-//        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
-//        
-//        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.URL title:self.titleName URL:self.picUrl];
-//
-//    }else{
-//        
-//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
-//        
-//        [self presentViewController:allertVC animated:YES completion:nil];
-//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-//        
-//        [allertVC addAction:alertAction];
-//    }
-//    
-//}
-
 #pragma mark -- webView的代理事件---
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     
@@ -183,7 +155,6 @@
         [_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '250%'"];
     }
 }
-
 
 
 

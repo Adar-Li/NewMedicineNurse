@@ -179,6 +179,7 @@
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
         
         [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:KCommonNewsListURL(self.commonNDModel.infoId) title:self.commonNDModel.infoTitle URL:self.commonNDModel.infoLogo type:@"2"];
+
   
     }else{
         
