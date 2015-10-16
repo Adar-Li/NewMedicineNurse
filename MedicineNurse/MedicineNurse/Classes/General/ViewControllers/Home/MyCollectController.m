@@ -104,12 +104,12 @@
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:SizeButton];
-    //绘制保存按钮
-    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
-    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
-    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
-    [self.headerView addSubview:collectButton];
+//    //绘制保存按钮
+//    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
+//    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+//    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+//    [self.headerView addSubview:collectButton];
     //分享按钮
     UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 110,12, 27, 27)];
     [shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
@@ -144,26 +144,26 @@
 
 
 #pragma mark -- 收藏事件---
-- (void)collectAction{
-    collectIndex ++;
-    if (collectIndex <= 1) {
-        collectIndex = 2;
-        
-        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
-        
-        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.URL title:self.titleName URL:self.picUrl];
-        [[DataManager shareDatamanager]selectAllDataWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
-    }else{
-        
-        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
-        
-        [self presentViewController:allertVC animated:YES completion:nil];
-        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-        
-        [allertVC addAction:alertAction];
-    }
-    
-}
+//- (void)collectAction{
+//    collectIndex ++;
+//    if (collectIndex <= 1) {
+//        collectIndex = 2;
+//        
+//        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
+//        
+//        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.URL title:self.titleName URL:self.picUrl];
+//
+//    }else{
+//        
+//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        [self presentViewController:allertVC animated:YES completion:nil];
+//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+//        
+//        [allertVC addAction:alertAction];
+//    }
+//    
+//}
 
 #pragma mark -- webView的代理事件---
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
