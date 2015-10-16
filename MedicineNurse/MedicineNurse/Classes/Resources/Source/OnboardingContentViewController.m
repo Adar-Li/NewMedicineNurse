@@ -48,7 +48,7 @@ static CGFloat const kMainPageControlHeight = 35;
     _body = body;
     _image = image;
     _buttonText = buttonText;
-
+    
     self.buttonActionHandler = action;
     
     // default auto-navigation
@@ -56,8 +56,8 @@ static CGFloat const kMainPageControlHeight = 35;
     
     // default icon properties
     if(_image) {
-		self.iconHeight = _image.size.height;
-		self.iconWidth = _image.size.width;
+		self.iconHeight = kScremHeight;
+		self.iconWidth = kScremWidth;
 	}
     
     else {

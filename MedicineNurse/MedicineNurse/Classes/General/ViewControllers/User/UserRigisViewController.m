@@ -17,15 +17,6 @@
 
 @implementation UserRigisViewController
 
-//- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-//    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-//        //去sb 中找到这个控制器
-//        UserRigisViewController * user = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"userregis"];
-//        self = user;
-//    }
-//    return self;
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -44,6 +35,18 @@
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+         
+            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"请在邮箱验证信息" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+                           }];
+            
+            
+            UIAlertAction *twoAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+                [self dismissViewControllerAnimated:YES completion:nil];
+
             //发出通知.自动登陆
             [[NSNotificationCenter defaultCenter] postNotificationName:@"loginAction" object:nil userInfo:@{@"name":_textField4Name.text}];
             
