@@ -14,6 +14,7 @@
 #import "HSBDetailController.h"
 #import "HDetailController.h"
 #import <SVPullToRefresh.h>
+#import "GiFHUD.h"
 
 @interface HPublicController ()
 {
@@ -29,6 +30,10 @@ static NSString * hcCCell = @"hccCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     pageIndex = 1;
+    
+    [GiFHUD setGifWithImageName:@"mie.gif"];
+    [GiFHUD show];
+  
     //注册自定义cell
     [self.tableView registerNib:[UINib nibWithNibName:@"HCCell" bundle:nil] forCellReuseIdentifier:hcCCell];
     
@@ -86,6 +91,8 @@ static NSString * hcCCell = @"hccCellID";
     AFHTTPRequestOperationManager * manager =[AFHTTPRequestOperationManager manager];
    
     [manager GET:weakSelf.URLStr parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+         [GiFHUD dismiss];
+        
         [weakSelf.mutArray removeAllObjects];
         NSArray * array = responseObject[@"data"][@"items"];
         for (NSDictionary * dict in array) {
