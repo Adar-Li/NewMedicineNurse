@@ -26,8 +26,8 @@
    [UMSocialData setAppKey:@"561c6d93e0f55a0eeb00a2b4"];
     [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:@"http://www.umeng.com/social"];
 
-    [AVOSCloud setApplicationId:@"EmuufWEMzBDTssl65QtYfzXl"
-                      clientKey:@"eiyJOovboqO9EASi0Ybfr1i3"];
+    [AVOSCloud setApplicationId:@"RDf8eeBpAyi6VxjcOsBidJTA"
+                      clientKey:@"YHjY02vVFMmpSaXqNQcm87Kw"];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -52,19 +52,19 @@
 }
 
 - (OnboardingViewController *)generateThirdDemoVC {
-    OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"image.jpg"] buttonText:nil action:nil];
+    OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"sheep1"] buttonText:nil action:nil];
     firstPage.bodyFontSize = 25;
     
-    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"111.jpg"] buttonText:nil action:nil];
+    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DCommon"] buttonText:nil action:nil];
     secondPage.bodyFontSize = 24;
     
-    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"xuhua"] buttonText:nil action:nil];
+    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DSuffer"] buttonText:nil action:nil];
     
-    OnboardingContentViewController *fourthPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"xuhua"] buttonText:@"See Ya Later!" action:^{
+    OnboardingContentViewController *fourthPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DUser"] buttonText:@"See Ya Later!"  action:^{
         [self setupNormalRootViewController];
     }];
     
-    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"milky_way.jpg"] contents:@[firstPage, secondPage, thirdPage, fourthPage]];
+    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"111"] contents:@[firstPage, secondPage, thirdPage, fourthPage]];
     onboardingVC.shouldMaskBackground = NO;
     onboardingVC.shouldBlurBackground = YES;
     return onboardingVC;

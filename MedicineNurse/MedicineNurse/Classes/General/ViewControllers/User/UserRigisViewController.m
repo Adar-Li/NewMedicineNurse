@@ -45,18 +45,17 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
          
-            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"尽情享受吧" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"请在邮箱验证信息" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
                            }];
             
-            //创建通知中心
+            
             UIAlertAction *twoAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
                 [self dismissViewControllerAnimated:YES completion:nil];
 
-                [[NSNotificationCenter defaultCenter]postNotificationName:@"Message" object:nil];
             }];
             [alert addAction:oneAc];
             [alert addAction:twoAc];

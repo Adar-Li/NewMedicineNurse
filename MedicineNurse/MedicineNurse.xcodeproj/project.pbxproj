@@ -74,6 +74,10 @@
 		C28EA6BD1BC3C52700B394F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA6AF1BC3C52700B394F5 /* AppDelegate.m */; };
 		C2953E0B1BCA5F8900466B76 /* CommonNewsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */; settings = {ASSET_TAGS = (); }; };
 		C2953E0D1BCA70D300466B76 /* CommonTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2953E0C1BCA70D300466B76 /* CommonTableController.m */; settings = {ASSET_TAGS = (); }; };
+		C2A3CD481BD0E7B50068DF43 /* DHome.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A3CD441BD0E7B50068DF43 /* DHome.png */; settings = {ASSET_TAGS = (); }; };
+		C2A3CD491BD0E7B50068DF43 /* DUser.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A3CD451BD0E7B50068DF43 /* DUser.png */; settings = {ASSET_TAGS = (); }; };
+		C2A3CD4A1BD0E7B50068DF43 /* DCommon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A3CD461BD0E7B50068DF43 /* DCommon.png */; settings = {ASSET_TAGS = (); }; };
+		C2A3CD4B1BD0E7B50068DF43 /* DSuffer.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A3CD471BD0E7B50068DF43 /* DSuffer.png */; settings = {ASSET_TAGS = (); }; };
 		C2BF17611BCFC1AD00736757 /* HCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17601BCFC1AD00736757 /* HCollectController.m */; settings = {ASSET_TAGS = (); }; };
 		C2BF17641BCFD74100736757 /* MyCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17631BCFD74100736757 /* MyCollectController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB89D1BC8AD410002AAB2 /* CommonController.m */; settings = {ASSET_TAGS = (); }; };
@@ -251,6 +255,10 @@
 		C2953E091BCA5F8900466B76 /* CommonNewsDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNewsDetailsController.h; sourceTree = "<group>"; };
 		C2953E0A1BCA5F8900466B76 /* CommonNewsDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNewsDetailsController.m; sourceTree = "<group>"; };
 		C2953E0C1BCA70D300466B76 /* CommonTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableController.m; sourceTree = "<group>"; };
+		C2A3CD441BD0E7B50068DF43 /* DHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DHome.png; sourceTree = "<group>"; };
+		C2A3CD451BD0E7B50068DF43 /* DUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DUser.png; sourceTree = "<group>"; };
+		C2A3CD461BD0E7B50068DF43 /* DCommon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCommon.png; sourceTree = "<group>"; };
+		C2A3CD471BD0E7B50068DF43 /* DSuffer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSuffer.png; sourceTree = "<group>"; };
 		C2BF175F1BCFC1AD00736757 /* HCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCollectController.h; sourceTree = "<group>"; };
 		C2BF17601BCFC1AD00736757 /* HCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCollectController.m; sourceTree = "<group>"; };
 		C2BF17621BCFD74100736757 /* MyCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectController.h; sourceTree = "<group>"; };
@@ -710,6 +718,10 @@
 		C28EA6B81BC3C52700B394F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2A3CD441BD0E7B50068DF43 /* DHome.png */,
+				C2A3CD451BD0E7B50068DF43 /* DUser.png */,
+				C2A3CD461BD0E7B50068DF43 /* DCommon.png */,
+				C2A3CD471BD0E7B50068DF43 /* DSuffer.png */,
 				C26829361BCF90A900C75C49 /* Source */,
 				C2D0B7DD1BCE2F68001745D0 /* GIFHUD */,
 				C2D0B7E01BCE2F68001745D0 /* RKCard */,
@@ -1069,6 +1081,7 @@
 				C242BCCC1BCE3D6E003E5950 /* home.jpg in Resources */,
 				C23A33051BC558E4007320E1 /* Skin.png in Resources */,
 				C268291D1BCF44F700C75C49 /* UMSLoginViewController.xib in Resources */,
+				C2A3CD481BD0E7B50068DF43 /* DHome.png in Resources */,
 				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
 				C2FC64191BCE029A00B2B22E /* IanScrollViewDefault@2x.png in Resources */,
 				C242BCD81BCE50DE003E5950 /* xuhua.png in Resources */,
@@ -1106,13 +1119,16 @@
 				C268291F1BCF44F700C75C49 /* UMSShareListController.xib in Resources */,
 				C2D0B7EE1BCE3443001745D0 /* sheep1.png in Resources */,
 				C2FC64051BCE013B00B2B22E /* HSBCell.xib in Resources */,
+				C2A3CD4B1BD0E7B50068DF43 /* DSuffer.png in Resources */,
 				C26829201BCF44F700C75C49 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				C2CFB8CD1BC8ADD10002AAB2 /* CommonClickCell.xib in Resources */,
 				C2EC44C91BC7B6EC00934592 /* lovew.png in Resources */,
 				C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */,
 				C26829181BCF44F700C75C49 /* UMSCommentDetailController.xib in Resources */,
 				C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */,
+				C2A3CD4A1BD0E7B50068DF43 /* DCommon.png in Resources */,
 				C201BE3F1BD090CE0049571B /* Collected.png in Resources */,
+				C2A3CD491BD0E7B50068DF43 /* DUser.png in Resources */,
 				C2EC44CA1BC7B6EC00934592 /* share.png in Resources */,
 				C23A33041BC558E4007320E1 /* Rheumatism.png in Resources */,
 			);
