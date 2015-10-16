@@ -92,7 +92,7 @@ static  FMDatabase * db = nil;
     return mutArray;
 }
 
-//
+
 //清楚表
 - (void)clearTableWithTableName:(NSString *)tableName{
     [db open];
@@ -105,7 +105,6 @@ static  FMDatabase * db = nil;
     [db close];
     
 }
-
 
 //根据网址清楚收藏项
 - (void)clearTableCollectWithTableName:(NSString *)tableName collectID:(NSString *)collectID{

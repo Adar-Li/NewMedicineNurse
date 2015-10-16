@@ -120,7 +120,6 @@
     [self.headerView addSubview:titleLable];
 }
 
-
 - (void)shareAction{
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:@"561c6d93e0f55a0eeb00a2b4"
@@ -133,11 +132,10 @@
     //根据`responseCode`得到发送结果,如果分享成功
     if(response.responseCode == UMSResponseCodeSuccess)
     {
-        
+
         NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
     }
 }
-
 
 #pragma mark -- 收藏事件---
 - (void)collectAction{
@@ -152,12 +150,7 @@
         collectIndex = 0;
         [self.collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
          [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:kHomeCellURL(self.ID)];
-//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
-//        
-//        [self presentViewController:allertVC animated:YES completion:nil];
-//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-//        
-//        [allertVC addAction:alertAction];
+
     }
     
 }
@@ -180,11 +173,6 @@
         [_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '250%'"];
     }
 }
-
-
-
-
-
 
 /*
  #pragma mark - Navigation
