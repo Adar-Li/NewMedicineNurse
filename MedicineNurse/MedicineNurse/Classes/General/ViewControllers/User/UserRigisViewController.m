@@ -32,38 +32,27 @@
     user.password =  _textField4Password.text;
     user.email = _textField4Email.text;
     //[user setObject:@"186-1234-0000" forKey:@"phone"];
-    
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-         
+            
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"请在邮箱验证信息" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
-                           }];
+            }];
             
             
             UIAlertAction *twoAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
                 [self dismissViewControllerAnimated:YES completion:nil];
-
-            //发出通知.自动登陆
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"loginAction" object:nil userInfo:@{@"name":_textField4Name.text}];
-            
-            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"尽情享受吧" preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             }];
-            UIAlertAction *twoAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                
-                [self dismissViewControllerAnimated:YES completion:nil];
-                
-            }];
+                //发出通知.自动登陆
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"loginAction" object:nil userInfo:@{@"name":_textField4Name.text}];
+            
             [alert addAction:oneAc];
             [alert addAction:twoAc];
-            
+    
             [self presentViewController:alert animated:YES completion:nil];
-            
         } else {
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册失败" message:@"密码或者邮箱不正确" preferredStyle:UIAlertControllerStyleAlert];
             
@@ -81,7 +70,6 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
     }];
-    
 }
 
 - (IBAction)btn4Cancel:(id)sender {

@@ -27,7 +27,7 @@
 }
 - (IBAction)btn4Find:(id)sender {
     
-    [AVUser requestPasswordResetForEmailInBackground:@"myemail@example.com" block:^(BOOL succeeded, NSError *error)  {
+    [AVUser requestPasswordResetForEmailInBackground:_textField4Email.text block:^(BOOL succeeded, NSError *error)  {
         if (succeeded) {
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"找回密码成功" message:@"尽情享受吧" preferredStyle:UIAlertControllerStyleAlert];
             
@@ -39,7 +39,7 @@
             UIAlertAction *twoAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
                 [self dismissViewControllerAnimated:YES completion:nil];
-                
+            
             }];
             [alert addAction:oneAc];
             [alert addAction:twoAc];
@@ -48,6 +48,7 @@
 
             
         } else {
+            NSLog(@"失败");
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"找回密码失败" message:@"账户邮箱不正确" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
