@@ -11,6 +11,8 @@
 #import "GiFHUD.h"
 #import "UMSocial.h"
 #import "DataManager.h"
+#import "AVUser.h"
+#import "UserController.h"
 
 @interface CommonNewsDetailsController () <UMSocialUIDelegate>
 {
@@ -173,6 +175,16 @@
 
 #pragma mark -- 收藏事件---
 - (void)collectAction{
+    
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+        NSLog(@"登陆成功");
+    } else {
+        UserController *userLogin = [UserController new];
+        
+        [self presentViewController:userLogin animated:YES completion:nil];
+    }
+    
     collectIndex ++;
     if (collectIndex <= 1) {
         collectIndex = 2;
