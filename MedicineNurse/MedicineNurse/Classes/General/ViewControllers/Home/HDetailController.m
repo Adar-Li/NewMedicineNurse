@@ -12,6 +12,8 @@
 #import "UMSocial.h"
 #import "DataManager.h"
 #import "GiFHUD.h"
+#import "AVUser.h"
+#import "UserController.h"
 @interface HDetailController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
     NSInteger collectIndex;
@@ -145,6 +147,15 @@
 
 #pragma mark -- 收藏事件---
 - (void)collectAction{
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+    } else {
+        UserController *userLogin = [UserController new];
+        //        [self popoverPresentationController];
+        [self.navigationController pushViewController:userLogin animated:YES];
+        
+    }
+
     collectIndex ++;
     if (collectIndex <= 1) {
         collectIndex = 2;
