@@ -98,7 +98,7 @@ static NSString * hccCell = @"hccCellID";
     MyCollectController * detailVC = [MyCollectController new];
     HLoverModel * model  = self.itemArray[indexPath.row];
     if ([model.type isEqualToString:@"1"]) {
-    detailVC.title = model.title;
+    detailVC.titleName = model.title;
     detailVC.picUrl = model.picUrl;
     detailVC.URL = model.ID;
     [self.navigationController pushViewController:detailVC animated:YES];

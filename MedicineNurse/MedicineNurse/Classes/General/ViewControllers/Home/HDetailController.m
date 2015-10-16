@@ -23,7 +23,7 @@
 @property(nonatomic,strong)UIWebView * webView;
 //创建头视图
 @property(nonatomic,strong)UIView * headerView;
-
+@property(nonatomic,strong)UIButton * collectButton;
 @end
 
 @implementation HDetailController
@@ -100,11 +100,12 @@
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     [self.headerView addSubview:SizeButton];
     //绘制保存按钮
-    UIButton * collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
-    [collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
-    [collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
-    [self.headerView addSubview:collectButton];
+    _collectButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _collectButton.frame = CGRectMake(kScremWidth - 145,10, 30, 30);
+    [_collectButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+    [_collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+    
+    [self.headerView addSubview:_collectButton];
     //分享按钮
     UIButton * shareButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 110,12, 27, 27)];
     [shareButton setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
@@ -143,6 +144,7 @@
     collectIndex ++;
     if (collectIndex <= 1) {
         collectIndex = 2;
+        [self.collectButton setImage:[UIImage imageNamed:@"Collected"] forState:UIControlStateNormal];
         
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
          [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kHomeCellURL(self.ID) title:self.titleName URL:self.picUrl type:@"1"];
