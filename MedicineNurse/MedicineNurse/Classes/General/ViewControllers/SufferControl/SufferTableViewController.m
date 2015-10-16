@@ -103,6 +103,9 @@
     if (model.stag == nil) {
         
         Suffer.str = model.url;
+        Suffer.image = model.imgpath;
+        
+        Suffer.titlename = model.title;
         UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
         self.navigationItem.backBarButtonItem = barButtonItem;
         [self.navigationController pushViewController:Suffer animated:YES];

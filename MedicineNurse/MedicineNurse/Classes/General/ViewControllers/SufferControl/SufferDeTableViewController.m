@@ -96,7 +96,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ViewController *suff = [ViewController new];
-    suff.str = [_dataArray[indexPath.row]url];
+    SufferModel *model = _dataArray[indexPath.row];
+    suff.titlename = model.title;
+    suff.image = model.imgpath;
+    suff.str = model.url;
+
     [self.navigationController pushViewController:suff animated:YES];
 }
 

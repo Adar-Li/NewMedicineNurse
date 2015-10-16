@@ -9,9 +9,11 @@
 #import "ViewController.h"
 #import "GiFHUD.h"
 #import "UMSocial.h"
+#import "DataManager.h"
 
 @interface ViewController ()<UIWebViewDelegate,UMSocialUIDelegate>
 {
+    NSInteger collectIndex;
     NSInteger index;
 }
 @property(nonatomic,strong)UIWebView *web;
@@ -35,6 +37,7 @@
 }
 
 - (void)viewDidLoad {
+    collectIndex = 0 ;
     [super viewDidLoad];
     index = 0;
     [GiFHUD setGifWithImageName:@"mie.gif"];
@@ -44,6 +47,7 @@
     //调用绘制表头事件
     [self drawHeader];
     [self drawbutton];
+    
 
 }
 
@@ -72,7 +76,6 @@
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('a')[59].style.display = 'none'"];
     
     [webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('source')[0].style.display = 'none'"];
-    
 }
 
 //绘制button事件
@@ -83,8 +86,13 @@
     UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180, 0, 35, 35)];
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
-    [self.headerView addSubview:SizeButton];
     
+    UIButton *collButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    collButton.frame = CGRectMake(kScremWidth/3, 0, 35, 35);
+    [collButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+    [collButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+    [self.headerView addSubview:SizeButton];
+    [self.headerView addSubview:collButton];
 }
 
 - (void)drawbutton{
@@ -129,6 +137,28 @@
     }
 }
 
+
+#pragma mark -- 收藏事件---
+- (void)collectAction{
+    collectIndex ++;
+    if (collectIndex <= 1) {
+        collectIndex = 2;
+        
+        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
+        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.str title:self.titlename URL:self.image type:@"3"];
+        
+        
+    }else{
+        
+        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [self presentViewController:allertVC animated:YES completion:nil];
+        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        
+        [allertVC addAction:alertAction];
+    }
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

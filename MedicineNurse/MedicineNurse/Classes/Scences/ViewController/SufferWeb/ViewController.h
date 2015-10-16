@@ -11,4 +11,8 @@
 @interface ViewController : UIViewController
 @property (nonatomic ,strong)NSString  *str;
 
+@property (nonatomic ,strong)NSString  *titlename;
+@property (nonatomic ,strong)NSString  *image;
+@property (nonatomic ,strong)NSString  *url;
+@property (nonatomic ,strong)NSString  *stype;
 @end
