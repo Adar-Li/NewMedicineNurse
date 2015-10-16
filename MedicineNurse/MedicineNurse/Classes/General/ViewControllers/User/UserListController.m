@@ -14,6 +14,7 @@
 #import "UMSocial.h"
 #import "DataManager.h"
 #import "HCollectController.h"
+#import "AVUser.h"
 
 #define BUFFERX 20
 #define BUFFERY 66
@@ -62,7 +63,7 @@
         // 使用Sina微博账号登录
         UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
         snsPlatform.loginClickHandler(self, [UMSocialControllerService defaultControllerService], YES, ^(UMSocialResponseEntity *response) {
-            //NSLog(@"response is %@", response);
+//            NSLog(@"response is %@", response);
             // 如果是授权到新浪微博，SSO之后如果想获取用户的昵称、头像等需要再获取一次账户信息
             [[UMSocialDataService defaultDataService]requestSocialAccountWithCompletion:^(UMSocialResponseEntity *response) {
                 
@@ -147,6 +148,7 @@
     
     
     [[DataManager shareDatamanager]clearTableWithTableName:kLoverTable];
+    
     UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"清理缓存成功" message:@"清理缓存成功" preferredStyle:UIAlertControllerStyleAlert];
     
     [self presentViewController:allertVC animated:YES completion:nil];
