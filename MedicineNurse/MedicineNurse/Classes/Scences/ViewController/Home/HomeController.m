@@ -152,7 +152,7 @@ static NSString * hccCell = @"hccCellID";
 - (void)pullFromtheButton{
     pageIndex ++;
     __weak HomeController * weakSelf = self;
-    NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/recommend?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=%ld&vc=4.0.5",pageIndex];
+    NSString * URL = [NSString stringWithFormat:@"http://dxy.com/app/i/columns/article/recommend?ac=1d6c96d5-9a53-4fe1-9537-85a33de916f1&items_per_page=10&mc=df4e09ce2cf802df592ff64773dbb40156b4d58d&page_index=%ld&vc=4.0.5",(long)pageIndex];
     
    [[HomeHelper shareHomeHelper]analysisMoreDataWithURL:URL :^{
 

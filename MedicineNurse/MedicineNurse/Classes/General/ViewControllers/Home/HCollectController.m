@@ -13,7 +13,10 @@
 #import "HLoverModel.h"
 #import "HDetailController.h"
 #import "MyCollectController.h"
+#import "DrugAndnewsListModel.h"
+#import "CommonNewsDetailsController.h"
 #import "ViewController.h"
+
 
 
 @interface HCollectController ()<UITableViewDelegate,UITableViewDataSource>
@@ -76,16 +79,28 @@ static NSString * hccCell = @"hccCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     HLoverModel * model = self.itemArray[indexPath.row];
-    
+     if ([model.type isEqualToString:@"1"])  {
+        
+   
     HCCell * cell  = [tableView dequeueReusableCellWithIdentifier:hccCell forIndexPath:indexPath];
     
     RecommendModel * item = [RecommendModel new];
     item.title = model.title;
     item.cover_small = model.picUrl;
     [cell setvalueWithModel:item];
+          return cell;
+     }else if ([model.type isEqualToString:@"2"]){
+    HCCell * cell  = [tableView dequeueReusableCellWithIdentifier:hccCell forIndexPath:indexPath];
+         RecommendModel * item = [RecommendModel new];
+         item.title = model.title;
+         item.cover_small = model.picUrl;
+         item.url = model.ID;
+         [cell setvalueWithModel:item];
+           return cell;
+     }
     
     
-    return cell;
+         return nil;
 }
 
 //设置cell的高度
@@ -103,10 +118,25 @@ static NSString * hccCell = @"hccCellID";
     detailVC.picUrl = model.picUrl;
     detailVC.URL = model.ID;
     [self.navigationController pushViewController:detailVC animated:YES];
+<<<<<<< HEAD
+    }else if ([model.type isEqualToString:@"2"]){
+        
+         DrugAndnewsListModel * commonNDModel = [DrugAndnewsListModel new];
+        commonNDModel.infoTitle = model.title;
+
+        commonNDModel.infoId = model.ID;
+//        commonNDModel.infoLogo = model.picUrl;
+        CommonNewsDetailsController *commonNDC = [CommonNewsDetailsController new];
+        commonNDC.commonNDModel = commonNDModel;
+        [self.navigationController pushViewController:commonNDC animated:YES];
+        
+    
+=======
     }else if ([model.type isEqualToString:@"3"]){
         ViewController *view = [ViewController new];
         view.str = model.ID;
         [self.navigationController pushViewController:view animated:YES];
+>>>>>>> 09fce63bf3fb7c1eac7063ca73a5b5d30b6941a5
     }
 }
 

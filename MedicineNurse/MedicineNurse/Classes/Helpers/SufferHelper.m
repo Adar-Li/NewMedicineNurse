@@ -36,7 +36,7 @@
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSString *Str = NetAndWed(page);
+    NSString *Str = NetAndWed((long)page);
     [manager GET:Str parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
         NSDictionary *dict = [responseObject valueForKey:@"message"];
