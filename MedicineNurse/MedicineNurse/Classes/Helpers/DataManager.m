@@ -106,8 +106,4 @@ static  FMDatabase * db = nil;
     
 }
 
-
-
-
-
 @end

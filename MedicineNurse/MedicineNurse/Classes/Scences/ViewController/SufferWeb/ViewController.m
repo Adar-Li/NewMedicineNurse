@@ -20,6 +20,9 @@
 //创建头视图
 @property(nonatomic,strong)UIView * headerView;
 
+@property (nonatomic ,strong)UIButton  *SufferCollecButtpn;
+
+
 @end
 
 @implementation ViewController
@@ -81,18 +84,18 @@
 //绘制button事件
 - (void)drawHeader{
     
-    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(90, 0,  kScremWidth -90 , 44)];
+    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(90, 0,kScremWidth , 44)];
     [self.navigationController.navigationBar addSubview:self.headerView];
     UIButton * SizeButton = [[UIButton alloc]initWithFrame:CGRectMake(kScremWidth - 180, 0, 35, 35)];
     [SizeButton setImage:[UIImage imageNamed:@"Text"] forState:UIControlStateNormal];
     [SizeButton addTarget:self action:@selector(changeTextSize) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *collButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    collButton.frame = CGRectMake(kScremWidth/3, 0, 35, 35);
-    [collButton addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
-    [collButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+    _SufferCollecButtpn = [UIButton buttonWithType:UIButtonTypeSystem];
+    _SufferCollecButtpn.frame = CGRectMake(kScremWidth/3, 0, 35, 35);
+    [_SufferCollecButtpn addTarget:self action:@selector(collectAction) forControlEvents:UIControlEventTouchUpInside];
+    [_SufferCollecButtpn setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
     [self.headerView addSubview:SizeButton];
-    [self.headerView addSubview:collButton];
+    [self.headerView addSubview:_SufferCollecButtpn];
 }
 
 - (void)drawbutton{
@@ -149,13 +152,17 @@
         
         
     }else{
+        collectIndex = 0;
+        [_SufferCollecButtpn setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
         
-        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+        [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:self.str];
         
-        [self presentViewController:allertVC animated:YES completion:nil];
-        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-        
-        [allertVC addAction:alertAction];
+//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        [self presentViewController:allertVC animated:YES completion:nil];
+//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+//        
+//        [allertVC addAction:alertAction];
     }
     
 }

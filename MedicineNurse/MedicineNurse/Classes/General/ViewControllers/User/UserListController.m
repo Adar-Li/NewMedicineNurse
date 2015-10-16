@@ -144,6 +144,7 @@
 //清理缓存事件
 - (void)clearAction{
     
+    
     [[DataManager shareDatamanager]clearTableWithTableName:kLoverTable];
     UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"清理缓存成功" message:@"清理缓存成功" preferredStyle:UIAlertControllerStyleAlert];
     

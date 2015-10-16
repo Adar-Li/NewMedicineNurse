@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField4Name;
 @property (weak, nonatomic) IBOutlet UITextField *textField4Password;
 @property (weak, nonatomic) IBOutlet UITextField *textField4Email;
-
 @end
 
 @implementation UserRigisViewController
@@ -81,11 +80,9 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
     }];
-    
-    
+   
 }
-
-
+ 
 //
 - (void)P_saveUserInfo
 {
@@ -98,10 +95,6 @@
     [alertView show];
     
 }
-
-
-
-
 
 
 - (IBAction)btn4Cancel:(id)sender {
