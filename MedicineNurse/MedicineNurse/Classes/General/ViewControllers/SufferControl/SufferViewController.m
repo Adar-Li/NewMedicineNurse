@@ -220,6 +220,8 @@
     
     if (model.stag == nil) {
         Suffer.str = model.url;
+        Suffer.titlename = model.title;
+        Suffer.image = model.imgpath;
         [self.navigationController pushViewController:Suffer animated:YES];
     }else
     {

@@ -13,6 +13,7 @@
 #import "HLoverModel.h"
 #import "HDetailController.h"
 #import "MyCollectController.h"
+#import "ViewController.h"
 
 
 @interface HCollectController ()<UITableViewDelegate,UITableViewDataSource>
@@ -102,7 +103,11 @@ static NSString * hccCell = @"hccCellID";
     detailVC.picUrl = model.picUrl;
     detailVC.URL = model.ID;
     [self.navigationController pushViewController:detailVC animated:YES];
-         }
+    }else if ([model.type isEqualToString:@"3"]){
+        ViewController *view = [ViewController new];
+        view.str = model.ID;
+        [self.navigationController pushViewController:view animated:YES];
+    }
 }
 
 

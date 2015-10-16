@@ -176,9 +176,10 @@
     if (collectIndex <= 1) {
         collectIndex = 2;
         
-        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL];
-        
-        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.newsDetail title:self.commonNDModel.infoTitle URL:self.commonNDModel.infoLogo];
+//        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:@"2"];
+//        
+//        
+//        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kLoverKey title:self.title URL:self. type:<#(NSString *)#>
   
     }else{
         

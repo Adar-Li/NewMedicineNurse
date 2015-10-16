@@ -16,6 +16,9 @@
 //ID
 @property(nonatomic,strong)NSString * ID;
 //类型
-@property(nonatomic,strong)NSString * type;
+@property(nonatomic,strong)NSString * url;
+@property (nonatomic ,strong)NSString  *type;
+
+
 
 @end
