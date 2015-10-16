@@ -17,10 +17,8 @@
 //单例方法
 + (SufferHelper *)sharedSuffer;
 
-
 //数据解析
 - (void)requestAllSufferWith:(NSInteger)page Finish:(void(^)())result;
-
 /**
  *  根据一个index返回一个model
  *

@@ -150,6 +150,21 @@
 - (void)collectAction{
     AVUser *currentUser = [AVUser currentUser];
     if (currentUser != nil) {
+        
+        collectIndex ++;
+        if (collectIndex <= 1) {
+            collectIndex = 2;
+            [self.SufferCollecButtpn setImage:[UIImage imageNamed:@"Collected"] forState:UIControlStateNormal];
+            [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
+            [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.str title:self.titlename URL:self.image type:@"3"];
+            
+            
+        }else{
+            collectIndex = 0;
+            [_SufferCollecButtpn setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+            
+            [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:self.str];
+        }
     } else {
         UserController *userLogin = [UserController new];
         //        [self popoverPresentationController];
@@ -158,22 +173,22 @@
     }
 
     
-    collectIndex ++;
-    if (collectIndex <= 1) {
-        collectIndex = 2;
-        [self.SufferCollecButtpn setImage:[UIImage imageNamed:@"Collected"] forState:UIControlStateNormal];
-        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
-        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.str title:self.titlename URL:self.image type:@"3"];
-        
-        
-    }else{
-        collectIndex = 0;
-        [_SufferCollecButtpn setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
-        
-        [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:self.str];
-        
+//    collectIndex ++;
+//    if (collectIndex <= 1) {
+//        collectIndex = 2;
+//        [self.SufferCollecButtpn setImage:[UIImage imageNamed:@"Collected"] forState:UIControlStateNormal];
+//        [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
+//        [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:self.str title:self.titlename URL:self.image type:@"3"];
+//        
+//        
+//    }else{
+//        collectIndex = 0;
+//        [_SufferCollecButtpn setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+//        
+//        [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:self.str];
+//        
 
-    }
+  //  }
     
 }
 
