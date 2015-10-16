@@ -148,15 +148,16 @@
         
         [[DataManager shareDatamanager]creatTableWithTableName:kLoverTable mainKey:kLoverKey title:kLoverTitle URl:kLoverURL type:kLoverType];
          [[DataManager shareDatamanager]InsertIntoTableName:kLoverTable WithMainKey:kHomeCellURL(self.ID) title:self.titleName URL:self.picUrl type:@"1"];
-    
     }else{
-        
-        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
-        
-        [self presentViewController:allertVC animated:YES completion:nil];
-        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-        
-        [allertVC addAction:alertAction];
+        collectIndex = 0;
+        [self.collectButton setImage:[UIImage imageNamed:@"lovew"] forState:UIControlStateNormal];
+         [[DataManager shareDatamanager]clearTableCollectWithTableName:kLoverTable collectID:kHomeCellURL(self.ID)];
+//        UIAlertController * allertVC = [UIAlertController alertControllerWithTitle:@"您已收藏过" message:@"您已经收藏成功\n可以到我的界面\n查看我的收藏" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        [self presentViewController:allertVC animated:YES completion:nil];
+//        UIAlertAction * alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+//        
+//        [allertVC addAction:alertAction];
     }
     
 }

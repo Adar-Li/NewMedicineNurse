@@ -79,9 +79,6 @@ static NSString * hccCell = @"hccCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     HLoverModel * model = self.itemArray[indexPath.row];
-
-        
-   
     HCCell * cell  = [tableView dequeueReusableCellWithIdentifier:hccCell forIndexPath:indexPath];
     
     RecommendModel * item = [RecommendModel new];
@@ -117,6 +114,7 @@ static NSString * hccCell = @"hccCellID";
         CommonNewsDetailsController *commonNDC = [CommonNewsDetailsController new];
         commonNDC.commonNDModel = commonNDModel;
         [self.navigationController pushViewController:commonNDC animated:YES];
+
     }else if ([model.type isEqualToString:@"3"]){
         ViewController *view = [ViewController new];
         view.str = model.ID;

@@ -84,7 +84,7 @@
 //绘制webView
 - (void)drawUI{
     
-    _webView  = [[UIWebView alloc]initWithFrame:CGRectMake(10,0, kScremWidth -20, kScremHeight )];
+    _webView  = [[UIWebView alloc]initWithFrame:CGRectMake(10,64, kScremWidth -20, kScremHeight )];
     _webView.delegate = self;
     _webView .scalesPageToFit = YES;
     [_webView loadHTMLString:self.detailModel.content baseURL:nil];

@@ -106,7 +106,18 @@ static  FMDatabase * db = nil;
     
 }
 
-
+//根据网址清楚收藏项
+- (void)clearTableCollectWithTableName:(NSString *)tableName collectID:(NSString *)collectID{
+    [db open];
+        NSString * clearStr = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = '%@'"  ,tableName,kLoverKey,collectID];
+      [db executeUpdate:clearStr];
+    if ([db executeUpdate:clearStr] ) {
+        NSLog(@"删除那条收藏成功");
+    }else{
+         NSLog(@"失败");
+    }
+    [db close];
+}
 
 
 
