@@ -111,13 +111,6 @@ static NSString * hccCell = @"hccCellID";
         detailVC.picUrl = model.picUrl;
         detailVC.URL = model.ID;
         [self.navigationController pushViewController:detailVC animated:YES];
-        
-
-    detailVC.titleName = model.title;
-    detailVC.picUrl = model.picUrl;
-    detailVC.URL = model.ID;
-    [self.navigationController pushViewController:detailVC animated:YES];
-
 
     }else if ([model.type isEqualToString:@"2"]){
         
@@ -126,11 +119,6 @@ static NSString * hccCell = @"hccCellID";
         
         commonNDModel.infoId = model.ID;
 
-        //        commonNDModel.infoLogo = model.picUrl;
-//        CommonNewsDetailsController *commonNDC = [CommonNewsDetailsController new];
-//        commonNDC.commonNDModel = commonNDModel;
-//        [self.navigationController pushViewController:commonNDC animated:YES];
-        
 
 
         CommonNewsDetailsController *commonNDC = [CommonNewsDetailsController new];
