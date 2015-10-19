@@ -35,7 +35,7 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             
-            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"请在邮箱验证信息" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"已经登录成功,可以收藏" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *oneAc = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 

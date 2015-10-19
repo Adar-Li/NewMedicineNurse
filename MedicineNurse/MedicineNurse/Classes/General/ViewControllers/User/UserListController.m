@@ -97,12 +97,12 @@
     __weak UserListController * weakSelf = self;
     _loginButton = [[WZFlashButton alloc] initWithFrame:CGRectMake(0, kScremHeight / 2 - BUFFERY + 50, kScremWidth -2*BUFFERX, 45)];
     _loginButton.buttonType = WZFlashButtonTypeInner;
-    _loginButton.textLabel.text = @"登陆";
+    _loginButton.textLabel.text = @"登陆/注册";
     _loginButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     _loginButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
     //登陆点击事件
     _loginButton.clickBlock = ^(void) {
-        if ([weakSelf.loginButton.textLabel.text isEqualToString:@"登陆"]) {
+        if ([weakSelf.loginButton.textLabel.text isEqualToString:@"登陆/注册"]) {
             UserController *user = [UserController new];
             user.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
             [weakSelf presentViewController:user animated:YES completion:nil];
@@ -112,7 +112,7 @@
             
             UIAlertAction * realyAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
                                 [AVUser logOut];
-                                weakSelf.loginButton.textLabel.text = @"登陆";
+                                weakSelf.loginButton.textLabel.text = @"登陆/注册";
                 [weakSelf dismissViewControllerAnimated:YES completion:nil];
             }];
             

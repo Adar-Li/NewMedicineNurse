@@ -1040,7 +1040,6 @@
 				TargetAttributes = {
 					C28EA6751BC3A9DA00B394F5 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = PT54ZQ8PBH;
 					};
 					C28EA68E1BC3A9DA00B394F5 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1439,8 +1438,9 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.Medicine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "94ecf2e9-e908-4faf-85ca-66c382e82b2f";
 			};
 			name = Debug;
 		};
@@ -1498,8 +1498,9 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.MedicineNurse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.Medicine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "94ecf2e9-e908-4faf-85ca-66c382e82b2f";
 			};
 			name = Release;
 		};

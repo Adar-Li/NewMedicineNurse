@@ -20,7 +20,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
    [UMSocialData setAppKey:@"561c6d93e0f55a0eeb00a2b4"];
@@ -46,8 +45,7 @@
 }
 
 - (void)setupNormalRootViewController {
-    // create whatever your root view controller is going to be, in this case just a simple view controller
-    // wrapped in a navigation controller
+
     self.window.rootViewController = [[RootViewController alloc]init];
 }
 
@@ -55,12 +53,12 @@
     OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"sheep1"] buttonText:nil action:nil];
     firstPage.bodyFontSize = 25;
     
-    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DCommon"] buttonText:nil action:nil];
+    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DHome"] buttonText:nil action:nil];
     secondPage.bodyFontSize = 24;
     
-    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DSuffer"] buttonText:nil action:nil];
+    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DCommon"] buttonText:nil action:nil];
     
-    OnboardingContentViewController *fourthPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DUser"] buttonText:@"See Ya Later!"  action:^{
+    OnboardingContentViewController *fourthPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DSuffer"] buttonText:@"点击进入"  action:^{
         [self setupNormalRootViewController];
     }];
     

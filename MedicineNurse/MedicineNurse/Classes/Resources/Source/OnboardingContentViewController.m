@@ -11,7 +11,7 @@
 
 static NSString * const kDefaultOnboardingFont = @"Helvetica-Light";
 
-#define DEFAULT_TEXT_COLOR [UIColor whiteColor];
+#define DEFAULT_TEXT_COLOR [UIColor blackColor];
 
 static CGFloat const kContentWidthMultiplier = 0.9;
 static CGFloat const kDefaultImageViewSize = 100;
