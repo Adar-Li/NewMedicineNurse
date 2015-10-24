@@ -15,6 +15,7 @@
 #import "GiFHUD.h"
 
 @interface SufferDeTableViewController ()
+
 @property (nonatomic ,strong)NSMutableArray *dataArray;
 
 @end
@@ -30,9 +31,7 @@
     [self.tableView registerClass:[SufferTableViewCell class] forCellReuseIdentifier:@"cell"];
     
     self.dataArray = [NSMutableArray array];
-    
     [self set_up];
-
 }
 
 // 解析数据
@@ -54,11 +53,7 @@
         [self.tableView reloadData];
         [GiFHUD dismiss];
     }];
-    
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -68,23 +63,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     SufferModel *model = _dataArray[indexPath.row];
-    
     SufferTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.data = model;
- 
     cell.ArticleLabel.text = [model.articleDate substringToIndex:10];
-    
-    
-    
+
     return cell;
 }
 

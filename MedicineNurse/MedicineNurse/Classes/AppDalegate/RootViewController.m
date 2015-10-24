@@ -12,8 +12,6 @@
 #import "SufferViewController.h"
 #import "UserListController.h"
 
-
-
 @interface RootViewController ()
 
 @end
@@ -24,9 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-    
-    
+
     }
     return self;
 }
@@ -64,8 +60,6 @@
     User.navigationBar.backgroundColor = [UIColor colorWithRed:0.957 green:1.000 blue:0.091 alpha:1.000];
     
     self.viewControllers = @[homeNC,common,suffer,User];
-
-    
 }
 
 - (void)didReceiveMemoryWarning {

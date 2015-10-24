@@ -22,9 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-   [UMSocialData setAppKey:@"561c6d93e0f55a0eeb00a2b4"];
+    [UMSocialData setAppKey:@"561c6d93e0f55a0eeb00a2b4"];
     [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:@"http://www.umeng.com/social"];
-
     [AVOSCloud setApplicationId:@"RDf8eeBpAyi6VxjcOsBidJTA"
                       clientKey:@"YHjY02vVFMmpSaXqNQcm87Kw"];
     
@@ -32,14 +31,15 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"first"]) {
+        
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"first"];
         self.window.rootViewController = [self generateThirdDemoVC];
     }else{
         
         self.window.rootViewController = [[RootViewController alloc]init];
     }
-    
     application.statusBarStyle = UIStatusBarStyleLightContent;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -50,6 +50,7 @@
 }
 
 - (OnboardingViewController *)generateThirdDemoVC {
+    
     OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"sheep1"] buttonText:nil action:nil];
     firstPage.bodyFontSize = 25;
     
@@ -67,8 +68,6 @@
     onboardingVC.shouldBlurBackground = YES;
     return onboardingVC;
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

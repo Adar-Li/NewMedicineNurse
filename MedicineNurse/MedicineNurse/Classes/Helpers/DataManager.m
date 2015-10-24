@@ -64,9 +64,9 @@ static  FMDatabase * db = nil;
     
     BOOL isSuc = [db executeUpdate:sqlInsert];
     if (isSuc) {
-        NSLog(@"suc");
+       
     }else{
-        NSLog(@"fail");
+        
     }
     [db close];
 }
@@ -98,9 +98,9 @@ static  FMDatabase * db = nil;
     [db open];
     NSString * clearStr = [NSString stringWithFormat:@"DELETE FROM %@",tableName];
     if ([db executeUpdate:clearStr]) {
-        NSLog(@"清理表成功");
+        
     }else{
-        NSLog(@"清理表失败");
+        
     }
     [db close];
     
@@ -112,9 +112,9 @@ static  FMDatabase * db = nil;
         NSString * clearStr = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = '%@'"  ,tableName,kLoverKey,collectID];
       [db executeUpdate:clearStr];
     if ([db executeUpdate:clearStr] ) {
-        NSLog(@"删除那条收藏成功");
+        
     }else{
-         NSLog(@"失败");
+        
     }
     [db close];
 }
