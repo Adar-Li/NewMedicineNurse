@@ -8,6 +8,7 @@
 
 #import "UserRigisViewController.h"
 #import "AVUser.h"
+#import "UserManager.h"
 
 @interface UserRigisViewController ()
 
@@ -36,6 +37,8 @@
     user.email = _textField4Email.text;
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+            [[UserManager shareUserManager]setUserName:_textField4Name.text];
+            [[UserManager shareUserManager]setUserPassWorld:_textField4Password.text];
             
             UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"已经登录成功,可以收藏" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -47,6 +50,10 @@
                 
                 [self dismissViewControllerAnimated:YES completion:nil];
             }];
+            //保存到本地文件
+           
+            
+            
                 //发出通知.自动登陆
             [[NSNotificationCenter defaultCenter] postNotificationName:@"loginAction" object:nil userInfo:@{@"name":_textField4Name.text}];
             [alert addAction:oneAc];
