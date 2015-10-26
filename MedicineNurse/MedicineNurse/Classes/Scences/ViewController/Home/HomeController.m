@@ -365,7 +365,7 @@ static NSString * hccCell = @"hccCellID";
     self.titleLable = [[UILabel alloc]initWithFrame:CGRectMake(20, 158, kScremWidth - 150, 40)];
     self.titleLable.numberOfLines = 3 ;
     self.titleLable.font =[UIFont systemFontOfSize:15];
-    self.titleLable.textColor = [UIColor blackColor];
+    self.titleLable.textColor = [UIColor redColor];
     //    self.titleLable.textAlignment = nste
     self.titleLable.text = self.titleArray[_currentIndex];
     [self.tableView addSubview:self.titleLable];

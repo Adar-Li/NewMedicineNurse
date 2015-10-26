@@ -15,6 +15,7 @@
 #import "DataManager.h"
 #import "HCollectController.h"
 #import "AVUser.h"
+#import "UserManager.h"
 
 #define BUFFERX 20
 #define BUFFERY 66
@@ -49,7 +50,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+   
     self.view.backgroundColor = [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1];
     self.navigationItem.title = @"用户";
     
@@ -98,6 +99,12 @@
     _loginButton.textLabel.text = @"登陆/注册";
     _loginButton.flashColor = [UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1];
     _loginButton.backgroundColor = [UIColor colorWithRed:0 green:152.0f/255.0f blue:203.0f/255.0f alpha:1.0f];
+    AVUser *currentUser = [AVUser currentUser];
+    //判断是否登陆
+    if (currentUser != nil)
+   {
+       _loginButton.textLabel.text = [UserManager shareUserManager].userName;
+    }
     
     //登陆点击事件
     _loginButton.clickBlock = ^(void) {
@@ -185,6 +192,7 @@
     
     self.loginButton.textLabel.text = notice.userInfo[@"name"];
 }
+
 
 
 /*

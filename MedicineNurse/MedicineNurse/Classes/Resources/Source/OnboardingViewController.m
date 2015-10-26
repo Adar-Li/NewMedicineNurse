@@ -462,11 +462,11 @@ static NSString * const kSkipButtonText = @"Skip";
 - (void)blurBackground {
     // Check pre-conditions.
     if (self.backgroundImage.size.width < 1 || self.backgroundImage.size.height < 1) {
-        NSLog (@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.backgroundImage.size.width, self.backgroundImage.size.height, self.backgroundImage);
+
         return;
     }
     if (!self.backgroundImage.CGImage) {
-        NSLog (@"*** error: image must be backed by a CGImage: %@", self.backgroundImage);
+
         return;
     }
     

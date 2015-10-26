@@ -65,6 +65,7 @@
 		C268293B1BCF90A900C75C49 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26829381BCF90A900C75C49 /* OnboardingContentViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C268293C1BCF90A900C75C49 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C268293A1BCF90A900C75C49 /* OnboardingViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C26829971BCFC99B00C75C49 /* fanhui.png in Resources */ = {isa = PBXBuildFile; fileRef = C26829961BCFC99B00C75C49 /* fanhui.png */; settings = {ASSET_TAGS = (); }; };
+		C26A234C1BDBA76C00375C57 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C26A234B1BDBA76C00375C57 /* UserManager.m */; settings = {ASSET_TAGS = (); }; };
 		C28EA67B1BC3A9DA00B394F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EA67A1BC3A9DA00B394F5 /* main.m */; };
 		C28EA6841BC3A9DA00B394F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6821BC3A9DA00B394F5 /* Main.storyboard */; };
 		C28EA6861BC3A9DA00B394F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28EA6851BC3A9DA00B394F5 /* Assets.xcassets */; };
@@ -240,6 +241,8 @@
 		C26829391BCF90A900C75C49 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
 		C268293A1BCF90A900C75C49 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 		C26829961BCFC99B00C75C49 /* fanhui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fanhui.png; sourceTree = "<group>"; };
+		C26A234A1BDBA76C00375C57 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		C26A234B1BDBA76C00375C57 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		C28EA6761BC3A9DA00B394F5 /* MedicineNurse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNurse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28EA67A1BC3A9DA00B394F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C28EA6831BC3A9DA00B394F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -691,6 +694,8 @@
 		C28EA6B51BC3C52700B394F5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C26A234A1BDBA76C00375C57 /* UserManager.h */,
+				C26A234B1BDBA76C00375C57 /* UserManager.m */,
 				C25015E31BCE22F200057CDD /* SufferHelper.h */,
 				C25015E41BCE22F200057CDD /* SufferHelper.m */,
 				C2FC64061BCE018400B2B22E /* HomeHelper.h */,
@@ -1233,6 +1238,7 @@
 				C235AAE21BCE42CF002308FB /* WeathViewController.m in Sources */,
 				C2FC64021BCE013B00B2B22E /* HomeCell.m in Sources */,
 				C2FC64041BCE013B00B2B22E /* HSBCell.m in Sources */,
+				C26A234C1BDBA76C00375C57 /* UserManager.m in Sources */,
 				C2500FF61BCE220B00057CDD /* SufferViewController.m in Sources */,
 				C2D0B7E81BCE2F68001745D0 /* WZFlashButton.m in Sources */,
 				C2D0B7CA1BCE2807001745D0 /* DrugAndnewsListModel.m in Sources */,

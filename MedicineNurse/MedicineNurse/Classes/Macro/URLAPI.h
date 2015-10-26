@@ -53,6 +53,12 @@
 #define kLoverTable @"MyloverTable"
 #define kLoverURL @"loverUrl"
 #define kLoverType @"loverType"
+//创建USerdefoult需要的宏定义
+
+#define kLoginState  @"isLogin"
+#define kUserName @"userName"
+#define kUserPwd @"userPWD"
+#define kUserEmailAddress @"emaiAddress"
 
 //常见病症网址
 //常见病症列表网址

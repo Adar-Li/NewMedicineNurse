@@ -9,6 +9,7 @@
 #import "UserController.h"
 #import "AVUser.h"
 #import "HomeController.h"
+#import "UserManager.h"
 
 @interface UserController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField4Name;
@@ -52,6 +53,8 @@
     [AVUser logInWithUsernameInBackground:_textField4Name.text password:_textField4Password.text block:^(AVUser *user, NSError *error) {
         if (user != nil) {
 
+            [[UserManager shareUserManager]setUserName:_textField4Name.text];
+            [[UserManager shareUserManager]setUserPassWorld:_textField4Password.text];
             //发出通知
             [[NSNotificationCenter defaultCenter] postNotificationName:@"loginAction" object:nil userInfo:@{@"name":_textField4Name.text}];
             
