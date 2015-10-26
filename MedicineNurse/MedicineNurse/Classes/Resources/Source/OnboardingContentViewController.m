@@ -11,7 +11,7 @@
 
 static NSString * const kDefaultOnboardingFont = @"Helvetica-Light";
 
-#define DEFAULT_TEXT_COLOR [UIColor blackColor];
+#define DEFAULT_TEXT_COLOR [UIColor redColor];
 
 static CGFloat const kContentWidthMultiplier = 0.9;
 static CGFloat const kDefaultImageViewSize = 100;
@@ -22,7 +22,7 @@ static CGFloat const kDefaultBottomPadding = 0;
 static CGFloat const kDefaultUnderPageControlPadding = 0;
 static CGFloat const kDefaultTitleFontSize = 38;
 static CGFloat const kDefaultBodyFontSize = 28;
-static CGFloat const kDefaultButtonFontSize = 24;
+static CGFloat const kDefaultButtonFontSize = 30;
 
 static CGFloat const kActionButtonHeight = 50;
 static CGFloat const kMainPageControlHeight = 35;

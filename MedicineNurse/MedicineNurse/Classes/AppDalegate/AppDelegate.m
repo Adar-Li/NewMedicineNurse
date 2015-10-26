@@ -51,9 +51,6 @@
 
 - (OnboardingViewController *)generateThirdDemoVC {
     
-    OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"sheep1"] buttonText:nil action:nil];
-    firstPage.bodyFontSize = 25;
-    
     OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:nil body:nil image:[UIImage imageNamed:@"DHome"] buttonText:nil action:nil];
     secondPage.bodyFontSize = 24;
     
@@ -63,7 +60,7 @@
         [self setupNormalRootViewController];
     }];
     
-    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"111"] contents:@[firstPage, secondPage, thirdPage, fourthPage]];
+    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"111"] contents:@[secondPage, thirdPage, fourthPage]];
     onboardingVC.shouldMaskBackground = NO;
     onboardingVC.shouldBlurBackground = YES;
     return onboardingVC;
