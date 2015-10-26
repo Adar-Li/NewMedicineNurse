@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     //隐藏滑动条
     self.tableView.showsVerticalScrollIndicator = NO;
     
@@ -80,7 +79,6 @@
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.

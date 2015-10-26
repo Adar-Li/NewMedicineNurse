@@ -17,7 +17,6 @@
     }
 }
 
-
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@,%@,%@,%@,%@", _title,_descrip,_url,_articleDate,_imgpath];

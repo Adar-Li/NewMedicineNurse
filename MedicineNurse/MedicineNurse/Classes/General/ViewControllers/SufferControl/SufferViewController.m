@@ -156,7 +156,7 @@
     
     [button addTarget:self action:@selector(JumpMore) forControlEvents:UIControlEventTouchUpInside];
      //设置大小
-  button.frame = CGRectMake(-50, -10,self.view.frame.size.width - 20 , 30);
+    button.frame = CGRectMake(-50, -10,self.view.frame.size.width - 20 , 30);
     self.table.tableFooterView = button;
 }
 
@@ -239,11 +239,6 @@
     [self.navigationController pushViewController:[WeathViewController new] animated:YES];
   
 }
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

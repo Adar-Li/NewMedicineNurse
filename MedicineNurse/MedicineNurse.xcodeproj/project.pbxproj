@@ -80,6 +80,8 @@
 		C2A3CD4B1BD0E7B50068DF43 /* DSuffer.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A3CD471BD0E7B50068DF43 /* DSuffer.png */; settings = {ASSET_TAGS = (); }; };
 		C2BF17611BCFC1AD00736757 /* HCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17601BCFC1AD00736757 /* HCollectController.m */; settings = {ASSET_TAGS = (); }; };
 		C2BF17641BCFD74100736757 /* MyCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BF17631BCFD74100736757 /* MyCollectController.m */; settings = {ASSET_TAGS = (); }; };
+		C2CB4BDA1BDBA37B00F2C80C /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2CB4BD91BDBA37B00F2C80C /* 123.jpg */; settings = {ASSET_TAGS = (); }; };
+		C2CB4BDC1BDBA54300F2C80C /* Love.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CB4BDB1BDBA54300F2C80C /* Love.png */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8A01BC8AD410002AAB2 /* CommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB89D1BC8AD410002AAB2 /* CommonController.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CA1BC8ADD10002AAB2 /* CommonClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFB8B61BC8ADD10002AAB2 /* CommonClassifyCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2CFB8CB1BC8ADD10002AAB2 /* CommonClassifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CFB8B71BC8ADD10002AAB2 /* CommonClassifyCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -263,6 +265,8 @@
 		C2BF17601BCFC1AD00736757 /* HCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCollectController.m; sourceTree = "<group>"; };
 		C2BF17621BCFD74100736757 /* MyCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectController.h; sourceTree = "<group>"; };
 		C2BF17631BCFD74100736757 /* MyCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectController.m; sourceTree = "<group>"; };
+		C2CB4BD91BDBA37B00F2C80C /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 123.jpg; path = ../../../123.jpg; sourceTree = "<group>"; };
+		C2CB4BDB1BDBA54300F2C80C /* Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Love.png; sourceTree = "<group>"; };
 		C2CFB89C1BC8AD410002AAB2 /* CommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonController.h; sourceTree = "<group>"; };
 		C2CFB89D1BC8AD410002AAB2 /* CommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonController.m; sourceTree = "<group>"; };
 		C2CFB89E1BC8AD410002AAB2 /* CommonTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableController.h; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 				C23A32FA1BC558E4007320E1 /* Skin.png */,
 				C23A32F21BC558E4007320E1 /* Child.png */,
 				C23A32F71BC558E4007320E1 /* Mentality.png */,
+				C2CB4BD91BDBA37B00F2C80C /* 123.jpg */,
+				C2CB4BDB1BDBA54300F2C80C /* Love.png */,
 			);
 			path = img;
 			sourceTree = "<group>";
@@ -1080,6 +1086,7 @@
 			files = (
 				C242BCCC1BCE3D6E003E5950 /* home.jpg in Resources */,
 				C23A33051BC558E4007320E1 /* Skin.png in Resources */,
+				C2CB4BDC1BDBA54300F2C80C /* Love.png in Resources */,
 				C268291D1BCF44F700C75C49 /* UMSLoginViewController.xib in Resources */,
 				C2A3CD481BD0E7B50068DF43 /* DHome.png in Resources */,
 				C28EA6891BC3A9DA00B394F5 /* LaunchScreen.storyboard in Resources */,
@@ -1095,6 +1102,7 @@
 				C2FC64011BCE013B00B2B22E /* HEDCell.xib in Resources */,
 				C2D1396C1BC5F9CA00D4B1F7 /* Male.png in Resources */,
 				C2CFB8CF1BC8ADD10002AAB2 /* CommonDetailsCell.xib in Resources */,
+				C2CB4BDA1BDBA37B00F2C80C /* 123.jpg in Resources */,
 				C242BCCB1BCE3D6E003E5950 /* common.jpg in Resources */,
 				C23A32FF1BC558E4007320E1 /* Infect.png in Resources */,
 				C249D70F1BCEA7C00093BDBD /* regist.jpg in Resources */,
