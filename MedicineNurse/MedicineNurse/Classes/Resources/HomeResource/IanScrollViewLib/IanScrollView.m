@@ -131,7 +131,7 @@
     }
     for (NSInteger i = 0; i < _slideImagesArray.count; i++) {
         IanScrollImageView *slideImage = [[IanScrollImageView alloc] init];
-        slideImage.contentMode = UIViewContentModeScaleAspectFit;
+//        slideImage.contentMode = UIViewContentModeScaleAspectFit;
         [slideImage sd_setImageWithURL:[NSURL URLWithString:_slideImagesArray[i]] placeholderImage:[UIImage imageNamed:@"IanScrollViewDefault"]];
         slideImage.tag = i;
         slideImage.frame = CGRectMake(_scrollView.frame.size.width * i + _scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height);
